@@ -1,0 +1,27 @@
+@import "../../common/reset";
+@import "../../common/common";
+@import "../../common/liveapp";
+@import "../../common/w750";
+
+[class^='p2'],[class^='p3']{&:extend(.pa);width:100%;height:50px;z-index:3;left:0;height:126px;}
+.p2_a {top:36px;}
+.p2_b {top:162px;}
+.p2_c {top:288px;}
+.p2_d {top:414px;}
+.p2_e {top:540px;}
+.p2_f {top:666px;}
+.p2_g {top:792px;}
+.p3_a {top:486px;}
+.p3_b {top:611px;}
+.p3_c {top:738px;}
+.arrow {z-index:299;}
+.imgWrap {position:fixed;top:0;left:0;height:100%;width:100%;z-index:300;&:extend(.f0,.tc);display:none;}
+.hand{&:extend(.pa);height:64px;width:64px;border:3px solid #fff;border-radius:50%;background:url(../images/hand.png) no-repeat;right:20px;top:32px;.animation(hand .6s linear infinite);}
+@-webkit-keyframes hand {
+    0% {.bgp(0,0);}
+    25% {.bgp(0,-5px);}
+    50% {.bgp(0,0);}
+    75% {.bgp(0,5px);}
+    100% {.bgp(0,0);}
+}
+//.gourl {height:226px;width:508px;&:extend(.pa);top:252px;left:125px;}

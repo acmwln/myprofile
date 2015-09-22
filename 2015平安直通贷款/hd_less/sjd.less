@@ -1,0 +1,62 @@
+@import "common/base";
+@import "common/w640";
+@basecolor:#f06b3e;
+img{width:100%;max-width: 100%;height: auto;}
+body{background:#f29868;font-size: 10px; }
+.w60{width: 60%;margin:0 auto;}
+.w55{width: 56%;margin:0 auto;margin-left:-6rem;}
+.nfloat{float: none!important;}
+.nmargin{margin:0!important;}
+.m30{margin:3rem;}
+.p30{padding:3rem;}
+.mt25{margin-top: 2.5rem;}
+.mt15{margin-top: 1.5rem;}
+.mb15{margin-bottom: 1.5rem;}
+.cwhite{color:#fff;}
+.hide{display: none;}
+.title{background: #f06b3e;padding:1rem 0;margin-bottom:3.5rem;text-align:center;border-radius:.5rem;img{width:33%;max-width: 164px;}}
+.outerBox{position: relative;margin:0 auto;}
+.m-page{
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+#page1.m-page{margin:0;}
+#page1 .m30{margin: 3rem 6rem;}
+.textBox{padding: 3rem 2rem;background: #efe1d9;color:@basecolor;font-size: 3.4rem;}
+#page2 .cwhite{padding:2rem 1.5rem;background: #f29868;h4{font-size: 3rem;}p{font-size: 2.8rem;}}
+#page2 dl{
+	margin:2rem;margin-bottom:0;font-size: 3rem;color:@basecolor;dt{float:left;}dd{margin-left: 14rem;}span{padding:0 1rem;}
+	.nmargin{em{float: left};p{margin-left: 4rem;}}
+	p{font-size: 3rem;}
+}
+#page3{text-align: center;&:extend(.cwhite);p{font-size: 2rem;}}
+#page3 .w50{text-align: center;max-width: 248px;}
+.btn{
+	box-shadow: 0 2px 5px #e17f5e inset;
+	margin:3.5rem 5rem;padding:1.5rem;text-align:center;background:@basecolor url(../images/btn_bt.png) left bottom no-repeat;
+	a{color:#fff;font-size: 3.6rem;font-family: "黑体";}
+}
+
+
+.u-arrow{position:fixed;bottom:30px;left:50%;z-index:3;width:80px;text-align:center;margin-left:-40px;pointer-events:none}
+.u-arrow img{position:absolute;top:30%;left:50%;margin:-28px 0 0 -28px;}
+
+.u-arrow img:nth-child(1) {-webkit-transform: translateY(-15px);opacity:.1;-webkit-animation:start1 1s infinite linear}
+.u-arrow img:nth-child(2) {opacity:1;-webkit-animation:start2 1s infinite linear}
+.u-arrow img:nth-child(3) {-webkit-transform: translateY(15px);opacity:.6;opacity:1;-webkit-animation:start3 1s infinite linear}
+@-webkit-keyframes start1 {
+	0% {opacity:0;}
+	50% {opacity:.5;}
+	100% {opacity:1;}
+}
+@-webkit-keyframes start2 {
+	0% {opacity:0;}
+	50% {opacity:1;}
+	100% {opacity:0;}
+}@-webkit-keyframes start3 {
+	0% {opacity:1;}
+	50% {opacity:.5;}
+	100% {opacity:0;}
+}

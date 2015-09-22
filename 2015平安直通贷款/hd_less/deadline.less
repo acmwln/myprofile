@@ -1,0 +1,107 @@
+@import "common/base";
+@border:1px solid #e2e2e2;
+@cgray:#8b8b8b;
+@corange:#ec5724;
+@corgange_dark:#da3801;
+@carrow:#808080;
+@base_width:8.325%;
+.cgray{color:#8b8b8b;}
+img{width:100%;max-width: 100%;}
+table {border-collapse: collapse;border-spacing: 0;}
+body{background: #e0382d}
+
+header {
+	font-family: "黑体";
+	font-size: 2rem;
+	height: 40px;
+	line-height: 40px;
+	color: #fff;
+	text-align: center;
+	background: -moz-linear-gradient(top, #df4900, #ff8a00);
+    background: -webkit-linear-gradient(top,#df4900, #ff8a00);
+    background: -o-linear-gradient(top, #df4900, #ff8a00);
+}
+.info{
+	margin:10px auto;
+	color:#fff;
+	font-size: 1.6rem;
+	overflow: hidden;
+	li{
+		width: 49%;
+		// height: 45px;
+		float: left;
+		position: relative;
+		padding-left: 70px;
+		box-sizing:border-box;
+		margin-bottom: 10px;
+		font-size: 1.2rem;
+	}
+	li:before{
+		position: absolute;
+		top: -20px;
+		left:0;
+		content: '';
+		display: block;
+		background-image: url(../images/icon_bg.png);
+		transform:scale(.5);
+	}
+
+	li:nth-child(1):before {width:83px; height:83px; background-position: -2px -2px}
+	li:nth-child(2):before {width:83px; height:83px; background-position: -87px -2px}
+	li:nth-child(3):before {width:83px; height:83px; background-position: -2px -87px}
+	li:nth-child(4):before {width:83px; height:83px; background-position: -87px -87px}
+
+}
+.clock_wrap{
+	position: relative;
+	min-height: 75px;
+	#clock{
+		width: 176px;
+		height: 50px;
+
+		position: absolute;
+
+		top: 0;
+		left: 50%;
+		margin-left: -88px;
+		.clock_number span{
+
+			
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-weight: bold;
+			
+			background: #eee;
+			border-radius: 5px;
+			font-size: 2rem;
+		}
+		span{width: 40px;display: inline-block;}
+
+	}
+	.orderText{
+		position: absolute;
+		bottom: -5px;
+		left:0;
+	}
+
+}
+#btn{
+	display: block;
+	width: 90%;
+	margin:10px auto;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;	
+	border-radius: 20px;
+	font-size: 2rem;
+	color: #000;
+	background: #ffcf31;
+	box-shadow:0px 5px 3px rgba(0,0,0,.5)
+}
+
+
+#btn.disabled{
+	background: #c3c3c3;
+	color:#fff;
+}

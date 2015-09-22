@@ -1,0 +1,142 @@
+@baseFont:1.2rem;
+.bt{border-top:1px solid #e6e2de!important;}
+header{
+	background:#f3dac9;
+	border-bottom: none;
+	padding: 0 1.5rem;
+	position: relative;
+	.icon-close{
+		position: absolute;
+		font-size: 1.5rem;
+		line-height: 5rem;
+		width: 4rem;
+		height: 100%;
+		display: block;		
+		box-sizing: border-box;
+	}
+
+	h1{
+		font-size: 1.5rem;
+		line-height: 4rem;
+		color:#595959;
+		text-align: center;
+	}
+}
+
+
+.ui-listview li,.title{
+	position: relative;
+	border-bottom: #e0e0e0 1px solid;
+	border-top: #faf5f2 1px solid;
+	font-size: @baseFont;
+	line-height: 2rem;
+	padding: 1rem 3rem 1rem 1.5rem;
+	word-break: break-all;
+	color: #595959;
+	span{margin-right: .5rem;}
+}
+.title{
+	position: relative;
+	padding-left: 2rem;
+}
+.title:before{
+	position: absolute;
+	left:1rem;
+	top:50%;
+	margin-top:-.7rem;
+	width: .7rem;
+	height: 1.4rem;
+	content: '';
+	display: block;
+	background: #f06b3e;
+}
+.arrow:after{
+	position: absolute;
+	top: 50%;
+	margin-top: -4px;
+	right: 2rem;
+	display: block;
+	content: '';
+	width: 8px;
+	height: 8px;
+	border: 2px solid #636363;
+	border-width: 2px 2px 0 0;
+	transform: rotate(45deg);
+
+}
+.ui-listview li:after{
+	&:extend(.arrow:after);
+	&:extend(.arrowR:after);
+}
+.ui-listview li.selected {
+  background: #fae8dc;
+  color: #ff6600;
+}
+.ui-listview li.selected:after{
+	border: 2px solid #f06b3e;
+	border-width: 2px 2px 0 0;
+
+}
+.ui-listview .secItem{
+	position: relative;
+	font-size: 1rem;
+	padding-left: 4rem;
+}
+.ui-listview .secItem:before{
+	position: absolute;
+	top: 50%;
+	margin-top: -5px;
+	left: 2.5rem;
+	content: '';
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background: #595959;
+
+}
+.ui-listview .secItem:after{
+	display: none;
+}
+
+// 材料浮层
+.content{
+	font-size: @baseFont;
+	color:#595959;
+	padding:1rem 1.5rem;
+	.title{margin-bottom: .5rem;}
+	.title:before{left:0;}
+
+	.imgBox{margin:1rem 0;text-align: center;}
+}
+
+
+#tapBox{
+	background: #fff;
+	border: 1px solid #d4bbab;
+	border-radius: 5px;
+
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	margin: 1.5rem;
+	li{  
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
+		-webkit-flex: 1;
+		flex: 1;
+		text-align: center;
+		border-right: 1px solid #d4bbab; 
+		padding: 1rem 0;
+
+	}
+	li:last-child{border-right: 0;}
+	li.selected{
+		background: #f5863d;
+		color:#fff;
+	}
+}

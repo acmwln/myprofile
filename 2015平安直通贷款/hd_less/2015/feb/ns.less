@@ -1,0 +1,71 @@
+@import "../../common/reset";
+@import "../../common/common";
+@import "../../common/w640";
+
+body{background-color:#D60772;}
+.mb35 {margin-bottom:35px;}
+.mt20 {margin-top:20px;}
+.mr20 {margin-right:20px;}
+
+.mouthWrap {margin-bottom:65px;&:extend(.tc);}
+.mouth {margin-top:50px;&:extend(.pr);}
+.heart1,.heart2,.heart3 {&:extend(.pa);}
+.heart1 {top:0;left:0;}
+.heart2 {top:80px;left:-50px;}
+.heart3 {top:100px;right:-50px;}
+.mouthicon {animation:mouthicon 1.2s linear infinite;}
+.heart1 {animation:heart1 1.2s linear infinite;}
+.heart2 {animation:heart2 1.2s linear infinite;}
+.heart3 {animation:heart3 1.2s linear infinite;}
+@keyframes mouthicon {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+@keyframes heart1 {
+    0% {transform: scale(.7) rotate(-45deg);top:0;left:0;opacity:1;}
+    50% {transform: scale(.2) rotate(315deg);top:-80px;left:-80px;opacity:0;}
+    100% {transform: scale(.7) rotate(-45deg);top:0;left:0;}
+}
+@keyframes heart2 {
+    0% {transform: scale(.4) rotate(-90deg);top:80px;left:-50px;opacity:1;}
+    50% {transform: scale(.2) rotate(270deg);top:60px;left:-100px;opacity:0;}
+    100% {transform: scale(.4) rotate(-90deg);top:80px;left:-50px;}
+}
+@keyframes heart3 {
+    0% {transform: scale(1) rotate(0);top:100px;right:-50px;opacity:1;}
+    50% {transform: scale(.2) rotate(360deg);top:-20px;right:-90px;opacity:0;}
+    100% {transform: scale(1) rotate(0);top:100px;right:-50px;opacity:1;}
+}
+
+.teWrap {margin-top:20px;}
+.list-te {
+    margin:auto;width:541px;
+    li {&:extend(.mb35);}
+    li:nth-child(2) {background:url("@{url}/li2.png") no-repeat;}
+    li:nth-child(3) {background:url("@{url}/li3.png") no-repeat;}
+    li:nth-child(2).on {background:url("@{url}/li2_2.png") no-repeat;}
+    li:nth-child(3).on {background:url("@{url}/li3_2.png") no-repeat;}
+}
+.cardWrap3-2,.cardWrap2-2 {display:none;}
+.on {
+    .cardWrap3-1,.cardWrap2-1 {display:none;}
+    .cardWrap3-2,.cardWrap2-2 {display:block;}
+    .cardWrap2-1 {&:extend(.vh);}
+
+}
+.cardWrap {&:extend(.pr);margin-left:124px;width:277px;height:80px;}
+#canvasWrap {
+    &:extend(.pa);top:0;left:0;
+    canvas {margin-left:0 !important;height:80px !important;width:277px !important;left:0 !important;position:absolute !important;}
+}
+.bgForm {background-color:#fdecf5;}
+.list-form {
+    width:510px;margin:0 auto;
+    li {&:extend(.oh);height:70px;margin-bottom:30px;}
+}
+.fLeft {&:extend(.tc,.fl,.cwhite);font-size:2.6rem;background-color:#d60772;width:154px;line-height:68px;border:1px solid #8DA4C6;border-right:none;border-radius: 14px 0 0 14px;}
+.fCont {&:extend(.oh,.bgWhite);border:1px solid #EBEBEB;border-left:none;border-radius: 0 14px 14px 0;padding:0 10px;}
+.inp-form {&:extend(.noBorder);height:66px;width:100%;outline:none;font-size:2.6rem;}
+.btn-submit {&:extend(.tc,.dib,.cwhite);font-size:3rem;width:366px;line-height:70px;background-color:#d60772;border-radius: 12px;}
+.share-popup {z-index:99;}

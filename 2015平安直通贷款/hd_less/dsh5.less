@@ -1,0 +1,75 @@
+@charset "utf-8";
+@import "common/var";
+@import "common/mixins";
+/*****  reset S  *****/
+html,body,nav,ul,li,h2,h3,figure,h1,p{padding:0px;margin:0px;}
+html{font-size:62.5%;}
+body{min-width:320px;font:normal 1.6rem/1.6 Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei;color:#000;background:#fff;overflow-x:hidden;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-moz-user-select:none;-webkit-font-smoothing: antialiased;}
+img{border:none}
+a{text-decoration:none;}
+li{list-style-type:none;}
+h1,h2,h3,h4,h5,h6 {font-weight:normal;}
+i,em {font-style: normal;}
+input[type="number"]::-webkit-textfield-decoration-container {
+    background-color: transparent;
+}
+input[type="number"]::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+}
+input[type="number"]::-webkit-outer-spin-button {
+     -webkit-appearance: none;	/* 有无看不出差别 */
+}
+
+.fya{font-family:"\5FAE\8F6F\96C5\9ED1";}
+.fsong{font-family:"\5b8b\4f53";}
+.f0{font-size:0;}
+.noBorder{border:none !important;}
+.noBg {background:none !important;}
+
+.c0{color:#000 !important;}
+.c3{color:#333 !important;}
+.c6{color:#666 !important;}
+.c9{color:#999;}
+.cwhite{color:#fff;}
+.red{color:#f00 !important;}
+
+.tl{text-align:left !important;}
+.tr{text-align:right;}
+.tc{text-align:center;}
+.fl{float:left;}
+.fr{float:right;}
+.vt{vertical-align:top;}
+.vm{vertical-align:middle !important;}
+.vb{vertical-align:bottom;}
+.pr{position:relative;}
+.pa{position:absolute;}
+.pstatic{position:static;}
+.oh{overflow:hidden;}
+.di{display:inline;}
+.db{display:block !important;}
+.hidden{display:none !important;}
+.cl{clear:both;}
+
+.bk{word-wrap:break-word;word-break:break-all;}
+.nowrap{white-space:nowrap;word-wrap:normal;}
+.vh{visibility:hidden;}
+.vShow{visibility:visible !important;}
+.clearfix:after{&:extend(.after);}
+/*****  reset S  *****/
+
+/*****  common S  *****/
+.tColor {color:#f15d2f;a&{text-decoration:underline;}}
+.f22 {font-size:2.2rem;}
+.loginWrap {margin:0 30px;}
+/*****  common E  *****/
+
+body {background-color:#FAF7AA;}
+.lLogoWrap {margin-top:50px;}
+
+.inpWrap {
+    &:extend(.pr);border-bottom:1px solid #7D7D7D;box-sizing: border-box;height:30px;
+    &::before,&::after{content:'\200B';&:extend(.pa);height:10px;bottom:0;}
+    &::before{left:0;border-left:1px solid #7D7D7D;}
+    &::after{right:0;border-right:1px solid #7D7D7D;}
+}
+.input-login {&:extend(.pa);right:10px;left:10px;height:100%;font-size:1.4rem;}

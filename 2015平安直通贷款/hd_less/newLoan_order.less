@@ -1,0 +1,223 @@
+
+@border:1px solid #e2e2e2;
+@cgray:#8b8b8b;
+@corange:#ec5724;
+html,body{
+	height: 100%;
+}
+
+#order_detail{
+	.main{
+		font-size: 1.6rem;
+		border: 1px solid #e2e2e2;
+		margin: 5px;
+		overflow: hidden;
+		background:#fafafa;
+		font-family: "微软雅黑";
+		.title{
+			text-align: center;
+			font-size: 1.8rem;
+			padding: 5px;	
+		}
+		h4{
+			font-weight: bold;
+			color: #010101;
+		}
+		ul{
+			margin:0 15px;
+			li{
+				font-size: 1.6rem;
+				padding:10px;
+				padding-left: 70px;
+				position: relative;
+				
+			}
+			li:before{
+				position: absolute;
+				top:15px;
+				left:0px;
+				display: block;
+				content: "";
+				background-image:url(../images/order_detail_icon.png);
+				
+			}
+		
+			li:before{transform:scale(.8);top:10px;};	
+			li:nth-child(1):before{width:62px; height:41px; background-position: -108px -2px}
+			li:nth-child(2):before{width:62px; height:48px; background-position: -66px -48px}
+			li:nth-child(3):before{width:62px; height:51px; background-position: -130px -48px}
+		}
+		.materialInfo {border-top:1px dotted #bbb;}
+		.materialInfo li:nth-child(1):before{width:62px; height:46px; background-position: -2px -48px}
+		.order_info,ol li{color:#666666;font-size: 1.4rem;}
+
+		#btn_viewMateral{float: right;color: @corange;text-decoration: underline;}
+		ol{-webkit-padding-start:25px;padding-strat:25px;}
+		ol li{padding: 0px;}
+		ol li:before{
+			content: none;
+			background: none;
+		}
+		ol li:after{content: none;}
+		#reOrder{
+			color: #ec5724;
+			font-size: 1.4rem;
+			position: absolute;
+			right: 20px;
+			padding-left: 20px;
+			background: url(../images/reOrder.png) left center no-repeat;
+			background-size:15px;
+		}
+		.title{
+			background: url(../images/order_titlebg.png) left top no-repeat;
+			text-align: left;
+			color: #fff;
+			font-size: 1.6rem;
+			padding: 5px;
+			background-size: 120px 35px;
+			padding-left: 10px;
+		}
+	}
+	.btngroup{
+		margin-bottom: 30px;
+		span{display:inline-block;width: 49%;height: 30px;line-height: 30px;position: relative;text-align: center;}
+		span:before{
+			transform:scale(.5);
+			position: absolute;
+			top:0px;
+			left:0px;
+			display: block;
+			content: "";
+			background-image:url(../images/order_detail_icon.png);
+		}
+		#btn_wx{border-left:1px solid #e2e2e2;}
+		#btn_wx:before{width:51px; height:44px; background-position: -55px -2px;top:-5px;}
+		#btn_sendPhone:before{width:51px; height:31px; background-position: -2px -2px;}
+	}
+}
+.btn_map i{
+top: -5px;
+background-position: -112px -2px;
+width: 35px;
+height: 40px;
+}
+
+
+#ui-datepicker-div{
+	height: 100%;
+	padding-bottom: 50px;
+	transition:left .3s ease;
+	left:0px!important;
+
+}
+.ui-datepicker {
+  width:100%;
+  padding: 0;
+  border-radius: 0;
+  top: 50px!important;
+  border: none;
+}
+.ui-widget{
+	font-family:'微软雅黑';
+}
+.ui-datepicker-multi .ui-datepicker-group{
+	width: 100%;
+}
+.ui-datepicker.ui-datepicker-multi{
+	width:100%!important;
+}
+.ui-datepicker-multi .ui-datepicker-group{
+	width:100%;
+}
+.ui-datepicker-multi .ui-datepicker-group table{
+	width:100%;
+}
+.ui-widget-header {
+  background: #fff;
+  color: #666;
+  border-radius:0px;
+  border:1px solid #e2e2e2;
+  border-width: 1px 0px 0px 0px;
+  font-weight: normal;
+}
+
+.ui-widget-content{
+	background: #fff;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  border: 0;
+  background:  #fff;
+  color: #000;
+  font-weight: normal;
+}
+.ui-datepicker table{
+	font-size: 1.6rem;
+}
+.ui-datepicker th{
+	font-weight: normal;
+	padding:0;
+	color: #959595;
+  	border-top:1px solid #dedede;
+  	border-bottom:1px solid #dedede;
+}
+.ui-datepicker td{
+background: #fff;
+text-align: center;
+vertical-align: top;
+}
+.ui-datepicker td .full{
+	font-size: 12px;
+	color:#f06b3e;
+	
+}
+
+.ui-datepicker .ui-datepicker-title{
+	text-align: left;
+	margin-left: 10px;
+}
+.ui-datepicker-title:before{
+	display: inline-block;
+	content:'';
+	width:5px;
+	height: 20px;
+	background: @corange;
+	margin-right: 5px;
+	vertical-align: middle;
+	line-height: 20px;
+}
+
+.ui-datepicker-multi .ui-datepicker-group{
+	float: none;
+}
+.ui-datepicker.ui-datepicker-multi{
+	width: 100%;
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+  text-align: center;
+}
+.ui-widget-header .ui-icon {
+  background: none;
+}
+
+#datepicker {
+  opacity: 0;
+  // display: none;
+}
+.ui-datepicker .ui-datepicker-title .ui-datepicker-year{
+	font-weight: normal;
+}
+.ui-datepicker .ui-state-disabled{	
+	opacity: 1;
+
+}
+.ui-datepicker .ui-datepicker-prev,.ui-datepicker .ui-datepicker-next{
+	display: none;
+}
+
+.ui-state-disabled .ui-state-default{
+	color:#b8b8b8;	
+}

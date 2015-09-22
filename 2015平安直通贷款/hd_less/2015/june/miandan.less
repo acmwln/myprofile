@@ -1,0 +1,26 @@
+@import "../../common/reset";
+@import "../../common/common";
+@import "../../common/w640";
+
+.ruleWrap {background-color:#FB675C;}
+.proWrap {background-color:#E62343;&:extend(.oh);}
+.titRule {&:extend(.db,.tc);background-color:#FA483A;line-height:80px;}
+#ruleSwitch:checked~p{display:block;}
+#ruleSwitch:checked+label .toIcon{transform: rotate(90deg);}
+.toIcon {transition: transform .3s linear;}
+.list-pro {
+    &:extend(.mau);width:620px;
+    li {&:extend(.pr);margin-bottom:20px;}
+}
+.pLeft,.pRight {&:extend(.pa);top:0;height:100%;}
+.pLeft {width:450px;left:0;}
+.pRight {width:170px;right:0;}
+.detailCont {color:#e62343;&:extend(.bgWhite,.pr);border-radius:12px;width:560px;}
+.tit-detail {font-size:3.6rem;&:extend(.tc);padding:30px 0 15px;border-bottom:1px solid #e62343;}
+.btn-close {&:extend(.pa);right:10px;top:10px;}
+.art-detail {&:extend(.oh);margin:30px 0 40px;}
+.list-detail {
+    margin:0 60px 30px;
+    li {&:extend(.tl);font-size:2.6rem;list-style: disc;}
+}
+.btn-view {&:extend(.dib,.tc,.cwhite);background-color:#e62343;width:280px;line-height:64px;font-size:3rem;border-radius:8px;}

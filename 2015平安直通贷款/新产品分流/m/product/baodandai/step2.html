@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>预约门店</title>
+	
+  	<meta name="format-detection" content="telephone=no" />
+  	<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  	<meta HTTP-EQUIV="Expires" CONTENT="-1">
+  	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  	<meta name="apple-mobile-web-app-capable" content="yes"> 
+  	<meta name="screen-orientation" content="portrait">
+  	<meta name="x5-orientation" content="portrait">
+  	<meta name="x5-fullscreen" content="true">
+  	<meta name="360-fullscreen" content="true">
+  	<meta name="renderer" content="webkit">
+
+    <link rel="stylesheet" href="../../common/css/zt-ui.css" />
+    <link rel="stylesheet" href="../../common/css/font.css" />
+    <link rel="stylesheet" href="../../common/css/step2.css" />
+    <link rel="stylesheet" href="../../common/css/city.css" />
+    <link rel="stylesheet" href="../../common/css/date.css" />
+</head>
+<body>
+	<!-- 立即预约浮层 -->
+	<div class="mask" id="popup_order">
+		
+	
+		<div id="popup_order_inner">
+			<ul>
+				<li>
+					<h1>提交预审信息</h1>
+					<div class="content-inner">
+						<p><i>●</i>您的预审信息已提交并审核通过！</p>
+						
+					</div>
+					
+				</li>
+				<li class="active">
+					<h1>门店办理及签约</h1>
+					<div class="content-inner">
+						<p><i>●</i>您可自行预约办理门店，或坐等贷款专员电话联系您！ </p>
+						<div>
+							<div class="btn mr20" onclick="document.getElementById('popup_order').style.display='none'"><i></i><span>立即预约</span></div>
+							<div class="btn" ><i></i><span>等待电话联系</span></div>
+						</div>
+						
+					</div>
+					
+				</li>
+				<li>
+					<h1>放款成功</h1>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="processbar f0"><img src="../../common/images/process-bar2.jpg" alt=""></div>
+	<ul class="navBar">
+		<li>信息预审</li>
+		<li class='currentItem'>门店预约</li>
+		<li>上门办理</li>
+	</ul>
+	<div class="topContent">
+		<i class="icon-info fl"></i>
+		<p class="ml2">门店需要您提供当地的居住证明，请预约您的常住城市进行办理。</p>
+		<i class="icon-info fl cgreen"></i>
+		<p class="ml2 f16">恭喜您成功领取授信额度<span class="cred">80000</span>元</p>
+	</div>
+	<section class="main">
+
+		<div class="item-wrap">
+			<div class="item-left">选择城市</div>
+			<div class="item-right">
+				<div class="select-outer box">
+					<i class="select-arrow"></i>   
+			    	<span class="sel-text placeholder inp " id="sel_orderCityText">请选择</span>
+			    	<select name="" id="orderCity"   value="">
+			    	  <option value="N">请选择</option>
+			    	  <option id="orderCity1" value="北京">北京</option>
+			    	  <option id="orderCity2" value="上海">上海</option>  
+			    	    
+			    	</select>           
+			   </div>
+			</div>			
+		</div>
+
+		<div class="item-wrap">
+			<div class="item-left">选择门店</div>
+			<div class="item-right cgray arrow arrowR ">
+				<p id="orderStore" class="inp text-overflow">请选择门店请选择门店请选择门店</p>
+				<i class="icon-location hide" id="btnMap"></i>
+
+
+
+			</div>
+			
+		</div>
+
+		<div class="item-wrap">
+			<div class="item-left">选择日期</div>
+			<div class="item-right cgray arrow arrowR">
+				<input type="text" id="datepicker" class="inp" style="width:0px;height:0px;opacity: 1;" />
+				<p id="orderCalender" class="inp">请选择日期</p>				
+			</div>			
+		</div>
+
+		<div class="item-wrap">
+			<div class="item-left">选择时间段</div>
+			<div class="item-right cgray arrow arrowR">
+				<p id="orderTime" class="inp">请选择时间段</p>
+			</div>			
+		</div>
+	</section>
+	<footer>
+		<div class="btn" id="btnNext">下一步</div>
+
+		
+	</footer>
+	<div class="tc" style="margin-top:-2.5rem;">
+		<a class="btn" href="../phoneOrder.html">还是等待电话联系</a>		
+	</div>
+
+	
+  	<!-- 门店浮层 -->
+  	<div id="popup_store" class="popup-right">
+	   <header>
+		 <span class="icon-close"></span>
+		 <h1>选择门店</h1>		   
+		</header>
+	    <ul class="ui-listview" id="storeList">
+	    	<li>北京蜀汉路营业部1北京蜀汉路营业部1北京蜀汉路营业部1</li>
+	    	<li >北京蜀汉路营业部1<i class="icon-thumbsup"></i></li>
+	    	<li>北京蜀汉路营业部1北京蜀汉路营业部1</li>
+	    </ul>
+	</div>
+	<!-- 预约时间浮层 -->
+	<div id="popup_time" class="popup-right">
+	   	<header>
+			<span class="icon-close"></span>
+			<h1>选择时间段</h1>		   
+		</header>
+	    <div id='timeList'>
+   
+		    <p class="list-divider">上午</p>
+		    <ul class="ui-listview">
+		      <li>9:00-10:00<span style="color:#f06b3e;font-size:1.2rem;">(推荐)</span></li>
+		      <li>10:00-11:00<span style="color:#f06b3e;font-size:1.2rem;">(推荐)</span></li>
+		      <li>11:00-12:00<span style="color:#f06b3e;font-size:1.2rem;">(推荐)</span></li>
+		    </ul>
+		    <p class="list-divider">下午</p>
+		    <ul class="ui-listview">
+		      <li>1:00-2:00</li>
+		      <li>2:00-3:00</li>
+		      <li>3:00-4:00</li>
+		    </ul>
+		</div>		
+	</div>
+
+	<script  src="../../common/js/jquery.min.js"></script>
+	<script  src="../../common/js/jquery-ui.min.js"></script>
+	<script  src="../../common/js/header.js"></script>
+	<script  src="../../common/js/selfCommon.js"></script>
+	<script  src="../../common/js/step2.js"></script>
+<!--数据统计-->
+<script>                                                                                                       
+	setTimeout('exesdcjs()',0);
+    function exesdcjs(){
+      var jDomain="www.pingan.com";
+      var js_path="/app_js/sdc/src/web.js";
+      var domain="http"+(window.location.protocol.indexOf('https:')==0?'s':'')+"://"+jDomain;
+      var SDC_js=document.createElement("script");
+      SDC_js.src=domain+js_path;
+      var headElem=document.getElementsByTagName("head")[0];
+      headElem.appendChild(SDC_js);
+     }
+</script>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KWWS7Z" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWWS7Z');
+</script>
+<!-- End Google Tag Manager -->
+<!--数据统计-->
+
+
+</body>
+
+</html>

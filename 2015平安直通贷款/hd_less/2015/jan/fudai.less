@@ -1,0 +1,74 @@
+@import "../../common/reset";
+@import "../../common/common";
+@import "../../common/w750";
+
+body{background-color:#367ADF;}
+.mt70 {margin-top:70px;}
+.mb20 {margin-bottom:20px;}
+.mb40 {margin-bottom:40px;}
+.mb65 {margin-bottom:65px;}
+.btnsWrap {&:extend(.pa,.tc);width:100%;top:1040px;left:0;}
+.bg {background:url("@{url}/bg.jpg") no-repeat #367ADF;background-size:cover;}
+.bgfd {background:url("@{url}/bg_fd.jpg") no-repeat #367ADF;background-size:cover;}
+.bgfd {background:url("@{url}/bg_fd2.jpg") no-repeat #367ADF;background-size:cover;}
+.txt_h,.txt_p,.txt_hgds,.jBottom,.backWrap,.backWrap2 {&:extend(.pa,.tc);left:0;width:100%;}
+.txt_h {top:520px;}
+.txt_p {top:470px;}
+.txt_hgds {top:450px;}
+.backWrap {top:700px;}
+.jBottom {top:900px;}
+.backWrap2 {top:1060px;}
+.progress {
+    &:extend(.pr,.mau);width:570px;
+    &::before{&:extend(.pa,.bgWhite);content:'\200B';left:10px;top:10px;height:5px;width:540px;border:3px solid #000;z-index:-1;}
+    span {&:extend(.fl,.tc,.f24);color:#1B64D3;font-weight:700;background-color:#fff;height:30px;width:30px;border:3px solid #000;line-height:30px;.radius(50%);margin-left:97px;}
+    span:first-child {margin-left:0;}
+}
+.progress0 {span:nth-child(1){background-color:#DD022D;&:extend(.cwhite);}}
+.progress1 {span:nth-child(1),span:nth-child(2){background-color:#DD022D;&:extend(.cwhite);}}
+.progress2 {span:nth-child(1),span:nth-child(2),span:nth-child(3){background-color:#DD022D;&:extend(.cwhite);}}
+.progress3 {span:nth-child(1),span:nth-child(2),span:nth-child(3),span:nth-child(4){background-color:#DD022D;&:extend(.cwhite);}}
+.progress4 {span{background-color:#DD022D;color:#fff !important;}}
+.txt-loop {
+    margin:0 25px 10px;
+    &::before{&:extend(.fl);content:'\200B';height:30px;width:46px;background:url(../images/icon_lb.png) no-repeat;}
+}
+.loopWrap {&:extend(.oh);}
+.list-loop {
+    &:extend(.f0,.tl);white-space:nowrap;overflow:hidden;
+    li {&:extend(.dib,.vt,.f24,.cwhite);}
+    p {margin-right:20px;padding-right:20px;}
+}
+.contBtnWrap {&:extend(.pa);left:0;top:0;width:100%;}
+.contBtnWrap2 {top:295px;}
+.list-j {
+    width:610px;margin:0 auto;height:568px;overflow-x:hidden;overflow-y:auto;
+    &::-webkit-scrollbar
+    {
+      width:4px;
+      background-color: rgba(0,0,0,.1);
+    }
+
+    &::-webkit-scrollbar-thumb
+    {      
+      background-color: rgba(0,0,0,.2);
+    }
+    li {&:extend(.mb20,.oh);background:url("@{url}/icon_j.png") no-repeat;height:182px;}
+    .li1 {.bgp(0,1px);}
+    .li2 {.bgp(0,-200px);}
+    .li3 {.bgp(0,-410px);}
+}
+.jiangInfo {&:extend(.bgWhite,.fr);color:#7b7b7b;font-size:2.8rem;line-height:1.4;width:410px;border-radius: 16px;height:140px;margin-top:30px;box-sizing: border-box;padding:10px 20px;}
+.txt-piao {&:extend(.cwhite);font-size:4.2rem;width:385px;margin:0 auto;}
+.txt-zhu {&:extend(.cwhite);font-size:4.2rem;width:430px;margin:0 auto;}
+.list-form {
+    width:485px;margin:0 auto;
+    li {
+        &:extend(.oh);margin-bottom:30px;
+        span {&:extend(.cwhite,.dib,.vm,.tr);width:150px;font-size:3.2rem;}
+    }
+}
+.inp-form {&:extend(.bgWhite,.vm,.noBorder);width:300px;height:70px;padding:0 10px;font-size:3.2rem;}
+.btnDetailWrap {width:540px;margin:20px auto 80px;&:extend(.tr);}
+.btn-detail {font-size:3rem;color:#fc3c54;text-decoration:underline;}
+.urlRule {text-decoration:underline;&:extend(.cwhite,.vm);font-weight:700;font-size:2.4rem;}

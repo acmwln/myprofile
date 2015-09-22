@@ -1,0 +1,58 @@
+@import "../../common/reset";
+@import "../../common/common";
+@import "../../common/w750";
+
+.f22 {font-size:2.2rem;}
+.f28 {font-size:2.8rem;}
+.mb20 {margin-bottom:20px;}
+.mb40 {margin-bottom:40px;}
+.mt40 {margin-top:40px;}
+.pw100 {width:100%;}
+
+body {background-color:#FFEF99;}
+.contWrap {&:extend(.pa,.oh);left:0;top:0;width:100%;}
+.hbWrap {&:extend(.mau,.cwhite,.f28,.pr);margin-top:450px;width:520px;}
+.headerWrap {&:extend(.f0);img{border:3px solid #bb1717;border-radius: 4px;}}
+.progressWrap {&:extend(.tc);}
+.progress {&:extend(.dib,.oh,.pr);border:2px solid #fff;height:16px;width:406px;border-radius:8px;box-sizing: border-box;}
+.progressBar {&:extend(.pa,.bgWhite);top:0;left:0;height:100%;}
+.btnsWrap {height:320px;}
+.btns {&:extend(.bgWhite,.tc,.dib);font-size:3.2rem;color:#ff2d2d;line-height:70px;width:390px;border-radius: 4px;}
+.btn-rule {&:extend(.pa,.f0);top:280px;left:495px;width:122px;height:280px;}
+.list-help {
+    li {&:extend(.tc,.cwhite,.f28);line-height:58px;background-color:#F04C3F;}
+    li:nth-child(2n) {background-color:#FF6955;}
+}
+.errInfo {&:extend(.f24);color:#ff5656;background:url("@{url}/icon_err.png") 0 3px no-repeat;line-height:26px;padding-left:32px;}
+.w248 {width:248px;&:extend(.fl);}
+.list-form {
+    width:485px;margin:20px auto;
+    li {margin-bottom:30px;&:extend(.tl);}
+    li::after{&:extend(.after);}
+}
+.inp-form {
+    background-color:#A5A5A5;height:80px;&:extend(.f28,.tc,.noBorder,.vm);outline:none;
+    &::placeholder {color:#575757;}
+}
+.btn-submit {font-size:3.4rem;&:extend(.cwhite,.tc,.dib);width:390px;line-height:80px;background-color:#FF2D2E;border-radius:4px;}
+.yzmWrap {&:extend(.fr,.cwhite,.tc);background-color:#FF2D2E;border-radius:4px;font-size:3.2rem;width:214px;line-height:80px;}
+.gxTxt {font-size:4.8rem;color:#fffe86;}
+.ruleCont {
+    height:700px;overflow-x:hidden;overflow-y:auto;border:3px solid #fff;width:560px;font-size:3rem;&:extend(.cwhite,.tl);padding:40px;
+    &::-webkit-scrollbar
+    {
+      width:4px;
+      background-color: rgba(0,0,0,.1);
+    }
+
+    &::-webkit-scrollbar-thumb
+    {      
+      background-color: rgba(0,0,0,.2);
+    }
+}
+#formWrap {
+    .share-popup {
+        &:extend(.pa,.noBg);
+        &::before{content:'\200B';position:fixed;top:0;left:0;height:100%;width:100%;background-color:rgba(0,0,0,0.7);z-index:-1;}
+    }
+}

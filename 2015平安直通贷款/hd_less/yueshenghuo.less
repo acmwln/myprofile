@@ -1,0 +1,24 @@
+@import "common/base";
+
+.tColor {color:#5b5b5b;}
+.f16 {font-size:16px*.75;}
+.ml10 {margin-left:10px;}
+
+body{background-color:#F0F0F0;}
+.pColor {color:#fefefe;}
+.header {color:#fff;line-height:52px;height:52px;text-align:center;.grad(#FF8A00,#DF4A00);font-size:36px*.75;}
+.cont {padding:20px*.75;}
+.list-pro {
+    li {margin-bottom:20px*.75;background-color:#fff;overflow:hidden;}
+}
+.tit-pro {font-size:20px*.75;margin-left:16px*.75;width:65%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.date-pro {&:extend(.f16);margin-right:16px*.75px;width:25%;text-align:right;}
+.proDetail {&:extend(.tColor);background-color:#fff;&:extend(.f16);padding:0 16px*.75;width:94%;height:50px*.7;line-height:50px*.7;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.imgWrap {
+    min-height:60px*.7;
+    .pColor {background-color:rgba(0,0,0,.6);position:absolute;bottom:0;width:100%;height:60px*.7;-webkit-box-sizing:content-box;box-sizing:content-box;line-height:60px*.7;}
+}
+.header-pro {font-size:20px*.75;p {margin:5px 0 10px;}}
+.proName {font-size:24px*.75;}
+.author {color:#28a1f6;text-decoration:none;}
+.art-cont {&:extend(.tColor);line-height:1.8;font-size:18px*.75;p{text-indent:2em;}}

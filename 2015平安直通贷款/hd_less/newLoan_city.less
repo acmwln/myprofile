@@ -1,0 +1,210 @@
+//放款通知
+@border:1px solid #e2e2e2;
+@corange:#ec5724;
+.titleBox{
+	// position: fixed;
+	// top: 0;
+	// left: 0;
+	height: 102px;
+	width: 100%;
+	// display: none;
+}
+// #citylist{margin-top: 102px;}
+
+.search-input-box {
+position: relative;
+padding: 10px;
+z-index: 999;
+// background: #dfeaf1;
+background: #fff;
+	.btn_cancle{
+		display: none;
+		float: right;
+		width: 50px;
+		// background: #eee;
+		text-align: center;
+		// color: #099fde;
+		color: #f06b3e;
+		font-size: 16px;
+		height: 32px;
+		line-height: 32px;
+		z-index: 999;
+	}
+	.ui-listview-filter{
+		height: 32px;
+		background: #ffffff;
+		border-radius: 4px;
+		position: relative;
+		
+
+	}
+	
+}
+
+
+.ui-icon-searchfield:before, .ui-icon-searchfield:after {
+position: absolute;
+content: "";
+z-index: 9;
+}
+.ui-icon-searchfield:before {
+	left: 6px;
+	top: 8px;
+	width: 12px;
+	height: 12px;
+	border: 1px solid #bcbcbc;
+	border-radius: 50%;
+}
+.ui-icon-searchfield:after {
+left: 20px;
+top: 18px;
+width: 1px;
+height: 8px;
+background: #bcbcbc;
+-webkit-transform: rotate(-45deg);
+-moz-transform: rotate(-45deg);
+-ms-transform: rotate(-45deg);
+-o-transform: rotate(-45deg);
+transform: rotate(-45deg);
+}
+
+.search-input-box span {
+	position: relative;
+display: block;
+height: 100%;
+border-radius: 4px;
+}
+.searchinput {
+width: 100%;
+height: 32px;
+line-height: 32px;
+line-height: normal;
+// background: #ffffff;
+background: #f5f5f5;
+border: none;
+font-size: 16px;
+padding-left: 30px;
+box-sizing: border-box;
+border-radius: 4px;
+box-shadow: inset 0px 0px 3px #c9c9c9;
+}
+.list-divider{
+	color: #666;
+	background-color: #efefef;
+	border-bottom: #bcbcbc 1px solid;
+	line-height: 20px;
+	padding: 5px 10px;
+	display: block;
+
+}
+.ui-listview li {
+border-bottom: #bcbcbc 1px solid;
+font-size: 15px;
+line-height: 20px;
+padding: 10px 30px 10px 10px;
+word-break: break-all;
+color: #000;
+}
+.ui-listview li.selected{
+	background: #00f;
+}
+
+
+.ui-listview li.list-search {
+border-bottom: 1px solid #E8EBEF;
+background: #FFFFFF;
+}
+
+.search_result_tip{
+	text-align: center;
+	font-size: 15px;
+	padding: 5px 0;
+}
+
+.flight-ctltsfixed {
+	position: fixed;
+	top: 0;
+	// right: 0;
+	right: 15px;
+	z-index: 99;
+	width: 26px;
+	height: 100%;
+	// opacity: 0;
+	display: none;
+	height:  348px;
+}
+.flight-ctltsfixed-pd {
+	margin-top: 132px;
+	height: 348px;
+}
+.flight-ctlts {
+	// height: 100%;
+	border-radius: 5px;
+
+}
+.flight-ctlts li {
+	font-size: 12px;
+	text-align: center;
+	color: #099fde;
+	height: 3.5714%;
+}.flight-ctlts li.selected{
+	color: #f00;
+}
+.flight-ctlts li:nth-of-type(1),
+.flight-ctlts li:nth-of-type(2),
+.flight-ctlts li:nth-of-type(3) {
+	font-size: 12px;
+}
+
+// #popup_city{
+// 	position: absolute;
+// 	top: 0;
+// 	left: 100%;
+// 	width: 100%;
+// 	transition:left .3s ease;
+// 	background: #f5f5f5;
+// 	height: 100%;
+// 	z-index: 99;
+// 	display: none;
+// 	// overflow-y: auto;
+// }
+
+#popup_city{
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	transition:left .3s ease;
+	background: #f5f5f5;
+	min-height: 100%;
+	z-index: 99;
+	display: none;
+	// overflow-y: auto;
+}
+// .icon_city{display:block;width:28px; height:28px; background-image: url(../images/icon.gif);transform:scale(.7)}
+.icon_city_dw{position:absolute;top:-5px;right:5px;display:block;width:28px; height:28px; background-image: url(../images/icon.gif);transform:scale(.7);background-position: -30px -24px}
+.icon_city_loading{position:absolute;top:0px;right:5px;display:block;width:20px; height:20px;background: url(../images/icon_city_loading.gif) left top no-repeat;transfrom:scale(1);background-size: 20px;}
+
+// .loadingMask{
+// 	height: 100%;
+// 	width: 100%;
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	background: rgba(0,0,0,.7);
+// 	z-index: 9999;
+// 	.icon_loading {
+// 		display: block;
+// 		margin-top: 50%;
+// 		text-align: center;
+// 		margin: 50% auto;
+// 		/* margin-left: 50%; */
+// 		padding-left: -50px;
+// 		padding-left: 20px;
+// 		/* text-align: center; */
+// 		background: url(../images/icon_city_loading.gif) left top no-repeat;
+// 		color: #fff;
+// 		width: 120px;
+
+// 	}
+// }

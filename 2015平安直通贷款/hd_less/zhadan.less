@@ -1,0 +1,142 @@
+@import "common/base";
+@import "common/common";
+
+@red: #FE3C3C;
+.mt15 {margin-top:15px;}
+.mt100 {margin-top:80px;}
+.f24 {font-size:2.4rem;}
+.red {color:@red;}
+.mt-1 {margin-top:-1px;}
+body {background:url("@{url}/bgbody.jpg") center top no-repeat #D6EEDC;background-size: cover;}
+.testBody {background-image:url("@{url}/bg_test.jpg");}
+.bgWhite {background:#fff;}
+.hasBg {position:fixed;height:100%;width:100%;left:0;top:0;z-index:0;background:url("@{url}/bg2.png") center no-repeat;background-size:100% 50%;}
+
+.footer {background-color:#5C5C5C;position:fixed;bottom:0;left:0;bottom:0;width:100%;height:46px;line-height:46px;&:extend(.f18);z-index:9;}
+.flex1 {&:extend(.fl,.tc);border-right:1px solid #959595;width:46px;}
+.flex2 {&:extend(.oh,.tc,.f16);color:#a6a6a6;margin-right:86px;.red {margin:0 3px;}}
+.flex3 {&:extend(.tc,.cwhite,.pa,.f16);width:80px;background-color:@red;top:0;right:0;}
+
+.icon-gang,.icon-gang::before,.icon-gang::after {&:extend(.dib);width:22px;height:4px;background-color:#fff;}
+.icon-gang {&:extend(.pr);top:-2px;}
+.icon-gang::before,.icon-gang::after {content:'\200B';&:extend(.pa);left:0;}
+.icon-gang::before {top:-10px;}
+.icon-gang::after {top:10px;}
+
+.icon-jia,.icon-jia::after {&:extend(.dib);background-color:#fff;}
+.icon-jia {height:18px;width:3px;&:extend(.pr,.vm);margin-left:13px;.overLayer & {-webkit-transform: rotate(45deg);&:extend(.pa);right:30px;top:10px;background-color:@red;}}
+.icon-jia:after {content:'\200B';width:18px;height:3px;&:extend(.pa);top:7px;left:-7px;.overLayer & {background-color:@red;}}
+.btnCloseWrap {&:extend(.pa);right:15px;top:0;height:60px;width:100%;.icon-jia{right:15px;}}
+
+.overLayer {
+    display:none;position:fixed;bottom:65px;left:0;width:100%;z-index:8;
+}
+.overInner {
+    background-color:#fff;margin:0 15px;padding:15px;.shadow(0 1px 5px rgba(0,0,0,.5));
+    &:after{&:extend(.pa);content:'\200B';background-color:#fff;height:20px;width:20px;-webkit-transform: rotate(45deg);bottom:-10px;}
+}
+
+.overLayerDing {.overInner:after{left:50%;margin-left:48px;}}
+.overLayerJiang {.overInner:after{right:45px;}}
+.overLayerActive {.overInner:after{left:15px;bottom:-14px;-webkit-transform: rotate(0);border:20px solid transparent;height:0;width:0;border-left:20px solid #fff;background-color:transparent;}}
+
+.tit-overlayer {&:extend(.red,.mb5);font-size:2rem;}
+.txt-info {line-height:1.2;}
+.list-data {
+    li {
+        border-bottom:1px solid @red;height:28px;&:extend(.pr,.mt15);
+        &::before,&::after {content:'\200B';&:extend(.pa);height:5px;bottom:0;border-left:1px solid @red;}
+        &::before {left:0;}
+        &::after {right:0;}
+    }
+}
+
+.inp-data {&:extend(.noBg,.noBorder,.f16,.ml5);height:24px;&:focus{outline:none;}}
+.pw96 {width:96%;}
+.pw60 {width:60%;}
+.btn-submit {line-height:40px;height:40px;&:extend(.tc,.cwhite,.f16);background-color:@red;}
+
+.listDataWrap {width:80%;margin:0 auto 20px;}
+.listJiangWrap {
+    height:255px;overflow-x:hidden;overflow-y:auto;
+}
+.list-jiang {
+    &:extend(.mb5);
+    dt {background-color:#ECECEC;&:extend(.f14,.plr10);height:36px;line-height:36px;}
+    dd {border:3px solid #ECECEC;&:extend(.p10);}
+}
+.jInfo {&:extend(.pl10);}
+.perInfo {&:extend(.f12);line-height:1.2;color:#5d5d5d;}
+.noWrap {white-space:nowrap;}
+.activeExplain {
+    border:1px dashed #A0A0A0;padding:5px;color:#535353;&:extend(.f16);width:80%;margin:0 auto;
+}
+.btn-chouj {&:extend(.dib);background-color:#F05F29;width:140px;height:40px;line-height:40px;&:extend(.tc,.cwhite);.shadow(2px 2px 4px rgba(0,0,0,.6));.radius(8px);}
+.table-product {
+    th,td {border:1px solid #000;}
+    th {background-color:#F05A23;&:extend(.cwhite,.f14);height:40px;letter-spacing:-1px;}
+    td {&:extend(.tc,.f12);padding:3px 5px;line-height:1.4;}
+}
+.list-active {
+    &:extend(.f16);height:255px;overflow-x:hidden;overflow-y:auto;
+    dt {&:extend(.red);}
+    dd {&:extend(.mb5);}
+}
+.list-ajp {
+    li {border-bottom:1px solid #E3E3E3;&:extend(.mb10);img:first-child{margin-right:12px;}}
+}
+.jpleft {&:extend(.dib);width:120px;}
+.ti2 {text-indent:1.2em;}
+
+.over3Wrap {&:extend(.pa,.tl);bottom:60px; left:0;width:100%;img{width:100%;}}
+.danWrap {margin:20px auto;&:extend(.pr);z-index:3;}
+.danInner {&:extend(.pr);}
+.danShadow {&:extend(.pr);margin-top:-25px;z-index:1;}
+.chuiWrap {&:extend(.pa,.dib);top:-20px;left:50%;margin-left:65px;z-index:3;-webkit-transform-origin: 60% 60%;}
+.chuiShake {.animation(cshake .1s ease-in-out);-webkit-animation-fill-mode: forwards;}
+@-webkit-keyframes cshake {
+    0% {-webkit-transform: translate(0,0) rotate(0deg);}
+    50% {-webkit-transform: translate(-20px,20px) rotate(-15deg);}
+    100% {-webkit-transform: translate(0,0)  rotate(0deg);}
+}
+.dan {&:extend(.pr);z-index:2;-webkit-transform-origin: 50% 100%;}
+.danShake {.animation(dshake .6s .3s ease-in-out);-webkit-animation-fill-mode: forwards;}
+@-webkit-keyframes dshake {
+    0% {-webkit-transform: rotate(0);}
+    10% {-webkit-transform: rotate(-9deg);}
+    30% {-webkit-transform: rotate(9deg);}
+    60% {-webkit-transform: rotate(-9deg);}
+    90% {-webkit-transform: rotate(9deg);}
+    100% {-webkit-transform: rotate(0);}
+}
+.jiangpWrap {&:extend(.pa,.tc);top:0;left:0;width:100%;display:none;z-index:3;}
+.img4 {img {width:70%;}}
+
+.starWrap {&:extend(.pa);top:-13px;left:50%;margin-left:3px;z-index:3;opacity:0;}
+.starShow {.animation(star .3s .32s ease-out);-webkit-animation-fill-mode: forwards;}
+@-webkit-keyframes star {
+    0% {opacity:1;}
+    100% {opacity:0;}
+}
+
+.num {&:extend(.f18);}
+.numshan {.animation(shan 1s linear);}
+@-webkit-keyframes shan {
+    0% {opacity:1;-webkit-transform: scale(1);}
+    25% {opacity:.2;-webkit-transform: scale(2);}
+    50% {opacity:1;-webkit-transform: scale(1);}
+    75% {opacity:.2;-webkit-transform: scale(2);}
+    100% {opacity:1;-webkit-transform: scale(1);}
+}
+
+.getCode {background-color:@red;&:extend(.cwhite,.tc,.f14);margin-right:3px;height:24x;line-height:24px;width:80px;}
+.btn-gray {background-color:#797979;}
+
+.list-jIntro {
+    li {&:extend(.dib,.vt,.mt10);}
+    li:nth-child(2n+1) {&:extend(.mr5);}
+}
+@media (width:384px) {
+    .flex2 {margin-right:90px;}
+    .flex3 {width:90px;}
+}

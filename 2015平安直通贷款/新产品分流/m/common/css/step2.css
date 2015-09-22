@@ -1,0 +1,87 @@
+.titleBox{margin-bottom: 1rem;}
+.list-content li {border-bottom: 1px solid #e2e2e2;font-size: 1.6rem;color: #585858;padding: 1rem 0;padding-left: 1rem;background: #fff;
+}
+.list-divider{font-size: 1.4rem;}
+#orderStore{
+	margin-right:4.5rem;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;
+}
+#btnMap{
+	position: absolute;top: 0;right: 2.5rem;color: #ff6600;font-size: 2rem;height: 4rem;line-height: 4rem;width: 2rem;
+}
+#popup_order{display: block;}
+#popup_order_inner{
+	width: 90%;box-sizing:border-box;z-index: 11;
+	position: absolute;top: 2rem;left:50%;margin-left: -45%;
+	background: #fff;padding: 3rem 2rem;
+	box-shadow: 0 0 9px rgba(0,0,0,.3);
+	border-top:1rem solid #ffe0c5;border-radius: 5px;
+
+}
+#popup_order_inner .content-inner{
+	padding: 1rem .5rem;background: #f5f5f5;border-radius: 5px;margin-top: 1rem;overflow: hidden;
+}
+#popup_order_inner .active .content-inner{
+	border:1px solid #cfcfcf;
+}
+#popup_order_inner p i{
+	padding-right: .5rem;
+
+}
+#popup_order_inner .active p i{
+	color: #ea5404;
+}
+
+
+#popup_order_inner li{
+	position: relative;
+	color:#939393;font-size: 1.2rem;padding-bottom: 3rem;
+	border-left: .1rem solid #a3a3a3;padding-left: 1rem;
+}
+
+#popup_order_inner li:first-child{border-color:#fac08f;}
+#popup_order_inner li:last-child{padding-bottom: 0;border: none;}
+#popup_order_inner li h1{font-size: 1.6rem;line-height: 1;padding-bottom:.5rem;}
+#popup_order_inner li.active {color:#4a4a4a;}
+#popup_order_inner li.active:after{position:absolute;top:-15%;left:-0.05rem;display:block;content: '';height: 8rem;width: .1rem;background: #ea5404;}
+#popup_order_inner li.active  h1{color:#575757;}
+#popup_order_inner .btn{
+	float: left;
+	background:#ffa14e;color: #fff;width: 49%;margin:2rem 0 0 0;text-align: center;box-sizing:border-box;
+}
+#popup_order_inner .btn span{margin-left: -.5rem;}
+
+#popup_order_inner .btn i{
+	display: inline-block;vertical-align: middle;
+	background: url(../images/step2_mask.png) center center no-repeat;
+	background-position: -31px -2px;width: 31px;height: 31px;transform:scale(.6);-webkit-transform:scale(.6);-moz-transform:scale(.6);-o-transform:scale(.6);
+}
+#popup_order_inner .btn.mr20{margin-right: 1%;}
+#popup_order_inner .btn.mr20 i{background-position: -2px -2px;width: 27px;}
+
+#popup_order_inner li:before{
+	z-index: 2;
+	display: block;content: "";background: url(../images/step2_mask.png) center center no-repeat;
+	position: absolute;top: 0;left: 0;width:32px; height:26px;
+	transform:translateX(-50%) translateY(-20%) scale(.6);-webkit-transform:translateX(-50%) translateY(-20%) scale(.6);-moz-transform:translateX(-50%) translateY(-20%) scale(.6);-ms-transform:translateX(-50%) translateY(-20%) scale(.6);-o-transform:translateX(-50%) translateY(-20%) scale(.6);
+}
+#popup_order_inner li:nth-child(1):before{ background-position: -2px -37px}
+#popup_order_inner li:nth-child(2):before{ background-position: -2px -65px}
+#popup_order_inner li:nth-child(3):before{ background-position: -2px -93px}
+
+@media screen and (min-width:640px) {
+	
+	#popup_order_inner li:before{
+	transform:translateX(-50%) translateY(0) scale(1);-webkit-transform:translateX(-50%) translateY(0) scale(1);-moz-transform:translateX(-50%) translateY(0) scale(1);-ms-transform:translateX(-50%) translateY(0) scale(1);-o-transform:translateX(-50%) translateY(0) scale(1);
+	}
+	#popup_order_inner .btn{
+		text-align: center;
+	}
+	#popup_order_inner .btn span{
+		margin-left: .5rem;
+	}
+	#popup_order_inner .btn i{
+		transform:scale(1);-webkit-transform:scale(1);-moz-transform:scale(1);-o-transform:scale(1);
+
+	}
+	
+}

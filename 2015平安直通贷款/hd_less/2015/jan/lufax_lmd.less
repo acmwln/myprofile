@@ -1,0 +1,30 @@
+@import "../../common/reset";
+@import "../../common/common";
+@import "../../common/w640";
+
+.mt30 {margin-top:30px;}
+.proWrap {}
+.list-naver {
+    display:box;display:-webkit-box;background:url("@{url}/pro.png") center top no-repeat;height:400px;
+    li {&:extend(.tc);flex:1;background:url("@{url}/icon_circle.png") center 23px no-repeat;}
+    li.cur {background:url("@{url}/icon_hand.png") 11px 6px no-repeat;}
+    li:nth-child(2).cur{.bgp(5px,6px);}
+    li:nth-child(3).cur{.bgp(-1px,6px);}
+}
+.yyTxt {font-size:3.2rem;color:#FF8711;font-weight:700;margin:10px 0 30px;&:extend(.tc);}
+
+.list-form {
+    width:510px;margin:0 auto;
+    li {&:extend(.oh);height:70px;margin-bottom:30px;}
+}
+.fLeft {&:extend(.tc,.fl,.cwhite);font-size:2.6rem;background-color:#8DA4C6;width:154px;line-height:68px;border:1px solid #8DA4C6;border-right:none;border-radius: 14px 0 0 14px;}
+.fCont {&:extend(.oh,.bgWhite);border:1px solid #EBEBEB;border-left:none;border-radius: 0 14px 14px 0;padding:0 10px;}
+.inp-form {&:extend(.noBorder);height:66px;width:100%;outline:none;font-size:2.6rem;}
+.btn-submit {&:extend(.tc,.dib,.cwhite);font-size:3rem;width:366px;line-height:70px;background-color:#FF8711;border-radius: 12px;}
+
+.bgColor {
+    background-color:#FFFBF1;
+    .fLeft {background-color:#EA5404;}
+    .btn-submit {width:100%;background-color:#EA5404;}
+    .list-form li:last-child {margin-top:50px;}
+}

@@ -1,0 +1,204 @@
+/* index.css*/
+.grad(@startColor: #555, @endColor: #333) {
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+	background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+	background-image: linear-gradient(to bottom, @startColor, @endColor); // Standard, IE10
+ }
+.m10{
+	margin:10px 0px;
+}
+
+.main .c-left { width:50%; float:left;border-right: 1px solid #e2e2e2;box-sizing:border-box; }
+.main .c-right { width:50%;float:right;box-sizing:border-box; }
+.main{
+		margin-bottom: 10px;
+}
+
+.main a:before{
+	content:'';
+	position: absolute;
+	background: url(../images/about_us.png) no-repeat;
+	background-size: auto 128px;
+	top:10px;
+	left:50%;
+	width:46px;
+	height: 46px;
+	margin-left: -23px;
+	
+
+}
+
+.main .target1:before {background-position: -115px -1px;}
+.main .target2:before {background-position: -1px -47px}
+.main .target3:before {background-position: -94px -47px}
+
+.main .target5:before {background-position: -161px -1px}
+.main .target6:before {background-position: -47px -47px}
+.main .target7:before {background-position: -140px -47px}
+
+
+
+.main .c-bottom { clear:both;}
+.main a {
+	height: 130px;
+	position: relative;
+	box-sizing: border-box;
+	width: 100%;
+	display:block; 
+	color:#000;
+	border-bottom: 1px solid #e2e2e2;
+}
+
+.main a h2{
+	font-size:15px;
+	padding-top: 60px;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+}
+.main a p{ 
+	font-size:12px;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+}
+
+.cont2 {
+	a{
+		position: relative;
+		display: block;
+		border: 1px solid #e2e2e2;
+		margin:10px;
+		padding: 10px;
+		.grad(@startColor:#fff , @endColor:#ededed);
+		background: url(../images/about_us_icon_car.png) 15px center no-repeat;
+		background-size:auto 33px;
+		padding-left:60px;
+	}
+	h2{
+		font-size: 15px;
+		color: #000;
+
+	}
+	p{
+		font-size: 12px;
+		color: #000;
+	}
+}
+.cont2 a:after{
+	position: absolute;
+	right: 10px;
+	top:50%;
+	margin-top: -7px;
+	display: block;
+	content: '';
+	width:15px;
+	height: 15px;
+	border:solid #e2e2e2;
+	border-width: 2px 2px 0 0;
+	transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+	-moz-transform:rotate(45deg);
+
+}
+.cont2 a.dai:after{
+	position: absolute;
+	right: 10px;
+	top:50%;
+	margin-top: -15px;
+	display: block;
+	content: '敬请期待';
+	color:#fff;
+	text-align: center;
+	width:90px;
+	height: 30px;
+	line-height: 30px;
+	background: #c5c5c5;
+	border-radius: 15px;
+	border:0;
+	transform:rotate(0deg);
+	-webkit-transform:rotate(0deg);
+	-o-transform:rotate(0deg);
+	-moz-transform:rotate(0deg);
+
+
+}
+.cont2 a.dai{
+	background: url(../images/about_us_icon_dai.png) 15px center no-repeat;
+	background-size:auto 33px;
+}
+
+
+
+.main .c-bottom { clear:both;}
+footer{
+	overflow: hidden;
+	background: #282828 url(../images/about_us_footer_bg3.png) right 10px no-repeat;
+	padding:15px;
+	color:#fff;
+	
+	.fl{
+		width:30%;
+		max-width: 153px;
+		
+		padding-right:15px;
+		text-align: center;
+		.btn{
+			border-radius: 15px;
+			background: #ff9500;
+			padding:5px 15px;
+			margin-top:10px;
+			display: inline-block;
+		}
+	}
+	.auto_r{
+		margin-left: 35%;
+		border-left: 1px solid #ff6b07;
+		padding-left: 5px;
+		dh{
+			font-size: 1.6rem;
+			font-weight: bold;
+			margin-bottom: 5px;
+			display: block;
+			span{
+				color:#ff6b07;
+				font-weight: normal;
+				display: block;
+				font-size: 1.2rem;
+				line-height: 12px;
+			}
+		}
+		dd{
+			-webkit-margin-start:20px;
+			word-wrap:break-word;
+			a{
+				color:#fff;
+			}
+			.btn{
+				border-radius: 15px;
+				background: #373737;
+				display: inline-block;
+				margin-bottom: 10px;
+				text-align: left;
+				padding: 5px;
+			}
+
+		}
+
+	}
+	.bg1{
+		background: url(../images/about_us_footer1.png) left center no-repeat;
+		padding-left: 25px;
+		color:#ff9500;
+	}
+	.bg2{
+		background: url(../images/about_us_footer2.png) left center no-repeat;
+		padding-left: 25px;
+		color:#ff9500;
+	}
+	
+
+}

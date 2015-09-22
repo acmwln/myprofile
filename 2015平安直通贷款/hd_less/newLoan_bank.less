@@ -1,0 +1,288 @@
+@border:1px solid #e2e2e2;
+@corange:#ec5724;
+
+#bank2{
+	section{
+		div:nth-child(1){overflow: hidden;}
+		// border-top:@border;
+		// box-sizing:border-box;
+		// padding-top: 5px;
+
+		.dr{
+			p{text-align: right;text-shadow:1px 1px 0px #333;}
+			#bankCardNum{padding-top: 10px;}
+
+		}
+		#cardType{padding-top: 5px;}
+	}
+	.title_divider{
+		font-size: 1.6rem;
+		padding: 5px;
+		padding-left: 15px;
+	}
+	.skWrap{	
+		background: #fff;
+		padding:25px 0;
+		// label{ padding-left:15px;}
+		.line{
+			position: relative;
+			margin-left:15px;
+			margin-right:15px;
+			input{
+				width: 70%;
+			}
+			#btn_sure{
+				padding:2px 5px;
+				position: absolute;
+				right: 5px;
+				bottom: 5px;
+				color: #fff;
+				background: @corange;
+
+			}
+		}
+	}
+	.checkInfo{
+		padding: 10px 0;
+	}
+	// .fl p,.dr p{color: #fff;padding-left: 5px;}
+	#bankName{
+		font-size: 1.6rem;
+	}
+	#bankName,#cardType{padding-left: 65px;}
+	.section1{
+		color:#fff;
+		// background: @corange;
+	    // background: -webkit-linear-gradient( #ff9500,#ff5e3a);
+	    // background: -o-linear-gradient(#ff9500,#ff5e3a);
+	    background: linear-gradient(#f06b3e,#ff4000);
+		border:none;
+		padding:10px;
+		padding-bottom: 25px;
+		img.fl{/*width: 130px;*/width: 60px;height: 60px;border-radius: 5px;}
+	}
+	.link{
+		position: relative;
+		color:#525252;
+		text-decoration: none;
+		font-size: 12px;
+		
+		// padding-left:50px;
+		display: block;
+		width: 100px;
+		max-width: 150px;
+		margin: 0 auto;
+		line-height: 2rem;
+		
+
+	}
+	.c6{box-sizing:border-box;}
+	// .c6:nth-child(1){
+	// 	border-right: @border;
+	// }
+	
+	// .link:before{
+	// 	position: absolute;
+	// 	top:50%;
+	// 	margin-top:-13px;
+	// 	left: 0;
+	// 	content: '';
+	// 	background-image: url(../images/bg2_icon_bg.png);
+	// 	transform:scale(.7);
+
+	// }
+	// .c6:nth-child(1) .link:before{
+		
+	// 	width:53px; 
+	// 	height:29px; 
+	// 	background-position: -2px -2px;
+	// }
+	// .c6:nth-child(2) .link:before{
+		
+	// 	width:52px; 
+	// 	height:28px; 
+	// 	background-position: -2px -33px;
+	// }
+
+
+
+	.p5{padding:5px 15px;}
+	a{text-decoration: underline;color:@corange;}
+	.btn{margin-bottom: 5px;margin-top: 20px;}
+	#textContent {
+		line-height: 2rem;
+	}
+	#textContent a{
+		background: #72a641 url(../images/icon_phone.png) 5px center no-repeat;
+		padding: 2px 5px;
+		margin: 0;
+		border-radius: 5px;
+		padding-left: 25px;
+		color: #fff;
+		text-decoration: none;
+		margin: 0 5px;
+
+	}
+
+	
+
+}
+#bank1{
+	#overflow{
+		width: 100%;
+		height: 100%;
+		overflow-x: hidden;
+		// overflow-y: hidden;
+		position: relative;
+	}
+
+	
+	#popup_bank{
+		position: absolute;
+		top: 0;
+		left: 100%;
+		width: 100%;
+		min-height: 100%;
+		// overflow: hidden;
+		background: #e2e2e2;
+		transition:left .3s ease;
+		display: none;
+		z-index: 99;
+
+		// ul{margin: 10px;/*overflow-y: auto;*/}
+		li{
+			position: relative;
+			padding:10px;
+			// .radius(5px);
+			// border-radius: 5px;
+			overflow: hidden;
+
+			border-bottom: @border;
+			font-size: 1.5rem;
+			background: #fff;
+			img{width: 40px;height: 40px;float: left;border-radius: 5px;}
+			.bankInfo{
+				margin-left: 45px;
+				color: #525252;
+				h2{font-size: 1.6rem;line-height: 20px;}
+			}
+			input[type="radio"]{position: absolute;top:0;left:0;opacity: 0;}
+		}
+
+	}
+	.suggest{
+		min-height: 100%;
+		background: #fff;
+	}
+		
+}
+
+.pa_error{
+	margin: 0 10px;
+	h2{
+		font-size: 1.6rem;
+		color:#525252;
+	}
+
+}
+
+.pa_error .error_con{
+	padding: 15px 0;
+	padding-left: 50px;
+	color:#707070;
+	position: relative;
+}
+.pa_error .error_con:before{
+	position: absolute;
+	top: 15px;
+	left: 0px;
+	display:  block;
+	content:'';
+	width: 42px;
+	height: 35px;
+	background:url(../images/icon_warning.png) left top no-repeat;
+	background-size: 42px 35px;
+
+	// transform:scale(.7);
+}
+.btnGroup{
+	margin: 15px auto;
+	width: 90%;
+
+	.btn{
+		height: 30px;
+		line-height: 30px;
+
+	}
+	.btn:last-child{
+		float: right;
+
+	}
+
+		
+
+}
+.moneyBox{
+	width: 90px;
+	min-height: 30px;
+	margin: 0 auto;
+	position: relative;
+	.applyMmoney{
+		width: 70px;
+		min-width: 65px;
+		position: absolute;
+		left: 10px;	
+		top: 5px;
+		border: none;
+		text-align: center;
+		background: #fff;
+
+	}
+}
+
+.number_box{
+	position: absolute;
+	top: 5px;
+	width: 16px;
+	height: 16px;
+	border:1px solid #ec5724;
+	// .arrow_up,.arrow_down{
+	// 	display: block;
+	// 	width: 6px;
+	// 	height: 6px;
+	// 	border:1px solid #8b8b8b;
+	// 	border-width: 1px 1px 0px 0px;
+	// 	margin: 0 auto;
+		
+
+	// }
+	
+
+}
+
+.number_up:before, .number_box:after{
+	content: "";
+	width: 1px;
+	height: 12px;
+	margin: -6px 0 0 -0px;
+	position: absolute;
+	left: 50%;
+	top:50%;
+	background-color: #ec5724;
+}
+
+.number_box:after {
+	width: 12px;
+	height: 1px;
+	margin: -0px 0 0 -6px;
+}
+.number_up{right: 0px;}
+.number_down{left: 0px;}
+.number_box.disabled{border-color:#8b8b8b;}
+.number_up.disabled:before, .number_box.disabled:after{background-color:#8b8b8b;}
+@media screen and (min-width:480px){
+	.moneyBox{width: 120px;}
+	.moneyBox .applyMmoney{left: 25px;}
+	
+	
+}

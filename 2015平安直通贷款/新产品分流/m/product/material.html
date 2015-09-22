@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>申请材料样例</title>
+	
+  	<meta name="format-detection" content="telephone=no" />
+  	<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  	<meta HTTP-EQUIV="Expires" CONTENT="-1">
+  	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  	<meta name="apple-mobile-web-app-capable" content="yes"> 
+  	<meta name="screen-orientation" content="portrait">
+  	<meta name="x5-orientation" content="portrait">
+  	<meta name="x5-fullscreen" content="true">
+  	<meta name="360-fullscreen" content="true">
+  	<meta name="renderer" content="webkit">
+
+    <link rel="stylesheet" href="../common/css/zt-ui.css" />
+    <link rel="stylesheet" href="../common/css/font.css" />
+    <link rel="stylesheet" href="../common/css/material.css" />
+  
+</head>
+<body>
+	<header>
+     <span class="icon-close"></span>
+		<h1>申请材料介绍</h1>		   
+	</header>
+	<h4 class="title">面签时请务必携带以下材料<span class="cred f9">（点击查看样例）</span></h4>
+	<ul class="ui-listview" id="list"></ul>
+
+  	<!-- 材料浮层 -->
+  	<div id="popup_material" class="popup-right">
+	   	<header>
+			<span class="icon-close"></span>
+			<h1 id="headerTitle"></h1>		   
+		</header>
+		<section class="content">
+		   <p class="imgBox"><img id="img" src="http://placehold.it/350x150&text=Loading..."  alt=""></p>
+			
+		</section>
+		
+	</div>
+	
+
+	<script  src="../common/js/jquery.min.js"></script>
+	<script  src="../common/js/selfCommon.js"></script>
+	<script  src="../common/js/material.js"></script>
+
+
+<!--数据统计-->
+<script>                                                                                                       
+	setTimeout('exesdcjs()',0);
+    function exesdcjs(){
+      var jDomain="www.pingan.com";
+      var js_path="/app_js/sdc/src/web.js";
+      var domain="http"+(window.location.protocol.indexOf('https:')==0?'s':'')+"://"+jDomain;
+      var SDC_js=document.createElement("script");
+      SDC_js.src=domain+js_path;
+      var headElem=document.getElementsByTagName("head")[0];
+      headElem.appendChild(SDC_js);
+     }
+</script>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KWWS7Z" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWWS7Z');
+</script>
+<!-- End Google Tag Manager -->
+<!--数据统计-->
+
+
+</body>
+
+</html>

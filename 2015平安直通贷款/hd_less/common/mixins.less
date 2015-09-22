@@ -1,0 +1,19 @@
+.dib {display:inline-block;}
+/*.icon {&:extend(.dib);background:url("@{url}/i.png") no-repeat;}
+.btn {&:extend(.dib);background:url("@{url}/btn.png") no-repeat;}*/
+.after {content:"\200B";clear:both;display:block;height:0;}
+
+.bgp(@x,@y) {background-position:@x @y;}
+.radius(@radius) {-webkit-border-radius:@radius;border-radius:@radius;}
+.shadow(@shadow) {-webkit-box-shadow:@shadow;box-shadow:@shadow;}
+.transition(@tran){-webkit-transition:@tran;transition:@tran;}
+.animation(@anim){-webkit-animation: @anim;animation: @anim;}
+.grad(@startColor: #555, @endColor: #333) {
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+	background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+	background-image: linear-gradient(to bottom, @startColor, @endColor); // Standard, IE10
+ }
+.radial(@argu1, @argu2, @argu3, @argu4){
+	background-image:-webkit-radial-gradient(@argu1, @argu2, @argu3, @argu4);
+	background-image:radial-gradient(@argu1, @argu2, @argu3, @argu4);
+}

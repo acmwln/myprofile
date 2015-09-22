@@ -1,0 +1,61 @@
+@import "common/reset";
+@import "common/common";
+@import "common/liveapp";
+@import "common/w640";
+
+body {background-color:#E3D17F;background-size: cover;background-repeat: no-repeat;}
+.bgform {background-image:url("@{url}/bgform.jpg");}
+.bgresult {background-image:url("@{url}/bgresult.jpg");}
+.bggame {background-image:url("@{url}/bggame.jpg");}
+.mt100 {margin-top:100px;}
+.mb20 {margin-bottom:20px;}
+.mb30 {margin-bottom:30px;}
+.mb60 {margin-bottom:60px;}
+.mlr15 {margin:0 15px;}
+
+.f28 {font-size:2.8rem;}
+.list-form {
+    margin:20px 0;
+    li {&:extend(.tc);margin-bottom:20px;}
+}
+.inpWrap1,.inpWrap2 {height:78px;width:539px;&:extend(.mau,.tr);}
+.inpWrap1 {background:url("@{url}/bg_inp1.png") no-repeat;}
+.inpWrap2 {background:url("@{url}/bg_inp2.png") no-repeat;}
+.inp-form {&:extend(.noBorder,.noBg,.f28);width:320px;height:72px;outline:none;}
+.secondWrap {&:extend(.pr,.f0);width:468px;margin:120px auto 10px;}
+.overLoadNum {&:extend(.c0,.pa,.tc);font-size:4rem;top:70px;left:270px;width:88px;line-height:36px;font-family:arial;}
+.numSecond {&:extend(.pa,.tc);left:180px;top:-45px;width:158px;}
+
+.btnIndexWrap {&:extend(.pa,.tc);left:0;top:0;width:100%;}
+
+.gameWrap {&:extend(.pa,.tc,.oh);left:0;top:185px;height:545px;width:100%;}
+.btnbWrap {&:extend(.pa);top:860px;left:20px;right:20px;}
+.timeWrap {&:extend(.tc);margin-top:90px;}
+.personWrap {width:525px;&:extend(.mau);-webkit-transform-origin: 50% 100%;-webkit-transform:rotate(-5deg);.transition(-webkit-transform .3s linear);}
+.icon-num {&:extend(.dib,.vm,.f0);line-height:0;height:100px;width:42px;background:url("@{url}/num.png") no-repeat;}
+.num0 {.bgp(0,0);}
+.num1 {.bgp(0,-100px);}
+.num2 {.bgp(0,-200px);}
+.num3 {.bgp(0,-300px);}
+.num4 {.bgp(0,-400px);}
+.num5 {.bgp(0,-500px);}
+.num6 {.bgp(0,-600px);}
+.num7 {.bgp(0,-700px);}
+.num8 {.bgp(0,-800px);}
+.num9 {.bgp(0,-900px);}
+.icon-dian {&:extend(.dib);width:32px;height:38px;background:url("@{url}/dian.png") no-repeat;}
+.mbtnLeft,.mbtnRight {position:fixed;top:40%;}
+.mbtnLeft {-webkit-transform: translateY(-50%);left:40px;}
+.mbtnRight {-webkit-transform: translateY(-50%) rotate(180deg);right:40px;}
+.overWrap {&:extend(.pr);}
+.btnSureWrap {&:extend(.pa,.tc);bottom:30px;left:0;width:100%;}
+.countDownWrap {
+    position:fixed;left:50%;top:50%;margin:-210px 0 0 -56px;height:186px;width:113px;
+    img {&:extend(.pa);left:0;top:0;opacity:0;}
+}
+
+.opa {.animation(opa 1s linear);}
+@-webkit-keyframes opa {
+    0% {opacity:1;}
+    100% {opacity:0;}
+}

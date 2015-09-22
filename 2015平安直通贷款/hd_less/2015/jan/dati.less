@@ -1,0 +1,91 @@
+@import "../../common/reset";
+@import "../../common/common";
+@import "../../common/liveapp";
+@import "../../common/w750";
+
+body{background-color:#00224D;}
+.mt45 {margin-top:45px;}
+.mt160 {margin-top:160px;}
+.mt140 {margin-top:140px;}
+.mt60 {margin-top:60px;}
+.mb80 {margin-bottom:80px;}
+.mb20 {margin-bottom:20px;}
+
+.godati {&:extend(.pa);top:0;left:50%;margin-left:-77px;height:144px;width:154px;}
+.list-q {
+    li {&:extend(.cwhite,.oh);height:150px;line-height:150px;}
+    li:first-child {background-color:#003464;}
+    li:last-child {background-color:#00224D;}
+}
+.qLeft {&:extend(.fl,.tr);font-size:11rem;width:160px;i{font-size:7rem;}}
+.qRight {margin-left:200px;font-size:3.2rem;}
+
+.p-index,.m-page {.grad(#293350,#01042E);}
+.arrowWrap {&:extend(.tc);bottom:20px;left:0;width:100%;position:fixed;z-index:200;}
+.icon-arrow {animation:up 1s linear infinite;}
+@keyframes up {
+    0% {transform: translateY(0);}
+    25% {transform: translateY(15px);}
+    50% {transform: translateY(0);}
+    75% {transform: translateY(-15px);}
+    100% {transform: translateY(0);}
+}
+.list-lc {
+    width:600px;margin:80px auto;border-left:4px solid #fff;box-sizing: border-box;
+    li {&:extend(.pr);padding-left:40px;margin-bottom:50px;font-size:2.8rem;}
+    li::before {content:'\200B';&:extend(.pa);background-color:#fff;height:24px;width:24px;border-radius:50%;left:-14px;top:30px;}
+    li::after {&:extend(.cwhite,.pa);-webkit-transform:rotate(90deg);font-size:2.4rem;top:25px;left:-60px;}
+    li:first-child::before,li:last-child::before{background-color:#FFE744;height:30px;width:30px;left:-17px;top:-17px;}
+    li:last-child::before {top:28px;}
+    li:nth-child(2)::after {content:'2015';}
+    li:nth-child(3)::after {content:'2013';}
+    li:nth-child(4)::after {content:'2011';}
+    li:nth-child(5)::after {content:'2009';}
+    li:nth-child(6)::after {content:'2007';}
+    li:not(:last-child){opacity:0;animation: opa .6s ease-in forwards;}
+    li:nth-child(6) {animation-delay: 1s;}
+    li:nth-child(5) {animation-delay: 2s;}
+    li:nth-child(4) {animation-delay: 3s;}
+    li:nth-child(3) {animation-delay: 4s;}
+    li:nth-child(2) {animation-delay: 5s;}
+    li:nth-child(1) {animation-delay: 6s;}
+}
+.mt-30 {&:extend(.pr);top:-50px;}
+.mpt30 {&:extend(.pr);top:30px;}
+.tznum {line-height:84px;background-color:#03062F;color:#ff7b23;font-size:6rem;&:extend(.tc,.pr);top:-20px;}
+[class^='answerCont'] {
+    &:extend(.pr,.c0);background-color:#FFE744;padding:5px 20px;line-height:1.2;border-radius:8px;min-height:76px;display:box;display:-webkit-box;-webkit-box-align:center;
+    &::before{&:extend(.pa);content:'\200B';border:12px solid transparent;border-right:12px solid #FFE744;&:extend(.f0);line-height:0;top:30px;left:-23px;}
+    &>p{flex:1;&:extend(.dib);}
+}
+
+.btn-share {&:extend(.pa);height:105px;width:343px;top:966px;left:210px;}
+.liScale {animation: scal .3s ease-in-out;}
+@keyframes scal {
+    0% {transform: scale(1);opacity:1;}
+    80% {transform: scale(1.2);opacity:.2;}
+    100% {transform: scale(1);opacity:1;}
+}
+@keyframes opa {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+.viewWrap {&:extend(.pa,.cwhite,.tc);top:595px;left:0;width:100%;font-size:3.6rem;}
+.aColor {color:#ff3d3d;font-size:7rem;}
+.mt48 {margin-top:48px;}
+.btn-view {&:extend(.dib);width:380px;height:102px;}
+.shareCont {&:extend(.f0,.tc);}
+.bg {background:url("@{url}/bg.jpg") no-repeat #01081F;background-size: cover;}
+.formWrap {border-top:1px solid #fff;&:extend(.cwhite,.mt45);padding-top:20px;}
+.list-form {
+    width:540px;margin:0 auto;
+    li {&:extend(.mt60);padding-left:160px;height:68px;}
+    li:nth-child(1) {background:url("@{url}/icons.png") no-repeat;}
+    li:nth-child(2) {background:url("@{url}/icons.png") 0 -82px no-repeat;}
+}
+.inp-form {&:extend(.noBorder,.bgWhite,.tc,.c3);width:354px;height:62px;outline:none;font-size:2.8rem;}
+.icon-err {&:extend(.f24);background:url("@{url}/icon_err.png") no-repeat;color:#b1b6d0;line-height:32px;padding-left:40px;}
+.btn-submit {&:extend(.dib,.tc,.cwhite);background-color:#F34959;font-size:3.6rem;line-height:88px;width:420px;}
+.btnsWrap {&:extend(.pa,.tc);top:360px;left:0;width:100%;.btn-submit{width:340px;}}
+.tdurl {&:extend(.cwhite);font-size:2.4rem;text-decoration:underline;}

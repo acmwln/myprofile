@@ -1,0 +1,120 @@
+@import "common/base";
+@basecolor:#f4641c;
+img{
+	width:100%;
+	max-width: 100%;
+}
+ header{
+	width: 100%;
+	a{
+		display: block;
+		width:40%;
+
+	}
+}
+.bd_container{
+	width:84.375%;
+	margin:0 auto;
+	.title{
+		width:95.37037037037%;
+		margin:30px auto 40px auto;
+	}
+	// li{
+	// 	position: relative;
+	// }
+	.line input{
+		width: 100%;
+		height: 35px;
+		// padding: 5px;
+		line-height: normal;
+		border: 0;
+		padding-left: 10px;
+		box-sizing: border-box;
+		font-size: 1.6rem;
+		outline: none;
+		outline:medium;
+	}
+	.sendCode{
+		width:90px;
+		float: right;
+		text-align: center;
+		line-height: 36px;
+		height: 36px;	
+		background: @basecolor;
+		color: #fff; 
+		font-size: 1.6rem;
+	}
+	.sendCode.active{
+		background:#c8c8c8;
+	}
+	.bd_icon_lock {
+		// position: absolute;
+		// bottom: 0;
+		margin-right: 100px;		
+		background: url(../images/bd_icon_lock.png) no-repeat 10px center;
+		background-size: 13px auto;
+	}
+	.bd_icon_phone {
+		background: url(../images/bd_icon_phone.png) no-repeat 10px center;
+		margin-bottom: 30px;
+		background-size: 13px auto;
+	}
+	.sendTip{
+		color:#797979;
+		font-size: 1.2rem;
+		visibility: hidden;
+	}
+
+	
+	.bd_btn{
+		background: @basecolor;
+		margin:25px 0;
+		width:100%;
+		padding: 10px 0;
+		text-align: center;
+		color: #fff;
+		font-size: 1.8rem;
+		display: block;
+
+	}
+	.icon_smile_box{
+		width:23.4375%;
+		margin:25px auto;
+
+	}
+	.success_text{
+		color: @basecolor;
+		font-size: 1.8rem;
+		text-align: center;
+	}
+
+
+}
+
+.line{
+	
+	box-sizing:border-box;
+	position:relative;
+	padding-left:25px;
+	border-bottom:1px solid @basecolor;
+}
+.line:before{
+	position:absolute;
+	background-color:#fff;
+	content:'';
+	height:10px;
+	border-left:1px solid @basecolor;
+	left:0;
+	bottom:0
+}
+.line:after{
+	position:absolute;
+	background-color:#fff;
+	content:'';
+	height:10px;
+	border-right:1px solid @basecolor;
+	right:0;
+	bottom:0
+}
+
+

@@ -1,0 +1,139 @@
+#ui-datepicker-div{
+	height: 100%;
+	padding-bottom: 50px;
+}
+.ui-datepicker {
+  width:100%;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  left:0!important;
+}
+.ui-widget{
+	font-family:'微软雅黑';
+}
+.ui-datepicker.ui-datepicker-multi{
+	width:100%!important;
+}
+.ui-datepicker-multi-2 .ui-datepicker-group{
+	width:100%;
+}
+.ui-datepicker-multi .ui-datepicker-group table{
+	width:100%;
+}
+.ui-widget-header {
+  background: #fff;
+  color: #666;
+  .radius(0);
+  border:1px solid #e2e2e2;
+  border-width: 1px 0px 0px 0px;
+  font-weight: normal;
+  background:#f3dac9;
+}
+
+.ui-widget-content{
+	background: #fff;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  border: 0;
+  background:  #fff;
+  color: #000;
+  font-weight: normal;
+}
+.ui-datepicker table{
+	font-size: 1.2rem;
+	width: 100%;
+}
+.ui-datepicker th{
+	font-weight: normal;
+	padding:0;
+	color: #959595;
+  	border-top:1px solid #dedede;
+  	border-bottom:1px solid #dedede;
+}
+.ui-datepicker td{
+background: #fff;
+text-align: center;
+vertical-align: top;
+padding: .5rem 0;
+}
+.ui-datepicker td .full{
+	font-size: 1.2rem;
+	color:#f06b3e;
+	
+}
+
+.ui-datepicker .ui-datepicker-title{
+	text-align: left;
+	margin-left: 1rem;
+	font-size: 1.5rem;
+	padding: .5rem 0;
+}
+.ui-datepicker-title:before{
+	display: inline-block;
+	content:'';
+	width:5px;
+	height: 2rem;
+	background: #FF6600;
+	margin-right: 5px;
+	vertical-align: middle;
+	line-height: 20px;
+}
+
+.ui-datepicker-multi .ui-datepicker-group{
+	float: none;
+}
+.ui-datepicker.ui-datepicker-multi{
+	width: 100%;
+}
+/*.ui-datepicker td span,*/
+.ui-datepicker td a {
+  text-align: center;
+	display: inline-block;
+	width: 100%;
+}
+.ui-widget-header .ui-icon {
+  background: none;
+}
+
+#datepicker {
+  opacity: 0;
+}
+#datepicker:focus{
+	outline: none;
+}
+.ui-datepicker .ui-datepicker-title .ui-datepicker-year{
+	font-weight: normal;
+}
+.ui-datepicker .ui-state-disabled{	
+	opacity: 1;
+
+}
+.ui-datepicker .ui-datepicker-prev,.ui-datepicker .ui-datepicker-next{
+	display: none;
+}
+
+.ui-state-disabled .ui-state-default{
+	color:#b8b8b8;	
+}
+.ui-datepicker-calendar thead tr{background: #f2f2f2;}
+
+/*border-bottom: #e0e0e0 1px solid;
+border-top: #faf5f2 1px solid;
+
+background: #f8f0ea;*/
+
+.list-divider:before {
+content: '';
+display: block;
+width: .7rem;
+height: 1.2rem;
+position: absolute;
+top: 50%;
+left: 1rem;
+margin-top: -.6rem;
+background: #f06b3e;
+}

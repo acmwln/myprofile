@@ -1,0 +1,154 @@
+html{height: 100%;}
+body{
+  color: #232323;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+}
+.banner {
+  background: #ffcf31;
+  position: relative;
+  overflow: hidden;
+  min-height: 90px;
+}
+.banner .person {
+  /*height:90%;*/
+  width: 50px;
+  font-size: 0;
+  margin-left: 10px;
+  position: absolute;
+  bottom: 0px;
+}
+.banner .person img {
+  /*height: 100%;*/
+}
+.banner .dialog {
+  margin: 5px 15px 5px 65px;
+  background: #fff;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+}
+.banner .dialog p {
+  padding: 5px;
+}
+.banner .dialog:before {
+  position: absolute;
+  top: 50%;
+  margin-top: -4px;
+  left: -4px;
+  content: '';
+  height: 8px;
+  width: 8px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background: #fff;
+}
+.main {
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+  background: #f5f5f5;
+}
+.main .list {
+  margin: 10px;
+}
+.main .list li {
+  border-left: 10px solid #b0b0b0;
+  border-bottom: 0;
+  padding-left: 0;
+  margin-bottom: 10px;
+  position: relative;
+}
+.main .list li div {
+  border: 1px solid #e2e2e2;
+}
+.main .list li .link{
+  padding: 10px;
+  padding-right: 50px;
+  position: relative;
+  background: #fff;
+  font-size: 1.6rem;
+}
+.main .list li p {
+  background: #f5f5f5;
+  border-top: 1px solid #e2e2e2;
+  font-size: 1.2rem;
+}
+/*.main .list li a,*/
+.main .list li p {
+  padding-left: 10px;
+  color: #525252;
+}
+.main .list li .link:after {
+  position: absolute;
+  right: -15px;
+  bottom: -13px;
+  content: '';
+  background-image: url(../images/index_icon_bg.png);
+  -webkit-transform: scale(0.4);
+  -ms-transform: scale(0.4);
+  transform: scale(0.4);
+}
+
+.main .list li:nth-child(1) .link:after {width:101px; height:44px; background-position: -2px -2px}
+.main .list li:nth-child(2) .link:after {width:101px; height:44px; background-position: -2px -48px}
+.main .list li:nth-child(3) .link:after  {width:101px; height:44px; background-position: -2px -94px}
+.main .list li:nth-child(4) .link:after {width:101px; height:44px; background-position: -2px -140px}
+.main .list li:nth-child(5) .link:after{width:101px; height:44px; background-position: -2px -186px}
+
+.main .list li.status_success{
+  border-color: #8cbd23!important;
+}
+.main .list li.status_add,.main .list li.status_failed {
+  border-color: #ff3131!important;
+}
+.main .list li.status_wait,.main .list li.status_upload {
+  border-color: #dfe539!important;
+  // border-color: #8cbd23!important;
+}
+.main .list li.status_add .text{color:#ec5724;}
+.main .list li.status_upload .text{color:#dfe539;}
+.main .list li.status_success .text{color:#8cbd23;}
+.main .list li.status_failed .text{color:#ff3131;}
+
+
+.icon{
+      position: absolute;
+      top: 12px;
+      margin-left:5px;
+      
+      background-image: url(../images/index_status_icon.png);
+      // width:21px; height:21px; background-position: -25px -2px;
+      transform:scale(.7);
+      -webkit-transform:scale(.7);
+      -o-transform:scale(.7);
+      -moz-transform:scale(.7);
+
+
+    }
+
+.status_add .icon{ width:21px; height:21px;background:url(../images/index_status_edit.gif) left -2px no-repeat;}
+.status_upload .icon{ width:21px; height:21px;background:url(../images/index_status_upload.png) left top no-repeat;background-size:21px;}
+// .status_add .icon,.status_upload .icon{ width:21px; height:21px; background-position: -50px -4px;}
+
+.status_success .icon{width:20px; height:21px; background-position: -73px -4px;}
+.status_wait .icon {width:21px; height:21px; background-position: -27px -4px}
+.status_failed .icon{ width:21px; height:21px; background-position: -2px -2px}
+
+.main .list .arrow:before {
+  right: 15px;
+  top: 15px;
+  position: absolute;
+}
+.btn-large.disabled{
+	background: #b0b0b0;
+	box-shadow: 0px 3px 0px #b0b0b0;
+}

@@ -1,0 +1,91 @@
+@import "common/base";
+@import "common/common";
+@import "common/w640";
+
+.f30 {font-size:3rem;}
+.f24 {font-size:2.4rem;}
+.mt100 {margin-top:100px;}
+.mt60 {margin-top:60px;}
+.mt135 {margin-top:135px !important;}
+.mb60 {margin-bottom:60px;}
+.mb40 {margin-bottom:40px;}
+.mb30 {margin-bottom:30px;}
+.mr20 {margin-right:20px;}
+.mb20 {margin-bottom:20px;}
+
+.indexBody {background:url("@{url}/main.jpg") no-repeat;background-size:cover;}
+.piaoWrap {
+    margin-top:60px;&:extend(.pr);
+}
+.piao2 {&:extend(.pr);}
+.piao1 {&:extend(.pa);top:0;left:50%;margin-left:-260px;}
+.list-icon {
+    &:extend(.oh,.pa);width:500px;z-index:2;left:50%;margin-left:-248px;top:47px;
+    li {
+        &:extend(.fl,.pr);margin-right:12px;margin-bottom:8px;
+        img,span{&:extend(.vh);}
+    }
+    li:nth-child(4n) {margin-right:0;margin-left:2px;}
+    .hasNum {img,span{&:extend(.vShow);}}
+}
+.listImg {&:extend(.pr);width:100%;z-index:1;}
+.txt-index {
+    &:extend(.cwhite,.tc);font-size:3.2rem;text-shadow: 3px 3px 10px rgba(0,0,0,.8);
+}
+.icon-num {&:extend(.pa,.tc,.cwhite);font-size:2.4rem;top:70px;right:3px;background-color:#D06A00;.radius(8px);height:40px;width:40px;line-height:40px;}
+
+.footer {
+    &:extend(.cwhite,.tc);font-size:2.4rem;margin:40px 0 60px;
+    a {&:extend(.cwhite);text-decoration:underline;}
+    i {margin:0 60px;}
+}
+
+.btnHeWrap {&:extend(.pa,.tr);bottom:30px;left:0;width:90%;}
+.btn-close {&:extend(.pa);right:10px;top:10px;height:50px;width:50px;}
+.txt-hecheng {&:extend(.mau);width:450px;}
+.txt-support {&:extend(.mau);width:580px;text-shadow: 3px 3px 10px rgba(0,0,0,.8);}
+.list-bao {
+    margin:0 35px 20px;border-top:1px solid #fff;height:700px;overflow-x:hidden;overflow-y:auto;
+    li {
+        border-bottom:1px solid #fff;padding:25px;
+        &::after{&:extend(.after);}
+        &>div {padding-left:25px;&:extend(.cwhite);font-size:2.4rem;a{&:extend(.cwhite);text-decoration:underline;}}
+    }
+}
+.elWrap {width:540px;&:extend(.mau);}
+.elCont {
+    height:560px;background:url("@{url}/bg_line.png") 130px 0 no-repeat;overflow-x:hidden;
+    &::-webkit-scrollbar-track
+    {
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar
+    {
+      width: 0;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb
+    {
+      background-color: transparent;
+    }
+}
+.list-help {
+    &:extend(.mb20);
+    dt {&:extend(.fl,.pr);width:125px;}
+    dd {&:extend(.oh);padding-left:25px;}
+    .txt-index {font-size:2rem;}
+}
+.imgHeads {
+    &::after{&:extend(.after);}
+    img {&:extend(.fl);margin-right:15px;margin-bottom:40px;}
+}
+
+.sElWrap {height:197px;width:197px;line-height:197px;margin:160px auto 50px;background:url("@{url}/bgel.png") center no-repeat;}
+
+@media (min-width:384px) {
+    .elCont {height:480px;}
+}
+
+#loading {position:fixed;top:0;left:0;height:100%;width:100%;}

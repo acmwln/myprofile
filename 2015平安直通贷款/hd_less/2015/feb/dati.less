@@ -1,0 +1,55 @@
+@import "../../common/reset";
+@import "../../common/common";
+@import "../../common/w640";
+
+@tColor: #eb6100;
+.tColor {color:@tColor;}
+.mlr40 {margin-left:40px;margin-right:40px;}
+.mb30 {margin-bottom:30px;}
+.mt40 {margin-top:40px;}
+.mt110 {margin-top:110px;}
+.mt80 {margin-top:80px;}
+.mb20 {margin-bottom:20px;}
+.mt280 {margin-top:280px;}
+.f24 {font-size:2.4rem;}
+
+body {background:url("@{url}/bg.jpg") center top no-repeat #EB6100;}
+
+.naver {
+    border-top:1px solid #FECCA9;padding:0 40px;margin-top:20px;&:extend(.pr);
+}
+.list-nav {
+    margin-top:-10px;
+    li {border:4px solid transparent;height:12px;width:12px;&:extend(.dib,.vm);border-radius: 6px;background-color:#FECCA9;box-sizing: border-box;margin-right:31px;}
+    .curli {border-color:#FCDD1D;background-color:#B72E22;box-sizing: content-box;border-radius:10px;}
+}
+.numWrap {&:extend(.pa,.tColor,.tc,.f16);top:-16px;right:40px;width:79px;line-height:31px;background:url("@{url}/bg_txt.png") no-repeat;}
+.footer-logo {position:fixed;left:40px;bottom:40px;}
+.qaWrap {&:extend(.mlr40);margin-top:30px;padding-bottom:120px;}
+.qleft {&:extend(.mr10,.tColor,.tc,.fl);font-size:2.4rem;height:40px;width:40px;background-color:#FCDD1D;}
+.tiNum {&:extend(.f14);}
+.qWrapTxt {font-size:2.8rem;&:extend(.cwhite,.oh);line-height:40px;}
+.list-ti-box {
+    width:540px;margin:20px auto;
+    li {margin-bottom:20px;}
+    label {&:extend(.db,.bgWhite);padding-left:25px;box-sizing: border-box;border-radius: 8px;line-height:62px;color:#5b5b5b;font-size:2.4rem;}
+}
+input:checked+label {font-size:2.8rem;color:#eb6100;font-weight:700;background-color:#FCDD1D !important;}
+.btn-submit {&:extend(.tColor,.dib,.tc,.bgWhite);font-weight:700;font-size:2.8rem;width:240px;line-height:70px;border-radius: 8px;}
+
+[type="radio"],[type="checkbox"] {display:none;}
+
+.btnsWrap {&:extend(.tc);margin:70px 0 55px;span{margin:0 20px;}}
+.btnColor {background-color:#FCDD1D !important;}
+.tdu {text-decoration:underline;}
+
+.list-form {
+    width:510px;margin:50px auto 0;
+    li {&:extend(.oh);height:70px;margin-bottom:30px;}
+}
+.fLeft {&:extend(.tc,.fl);color:#954105;font-size:2.6rem;background-color:#FDDA02;width:154px;line-height:68px;border:1px solid transparent;border-radius: 14px 0 0 14px;}
+.fCont {&:extend(.oh,.bgWhite);border:1px solid transparent;border-left:none;border-radius: 0 14px 14px 0;padding:0 10px;}
+.inp-form {&:extend(.noBorder);height:66px;width:100%;outline:none;font-size:2.6rem;}
+
+.shareCont {width:504px;height:500px;background:url("@{url}/bgover.png") no-repeat;&:extend(.oh);}
+.footer-logo2 {&:extend(.mlr40,.mt110,.mb30);}

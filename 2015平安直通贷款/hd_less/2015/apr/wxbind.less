@@ -1,0 +1,54 @@
+@import "../../common/reset";
+@import "../../common/common";
+@import "../../common/w640";
+
+@aColor:#F4641C;
+.aColor {color:@aColor;}
+.plr50 {padding:0 50px;}
+.f22 {font-size:2.2rem;}
+.f26 {font-size:2.6rem;}
+.f28 {font-size:2.8rem;}
+.mb20 {margin-bottom:20px;}
+.botColor{border-top:1px solid #FDF3EE;}
+.pw100 {width:100% !important;}
+
+.titBind {
+    &:extend(.f26,.aColor,.mb10);
+    &::before{&:extend(.dib,.mr10,.vm);content:'\200B';width:12px;background-color:@aColor;height:28px;}
+}
+.selectWrap {&:extend(.tc,.mb20);border:1px solid #FED0B8;border-radius: 14px;height:68px;box-sizing: border-box;background:url("@{url}/icon_select.png") right top no-repeat;}
+.select-pro {
+    width:98%;height:68px;&:extend(.noBorder,.noBg,.f28);-webkit-appearance:none;outline:none;
+}
+.list-check {
+    display:flex;
+    li {flex:1;}
+}
+[name="attentionTypes"] {-webkit-appearance:none;&:extend(.dib,.noBorder);height:89px;width:89px;background:url("@{url}/icons.png") no-repeat;outline:none;}
+
+.loopClass();
+.loopClass(@i: 0, @n:0) when (@i <= 4) {
+　　#type@{i} {
+　　　　.bgp(-89px*@i,-89px);
+        &:checked {.bgp(-89px*@i,0);}
+　　}
+   .loopClass(@i + 1);
+}
+
+.typeLabel {&:extend(.tc,.dib,.aColor,.f26);width:100%;}
+.btn-getCode,.btn-yy {&:extend(.cwhite,.tc,.dib);background-color:@aColor;}
+.btn-getCode {&:extend(.f26,.fr);width:170px;line-height:64px;}
+.btn-yy {font-size:3.6rem;line-height:80px;width:490px;border-radius: 12px;}
+.list-form {
+    margin-bottom:40px;
+    li {&:extend(.oh);margin-top:40px;}
+    li:nth-child(2) .inpWrap {.bgp(10px, -45px);}
+}
+.inpWrap {
+    &:extend(.pr,.fl);border-bottom:2px solid #B3B3B3;box-sizing: border-box;padding:0 10px 0 45px;background:url("@{url}/icon_reg.png") 10px 10px no-repeat;line-height:64px;width:340px;
+    &::before,&::after{content:'\200B';&:extend(.pa);height:8px;width:0;bottom:0;}
+    &::before{left:0;border-left:2px solid #B3B3B3;}
+    &::after{right:0;border-right:2px solid #B3B3B3;}
+    &::placeholder{color:#B3B3B3;}
+}
+.inp-form {&:extend(.noBorder,.noBg,.f26);width:100%;outline:none;}

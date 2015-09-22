@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>产品列表</title>
+	
+  	<meta name="format-detection" content="telephone=no" />
+  	<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  	<meta HTTP-EQUIV="Expires" CONTENT="-1">
+  	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  	<meta name="apple-mobile-web-app-capable" content="yes"> 
+  	<meta name="screen-orientation" content="portrait">
+  	<meta name="x5-orientation" content="portrait">
+  	<meta name="x5-fullscreen" content="true">
+  	<meta name="360-fullscreen" content="true">
+  	<meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../common/css/other.css" />
+  
+</head>
+<body id="prolist">
+	 <header>
+      <p class="logo"><img src="../common/images/logo_white.png" alt=""></p>
+  </header>
+	<p><img src="../common/images/prolist_top.png" alt=""></p>
+ 
+  <div class="box fangdai">
+    <h1>有房就能贷</h1>
+    <ul>
+      <li>最高额度15万</li>
+      <li>每月利率1.7%</li>
+    </ul>
+  </div>
+
+  <div class="box chedai">
+    <h1>有车就能贷</h1>
+    <ul>
+      <li>最高额度30万</li>
+      <li>每月利率1.7%</li>
+    </ul>
+  </div>
+
+  <div class="box baodandai">
+    <h1>有寿险保单就能贷</h1>
+    <ul>
+      <li>最高额度15万</li>
+      <li>每月利率1.7%</li>
+    </ul>
+  </div>
+
+  <div class="btn" id="btnSubmit">立即申请</div>
+  <script  src="../common/js/jquery.min.js"></script>
+  <script>
+    $(function(){
+      //多选
+      $('.box').on('click',function(){
+        var $this = $(this);
+        if($this.hasClass('active')){
+          $this.removeClass('active');
+        }else{
+          $this.addClass('active');
+        }
+      });
+      //立即申请
+      $('#btnSubmit').on('click',function(){
+        var len = $('.active').length;
+        if(!len){
+          alert('至少选择一项');
+          return;
+        }
+      })
+
+
+    })
+  </script>
+  
+	
+	
+
+
+
+
+<!--数据统计-->
+<script>                                                                                                       
+	setTimeout('exesdcjs()',0);
+    function exesdcjs(){
+      var jDomain="www.pingan.com";
+      var js_path="/app_js/sdc/src/web.js";
+      var domain="http"+(window.location.protocol.indexOf('https:')==0?'s':'')+"://"+jDomain;
+      var SDC_js=document.createElement("script");
+      SDC_js.src=domain+js_path;
+      var headElem=document.getElementsByTagName("head")[0];
+      headElem.appendChild(SDC_js);
+     }
+</script>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KWWS7Z" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWWS7Z');
+</script>
+<!-- End Google Tag Manager -->
+<!--数据统计-->
+
+
+</body>
+
+</html>

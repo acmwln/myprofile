@@ -1,0 +1,99 @@
+@import "../../common/reset";
+@import "../../common/common";
+@import "../../common/w750";
+
+body {background:url("@{url}/bg.jpg") no-repeat #B00819;background-size: cover;}
+.animationWrap {&:extend(.pa);top:233px;left:0;width:100%;z-index:80;}
+.animWrap {&:extend(.dib,.mb10,.pr);background:url("@{url}/txt_c.png") no-repeat;width:396px;height:396px;}
+.animWrap2 {background:url("@{url}/bg.png") no-repeat;.animation(bgy 2.5s 1s step-start forwards);}
+@keyframes bgy {
+    0% {.bgp(0,0);}
+    2% {.bgp(-396px,0);}
+    4% {.bgp(-792px,0);}
+    6% {.bgp(-1188px,0);}
+    8% {.bgp(0,-396px);}
+    10% {.bgp(-396px,-397px);}
+    12% {.bgp(-792px,-397px);}
+    14% {.bgp(-1188px,-397px);}
+    16% {.bgp(0,-793px);}
+    18% {.bgp(-396px,-793px);}
+    20% {.bgp(-792px,-793px);}
+    22% {.bgp(-1188px,-793px);}
+    24% {.bgp(0,-1190px);}
+    26% {.bgp(-396px,-1190px);}
+    28% {.bgp(-792px,-1190px);}
+    30% {.bgp(-1188px,-1190px);}
+    32% {.bgp(0,-1587px);}
+    34% {.bgp(-396px,-1587px);}
+    36% {.bgp(-792px,-1587px);}
+    38% {.bgp(-1188px,-1587px);}
+    40% {.bgp(0,-1984px);}
+    42% {.bgp(-396px,-1984px);}
+    44% {.bgp(-792px,-1984px);}
+    46% {.bgp(-1188px,-1984px);}
+    48% {.bgp(0,-2381px);}
+    50% {.bgp(-396px,-2381px);}
+    52% {.bgp(-792px,-2381px);}
+    54% {.bgp(-1188px,-2381px);}
+    56% {.bgp(0,-2778px);}
+    58% {.bgp(-396px,-2778px);}
+    60% {.bgp(-792px,-2778px);}
+    62% {.bgp(-1188px,-2778px);}
+    64% {.bgp(0,-3175px);}
+    66% {.bgp(-396px,-3175px);}
+    68% {.bgp(-792px,-3175px);}
+    70% {.bgp(-1188px,-3175px);}
+    72% {.bgp(0,-3573px);}
+    74% {.bgp(-396px,-3573px);}
+    76% {.bgp(-792px,-3573px);}
+    78% {.bgp(-1188px,-3573px);}
+    80% {.bgp(0,-3970px);}
+    82% {.bgp(-396px,-3970px);}
+    84% {.bgp(-792px,-3970px);}
+    86% {.bgp(-1188px,-3970px);}
+    88% {.bgp(0,-4367px);}
+    90% {.bgp(-396px,-4367px);}
+    92% {.bgp(-792px,-4367px);}
+    94%,100% {.bgp(-1188px,-4367px);}
+}
+
+.bgkuang,.bgbian {position:fixed;height:100%;width:100%;top:0;left:0;z-index:1;opacity:0;}
+.bgkuang {background:url("@{url}/bgku.png") center 30px no-repeat;}
+.bgbian {background:url("@{url}/bgk.png") repeat-y;.animation(bgmove 1s 1s linear infinite);}
+@keyframes bgmove {
+    0% {.bgp(0,0);}
+    100% {.bgp(0,228px);}
+}
+.btn-fu {&:extend(.pa);width:164px;height:164px;background:url("@{url}/txt_f.png") no-repeat;top:197px;left:117px;.animation(rota 2s linear infinite);}
+@keyframes rota {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(360deg);}
+}
+.opa {.animation(opa 1s ease-out forwards);transform-origin: 50% 50%;}
+@keyframes opa {
+    0% {transform: rotate(0) scale(1);opacity:1;}
+    100% {transform: rotate(360deg) scale(.8);opacity:0;}
+}
+.pw {&:extend(.pa,.tc);left:0;width:100%;opacity:0;}
+.opa0 {opacity:0;.transition(opacity .6s linear);}
+.opa1 {opacity:1;.transition(opacity .6s linear);}
+.opa2 {opacity:1;.transition(opacity .6s 4s linear);}
+.t-2015 {&:extend(.pw);top:86px;}
+.scal {transform: scale(.5);.animation(scal .6s 3s linear forwards);}
+@keyframes scal {
+    0% {opacity:0;transform: scale(.5);}
+    100% {opacity:1;transform: scale(1);}
+}
+.t-zhu {&:extend(.pw);top:662px;}
+.inpWrap {&:extend(.pw,.tr);top:785px;z-index:80;line-height:74px;left:0;width:750px;}
+.btnsWrap {&:extend(.pw);top:876px;z-index:80;}
+.inp-form {&:extend(.noBorder,.tc);background:url("@{url}/bg_inp.png") no-repeat;width:238px;height:72px;font-size:2.8rem;margin-left:360px;outline:none;}
+.ybWrap {&:extend(.pw);top:-1000px;}
+.down {.animation(down 1s 2.4s linear);}
+@keyframes down {
+    0% {top:-1000px;opacity:0;}
+    50% {top:0;opacity:1;}
+    100% {top:2000px;opacity:1;}
+}
+.share-popup {z-index:99;}
+.uName {&:extend(.cwhite,.pa,.tr);font-size:4rem;right:80px;top:0;line-height:72px;display:none;}

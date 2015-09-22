@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>保单贷</title>
+	<meta name="keywords" content="车主贷款,车险保单贷款,汽车贷款,个人信用贷款,平安易贷款" />
+	<meta name="description" content="平安集团联合平安陆金所、平安信用保险、平安直通贷推出针对有车用户的平安车主车险保单贷款产品，用户只要在线填写简单2步即可申请贷款，申请方便，贷款额度高，最快当天放款，无须行驶证、车辆等任何抵押，也无须强制安装GPS；目前可贷款城市覆盖北京、上海、广州、深圳、等城市。支持平安车险、阳光车险、等多家主流车险保单均可申请贷款。" />
+	
+  	<meta name="format-detection" content="telephone=no" />
+  	<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  	<meta HTTP-EQUIV="Expires" CONTENT="-1">
+  	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  	<meta name="apple-mobile-web-app-capable" content="yes"> 
+  	<meta name="screen-orientation" content="portrait">
+  	<meta name="x5-orientation" content="portrait">
+  	<meta name="x5-fullscreen" content="true">
+  	<meta name="360-fullscreen" content="true">
+  	<meta name="renderer" content="webkit">
+
+    <link rel="stylesheet" href="../common/css/zt-ui.css" />
+    <link rel="stylesheet" href="../common/css/font.css" />
+    <style>
+    .raido-wrap{width: 6rem;margin: 0 auto;position: relative;}
+    .radio-item {
+		width:40px; height:35px;display: inline-block;
+		background-image: url(../common/images/sx-icon-radio.png);background-position: -2px -2px;		
+		position: absolute;top: 50%;left: 0;margin-top: -20px;
+		transform:scale(.7);
+		-webkit-transform:scale(.7);
+		-moz-transform:scale(.7);
+		-o-transform:scale(.7);
+		-ms-transform:scale(.7);
+	}
+	.radio-item.checked{ background-position:-2px -39px}
+	
+
+
+    </style>
+</head>
+<body> 
+	<div class="mask show" id="tipMask">
+		<div class="mask-inner">
+			<div id="btnClose" class="icon-close"></div>
+			<div class="tc cont">
+				<p>
+					<img src="../common/images/error_ban.png" alt="" class="mask-img">
+					<span class="mask-text">很抱歉，您的申请条件与本方案匹配度不高。点击下一步，还有更多贷款产品可申请</span>
+				</p>
+				
+			</div>
+			<div class="tc">
+				<a class="btn" id="btnNextMask" href="../product/proList.html">下一步</a>
+				
+			</div>
+			
+		</div>		
+	</div>
+	<div class="acBox">
+		<i class="icon-people"></i>
+		<p id="topIntroText">
+			本产品最高额度<span class="cred">2-15</span>万元，提交您的贷款预审信息，请务必<span class="cred">准确及如实填写</span>，后续实际审核阶段若出现信息不符，将会对您的贷款通过产生直接影响。</p>
+	</div>
+	<section class="main">	
+		
+		<!-- <div class="item-wrap">
+			<div class="item-left">保险公司</div>
+			<div class="item-right">
+				<div class="select-outer">  
+					<i class="select-arrow"></i> 
+			    	<span class="sel-text inp placeholder" id="sel_insCompanyText">请选择</span>
+			    	<select id="insCompany"   value="">
+			    		<option  value="N" >请选择</option>
+			    		<option  value="Y" >平安人寿</option>
+			    		<option  value="Y">中国人寿</option>
+			    		<option  value="Y">泰康人寿</option>
+			    		<option  value="Y">新华人寿</option>
+			    		<option  value="Y">太平洋人寿</option>
+			    		<option  value="Y">中国人保</option>
+			    		<option  value="Y">太平人寿</option>
+			    		<option  value="N">其他</option>
+			    	
+			    	</select>           
+			   </div>
+			</div>			
+		</div>		 -->
+
+		<div class="item-wrap">
+			<div class="item-left">缴费方式</div>
+			<div class="item-right">
+				<div class="select-outer">  
+					<i class="select-arrow"></i> 
+			    	<span class="sel-text inp placeholder" id="sel_payWayText">请选择</span>
+			    	<select id="payWay"  value="">
+			    		<option  value="请选择" >请选择</option>
+			    		<option  value="Y">分期缴付</option>
+			    		<option  value="N">一次性缴付</option>    			    		     
+			    	</select>           
+			   </div>
+			</div>			
+		</div>
+		<div class="item-wrap hide" id="payTimeBox">
+			<div class="item-left">已缴期数</div>
+			<div class="item-right">
+				<div class="select-outer">  
+					<i class="select-arrow"></i> 
+			    	<span class="sel-text inp placeholder" id="sel_payTimeText">请选择</span>
+			    	<select id="payTime"  value="">
+			    		<option  value="N">请选择</option>
+			    		<option  value="Y">3年及以上</option>
+			    		<option  value="N">1-2年</option>    			    		     
+			    		<option  value="N">1年以下</option>    			    		     
+			    	</select>           
+			   </div>
+			</div>			
+		</div>
+		<div class="item-wrap">
+			<div class="item-left">已生效时间</div>
+			<div class="item-right">
+				<div class="select-outer">  
+					<i class="select-arrow"></i> 
+			    	<span class="sel-text inp placeholder" id="sel_insTimeText">请选择</span>
+			    	<select id="insTime"  value="">
+			    		<option  value="N" >请选择</option>
+			    		<option  value="Y">1年以上</option>    			    		     
+			    		<option  value="Y">6-12个月</option>    			    		     
+			    		<option  value="N">1-5个月</option>
+			    	</select>           
+			   </div>
+			</div>			
+		</div>
+		<div class="item-wrap">
+			<div class="item-left">寿险投保人</div>
+			<div class="item-right">
+				<div class="select-outer">  
+					<i class="select-arrow"></i> 
+			    	<span class="sel-text inp placeholder" id="sel_insPeopleText">请选择</span>
+			    	<select id="insPeople"  value="">
+			    		<option  value="N" >请选择</option>
+			    		<option  value="Y">投保人为本人</option>
+			    		<option  value="N">投保人为亲属</option>    			    		     
+			    		<option  value="N">其他</option>    			    		     
+			    	</select>           
+			   </div>
+			</div>			
+		</div>
+
+		<div class="item-wrap">
+			<div class="item-left">信用历史</div>
+			<div class="item-right">
+				<div class="select-outer">  
+					<i class="select-arrow"></i> 
+			    	<span class="sel-text inp placeholder" id="sel_creditHistoryText">请选择</span>
+			    	<select name="" id="creditHistory"   value="">
+					<option  value="N" >请选择</option>
+					<option  value="Y">使用信用卡</option>
+					<option  value="Y">曾经贷过款（非民间）</option>  
+					<option  value="Y">上述两者均有</option>          
+					<option  value="N">上述两者均没有</option>          
+				</select>            
+			   </div>
+			</div>	
+		</div>
+	
+
+		
+		<p class="tc"><img class="w640" src="../common/images/sx_ac2.jpg" alt="" ></p>
+		<footer>
+			<div class="btn" id="btnNext">立即匹配</div>
+		</footer>		
+	</section>
+
+	<script  src="../common/js/jquery.min.js"></script>
+	<script  src="../common/js/selfCommon.js"></script>
+	<script  src="js/header.js"></script>
+	<script  src="js/bd_filter.js"></script>
+
+
+<!--数据统计-->
+<script>                                                                                                       
+	setTimeout('exesdcjs()',0);
+    function exesdcjs(){
+      var jDomain="www.pingan.com";
+      var js_path="/app_js/sdc/src/web.js";
+      var domain="http"+(window.location.protocol.indexOf('https:')==0?'s':'')+"://"+jDomain;
+      var SDC_js=document.createElement("script");
+      SDC_js.src=domain+js_path;
+      var headElem=document.getElementsByTagName("head")[0];
+      headElem.appendChild(SDC_js);
+     }
+</script>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KWWS7Z" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWWS7Z');
+</script>
+<!-- End Google Tag Manager -->
+<!--数据统计-->
+
+
+</body>
+
+</html>

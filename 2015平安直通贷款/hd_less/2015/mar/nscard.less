@@ -1,0 +1,26 @@
+@import "../../common/reset";
+@import "../../common/common";
+@import "../../common/w640";
+
+body {background-color:#B01497;}
+#canvasWrap {
+    &:extend(.pa);top:0;left:0;height:264px;width:423px;
+    canvas {height:264px !important;width:423px !important;position:absolute !important;left:0 !important;top:0 !important;margin-left:0 !important;}
+}
+
+.cardWrap {&:extend(.pr,.mau);z-index:2;width:423px;height:264px;}
+.imgWrap {&:extend(.pr,.f0);width:640px;height:455px;}
+.bgImg {&:extend(.pa);left:0;top:0;}
+.btn-share {width:496px;line-height:76px;height:80px;&:extend(.c0,.tc,.dib);font-size:3.6rem;background:url("@{url}/btn.png") no-repeat;}
+.btnshareWrap {&:extend(.pr,.tc);z-index:2;margin:40px 0;}
+
+.formWrap {&:extend(.pa);top:180px;left:0;width:100%;}
+.txt-jiang {height:34px;background:url("@{url}/txt.png") no-repeat;margin-bottom:35px;}
+.txt-jiang1 {background-position: center 0;}
+.txt-jiang2 {background-position: center -34px;}
+.list-form {
+    width:466px;margin:0 auto 180px;
+    li {&:extend(.bgWhite);border-radius: 8px;height:76px;margin-bottom:30px;font-size:2.8rem;}
+}
+.inp-form {&:extend(.noBorder,.noBg);box-sizing: border-box;height:76px;width:100%;padding:0 20px;outline:none;}
+.subInfo {background-color:#c945a1;width:466px;border-radius: 16px;}

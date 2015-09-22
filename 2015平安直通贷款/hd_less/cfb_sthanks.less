@@ -1,0 +1,20 @@
+@import "common/reset";
+@import "common/common";
+@import "common/w750";
+
+.inpWrap1,.inpWrap2 {&:extend(.pa,.bgWhite);height:50px;border-top:3px solid #FFD8CF;border-left:3px solid #FFD8CF;box-sizing: border-box;}
+.myname,.yname {&:extend(.pa,.cwhite);font-size:3.2rem;line-height:50px;width:217px;}
+.inpWrap1,.yname {top:-10px;left:170px;}
+.inpWrap2,.myname {top:0;left:430px;}
+.inp-form {&:extend(.noBg,.noBorder,.mlr10);outline:none;font-size:3.2rem;width:217px;}
+.btnsWrap {&:extend(.pa,.tc);top:30px;left:0;right:0;span{margin:0 20px;}}
+.tsInfo {
+    font-size:3.2rem;padding:20px 40px 40px;&:extend(.bgWhite);border-top:3px solid #CF1E00;max-width:320px;
+    p {margin-top:20px;}
+}
+.pandaWrap {&:extend(.pa);top:30px;left:50%;height:452px;width:651px;margin-left:-325px;background:url("@{url}/ani.png") no-repeat; -webkit-animation: ani 1s step-start infinite;}
+@-webkit-keyframes ani {
+    0% {.bgp(0,0);}
+    50% {.bgp(0,-452px);}
+    100% {.bgp(0,0);}
+}

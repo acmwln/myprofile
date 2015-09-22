@@ -1,0 +1,48 @@
+@import "../../common/reset";
+@import "../../common/common";
+@import "../../common/w750";
+
+.mt20 {margin-top:20px;}
+.mb30 {margin-bottom:30px;}
+.mb20 {margin-bottom:20px;}
+.ml30 {margin-left:30px;}
+.mr30 {margin-right:30px;}
+.aColor {color:#3a7f28;}
+.f26 {font-size:2.6rem;}
+.f28 {font-size:2.8rem;}
+.f30 {font-size:3rem;}
+
+.txt-indeximg {&:extend(.pa);left:50%;top:510px;transform:translateX(-50%);}
+.cardsWrap {&:extend(.pr);margin:400px 0 80px 87px;width:582px !important;height:376px !important;}
+.cardWrap {/*&:extend(.pa);left:50%;top:0;transform: translateX(-50%);*/}
+#canvasWrap,.cardWrap {width:582px !important;height:376px !important;}
+#canvasWrap {&:extend(.pa);left:0;top:0;}
+#canvasWrap canvas {width:582px !important;height:376px !important;position:absolute !important;margin-left:0 !important;left:0 !important;}
+.btnsBox {&:extend(.f0,.tc,.mb30);}
+.btn-share,.btn-lq {&:extend(.dib);width:332px;height:88px;}
+.btn-share {
+    background-image:url("@{url}/btn_share0.png");
+    .btnsBox2 & {background-image:url("@{url}/btn_share.png");}
+}
+.btn-lq {
+    background-image:url("@{url}/btn_lq0.png");
+    .btnsBox2 & {background-image:url("@{url}/btn_lq.png");}
+}
+
+.list-steps {
+    li {background-color:#77BD65;padding:60px 45px 40px;width:600px;box-sizing: border-box;border-radius: 16px;&:extend(.pr);}
+}
+.inp-form {
+    &:extend(.noBorder,.bgWhite,.f28);border-radius: 10px;box-sizing: border-box;width:100%;height:80px;padding:0 20px;outline:none;
+    &::placeholder {color:#77bd65;}
+}
+.codeWrap {
+    &:extend(.mt20);
+    .inp-form {&:extend(.fl);width:328px;}
+    .btn-getCode {&:extend(.fr);}
+}
+.btn-getCode2 {&:extend(.fr,.tc,.c6);font-size:2.2rem;line-height:80px;width:170px;background-color:#ccc;border-radius: 10px;}
+.bgCard {&:extend(.pa,.f0,.tc);top:0;left:0;width:100%;height:100%;z-index:-1;}
+.errorInfo {&:extend(.f26,.pa,.tl);color:#fc5d1f;line-height:62px;padding-left:75px;background:url("@{url}/icon_err.png") 20px center no-repeat #FDD8BE;left:0;top:0;width:100%;box-sizing:border-box;border-radius: 12px 12px 0 0;}
+.inp-form-error {box-shadow: 3px 3px 10px rgba(253, 50, 17, 1),-3px -3px 10px rgba(253, 50, 17, 1);}
+.btn-back {&:extend(.dib,.tc,.cwhite);font-size:3.6rem;background-color:#FCB54D;width:332px;line-height:88px;border-radius: 12px;}

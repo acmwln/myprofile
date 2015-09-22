@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>平安车主贷-车险保单贷-个人汽车信用贷</title>
+	<meta name="keywords" content="车主贷款,车险保单贷款,汽车贷款,个人信用贷款,平安易贷款" />
+	<meta name="description" content="平安集团联合平安陆金所、平安信用保险、平安直通贷推出针对有车用户的平安车主车险保单贷款产品，用户只要在线填写简单2步即可申请贷款，申请方便，贷款额度高，最快当天放款，无须行驶证、车辆等任何抵押，也无须强制安装GPS；目前可贷款城市覆盖北京、上海、广州、深圳、等城市。支持平安车险、阳光车险、等多家主流车险保单均可申请贷款。" />
+
+	
+  	<meta name="format-detection" content="telephone=no" />
+  	<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  	<meta HTTP-EQUIV="Expires" CONTENT="-1">
+  	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  	<meta name="apple-mobile-web-app-capable" content="yes"> 
+  	<meta name="screen-orientation" content="portrait">
+  	<meta name="x5-orientation" content="portrait">
+  	<meta name="x5-fullscreen" content="true">
+  	<meta name="360-fullscreen" content="true">
+  	<meta name="renderer" content="webkit">
+
+    <link rel="stylesheet" href="../common/css/zt-ui.css" />
+    <link rel="stylesheet" href="../common/css/font.css" />
+</head>
+<body>
+	<div class="mask show" id="tipMask">
+		<div class="mask-inner">
+			<div id="btnClose" class="icon-close"></div>
+			<div class="tc cont">
+				<p>
+					<img src="../common/images/error_ban.png" alt="" class="mask-img">
+					<span class="mask-text">很抱歉，您的申请条件与本方案匹配度不高。点击下一步，还有更多贷款产品可申请</span>
+				</p>
+				
+			</div>
+			<div class="tc">
+				<a class="btn" id="btnNextMask" href="../product/proList.html">下一步</a>
+				
+			</div>
+			
+		</div>		
+	</div>
+	<div class="acBox">
+		<i class="icon-people"></i>
+		<p id="topIntroText">
+			本产品最高额度<span class="cred">1-30</span>万元，提交您的贷款预审信息，请务必<span class="cred">准确及如实填写</span>，后续实际审核阶段若出现信息不符，将会对您的贷款通过产生直接影响。</p>
+	</div>
+	<section class="main">
+		<!-- 车贷表单 -->
+		<div id="carLoanBox">
+			<div class="item-wrap">
+				<div class="item-left">是否有车贷</div>
+				<div class="item-right">
+					<div class="select-outer">  
+						<i class="select-arrow"></i> 
+				    	<span class="sel-text inp placeholder" id="sel_carLoanStatusText">请选择</span>
+				    	<select id="carLoanStatus"   value="">
+				    		<option  value="请选择">请选择</option>
+				    		<option  value="正在还车贷" checked="true">正在还车贷</option>
+				    		<option  value="车贷已还清">车贷已还清</option>
+				    		<option  value="没有车贷">没有车贷</option>
+				    	
+				    	</select>           
+				   </div>
+				</div>			
+			</div>
+			<div class="item-wrap hide"  id="carLoanMoneyBox">
+				<div class="item-left">贷款总额</div>
+				<div class="item-right">
+					<span class="rightSign">元</span>
+					<input id="carLoanMoney" type="tel" placeholder="请输入车贷总额"/>
+				</div>
+			</div>
+
+			<!-- 正在还车贷 已还贷期数-->
+			<div id="payBox1" class="item-wrap hide" >
+				<div class="item-left">已还贷期数</div>
+				<div class="item-right">
+					<div class="select-outer">  
+						<i class="select-arrow"></i> 
+				    	<span class="sel-text inp placeholder" id="sel_payingTimeText">请选择</span>
+				    	<select name="" id="payingTime"   value="">
+				    		<option  value="N" >请选择</option>
+				    		<option  value="Y">1年及以上</option>          
+				    		<option  value="N">6-12个月</option>  
+				    		<option  value="N">1-5个月</option>
+				    	</select>           
+				   </div>
+				</div>			
+			</div>
+			
+		
+
+			<!-- 车贷已还清 还清距今-->
+			<div class="item-wrap hide" id="payBox2">
+				<div class="item-left">还清距今</div>
+				<div class="item-right">
+					<div class="select-outer">  
+						<i class="select-arrow"></i> 
+				    	<span class="sel-text inp placeholder" id="sel_payedTimeText">请选择</span>
+				    	<select name="" id="payedTime"   value="">
+				    		<option  value="N">请选择</option>
+				    		<option  value="Y">1-6个月</option>  
+				    		<option  value="N">7-12个月</option>
+				    		<option  value="N">12个月以上</option>          
+				    	</select>           
+				   </div>
+				</div>			
+			</div>
+
+				
+				
+		</div>	
+		<!-- 车险表单 -->
+		<div id="carInsBox" class="hide">
+			
+		
+			<div class="item-wrap">
+				<div class="item-left">车辆类型</div>
+				<div class="item-right">
+					<div class="select-outer">  
+						<i class="select-arrow"></i> 
+				    	<span class="sel-text inp placeholder" id="sel_carTypeText">请选择</span>
+				    	<select id="carType"   value="">
+				    		<option  value="N" >请选择</option>
+				    		<option  value="Y" >7座及以下</option>
+				    		<option  value="Y">9座及以下</option>
+				    		<option  value="N">其他</option>
+				    	
+				    	</select>           
+				   </div>
+				</div>			
+			</div>		
+
+			<div class="item-wrap">
+				<div class="item-left">车辆信息</div>
+				<div class="item-right">
+					<div class="select-outer">  
+						<i class="select-arrow"></i> 
+				    	<span class="sel-text inp placeholder" id="sel_carInsuredTypeText">请选择</span>
+				    	<select id="carInsuredType"  value="">
+				    		<option  value="请选择" >请选择</option>
+				    		<option  value="Y">一手车</option>
+				    		<option  value="N">二手车</option>    			    		     
+				    	</select>           
+				   </div>
+				</div>			
+			</div>
+			<div class="item-wrap hide" id="carTransTimeBox">
+				<div class="item-left">过户时间</div>
+				<div class="item-right">
+					<div class="select-outer">  
+						<i class="select-arrow"></i> 
+				    	<span class="sel-text inp placeholder" id="sel_carTransTimeText">请选择</span>
+				    	<select id="carTransTime"  value="">
+				    		<option  value="请选择" >请选择</option>
+				    		<option  value="Y">一年以上</option>    			    		     
+				    		<option  value="Y">6~12个月</option>    			    		     
+				    		<option  value="Y">3-6个月</option>
+				    		<option  value="N">3个月以下</option>    			    		     
+				    	</select>           
+				   </div>
+				</div>			
+			</div>
+
+			<div class="item-wrap " >
+				<div class="item-left">使用车龄</div>
+				<div class="item-right">
+					<div class="select-outer">  
+						<i class="select-arrow"></i> 
+				    	<span class="sel-text inp placeholder" id="sel_carAgeText">请选择</span>
+				    	<select id="carAge"  value="">
+				    		<option  value="请选择" >请选择</option>
+				    		<option  value="Y">12个月以上</option>    			    		     	    		     
+				    		<option  value="Y">6-12个月</option>    			    		     	    		     
+				    		<option  value="N">1-5个月</option>    			    		     
+				    	</select>           
+				   </div>
+				</div>			
+			</div>
+
+
+			<div class="item-wrap " >
+				<div class="item-left">是否抵押</div>
+				<div class="item-right">
+					<div class="select-outer">  
+						<i class="select-arrow"></i> 
+				    	<span class="sel-text inp placeholder" id="sel_carDYText">请选择</span>
+				    	<select id="carDY"  value="">
+				    		<option  value="请选择" >请选择</option>
+				    		<option  value="Y">否</option>    			    		     	    		     
+				    		<option  value="N">是</option>    			    		     
+				    	</select>           
+				   </div>
+				</div>			
+			</div>
+
+
+			<div class="item-wrap " >
+				<div class="item-left">使用性质</div>
+				<div class="item-right">
+					<div class="select-outer">  
+						<i class="select-arrow"></i> 
+				    	<span class="sel-text inp placeholder" id="sel_carUseText">请选择</span>
+				    	<select id="carUse"  value="">
+				    		<option  value="请选择" >请选择</option>
+				    		<option  value="Y">非营运</option>    			    		     	    		     
+				    		<option  value="N">营运</option>    			    		     
+				    	</select>           
+				   </div>
+				</div>			
+			</div>
+
+			<div class="item-wrap">
+				<div class="item-left">车牌号</div>
+				<div class="item-right">
+					<input id="carNum" type="text" placeholder="如：沪A88888" maxLength="7"/>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="item-wrap hide" id="creditHistoryBox">
+			<div class="item-left">信用历史</div>
+			<div class="item-right">
+				<div class="select-outer">  
+					<i class="select-arrow"></i> 
+			    	<span class="sel-text inp placeholder" id="sel_creditHistoryText">请选择</span>
+			    	<select name="" id="creditHistory"   value="">
+					<option  value="N" >请选择</option>
+					<option  value="Y">使用信用卡</option>
+					<option  value="Y">曾经贷过款（非民间）</option>  
+					<option  value="Y">上述两者均有</option>          
+					<option  value="N">上述两者均没有</option>          
+				</select>            
+			   </div>
+			</div>	
+		</div>
+		
+		
+		
+		<footer>
+			<div class="btn" id="btnNext">立即匹配</div>
+		</footer>		
+	</section>
+	<div id="cdMask" class="mask">
+	<section  class="flex-center absolute-fullpage">
+		<div class="cd-filter-mask">
+			<div class="p30 pr">
+				<i class="icon-info"></i>
+				<p class="fb">已为您匹配到对应的车主专属产品，<br/>该产品必须<span class="cred">同时满足</span>以下3个条件：</p>
+				<ul>
+					<li>1、车辆已通过年检且未到期</li>
+					<li>2、商业险及交强险均在有效期内</li>
+					<li>3、车险被保人为本人</li>
+				</ul>
+				
+			</div>
+			
+			<div class="bt-group">
+				<a href="../proList.html">换个产品</a>
+				<a href="javascript:void(0);" id="btnMask">符合</a>
+			</div>
+				
+		</div>
+		
+		
+	</section>
+	</div>
+
+	<script  src="../common/js/jquery.min.js"></script>
+	<script  src="../common/js/selfCommon.js"></script>
+	<script  src="js/header.js"></script>
+	<script  src="js/cd_filter.js"></script>
+
+
+<!--数据统计-->
+<script>                                                                                                       
+	setTimeout('exesdcjs()',0);
+    function exesdcjs(){
+      var jDomain="www.pingan.com";
+      var js_path="/app_js/sdc/src/web.js";
+      var domain="http"+(window.location.protocol.indexOf('https:')==0?'s':'')+"://"+jDomain;
+      var SDC_js=document.createElement("script");
+      SDC_js.src=domain+js_path;
+      var headElem=document.getElementsByTagName("head")[0];
+      headElem.appendChild(SDC_js);
+     }
+</script>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KWWS7Z" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWWS7Z');
+</script>
+<!-- End Google Tag Manager -->
+<!--数据统计-->
+
+
+</body>
+
+</html>

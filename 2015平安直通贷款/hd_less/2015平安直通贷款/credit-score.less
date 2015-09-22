@@ -1,0 +1,419 @@
+@import "../common/base";
+@import "../common/liveapp";
+@import "../common/w640";
+.flex-center{
+	display: box;box-align:center;box-pack:center;
+	display: flex;align-items:center;justify-content:center;
+	
+}
+.absolute-center{position: absolute;top:0;left: 0;bottom: 0;right: 0;margin: auto;}
+.hide{display: none;}
+.mt20{margin-top: 20px;}
+.mt40{margin-top: 40px;}
+.mb40{margin-bottom: 40px;}
+.mt45{margin-top: 45px;}
+.mt100{margin-top:125px;}
+.mt150{margin-top: 150px;}
+.cred{color:#ff7f00;}
+html,body{height: 100%;max-height: 100%;color: #5d4d3d;background: #000;}
+#loadingBox{position:absolute;top:0;left:0;z-index:2;overflow:hidden;width: 100%;height: 100%;background: #ff9a28;font-size:3rem;color: #fff;&:extend(.flex-center);}
+#loadingBar-outer{
+	position: relative;height: 9px;width: 284px;background: rgba(255,255,255,.3);margin: 0 25px;border-radius: 5px;
+}
+#loadingBar {
+	position: absolute;top: 0;left: 0;height: 8px;width: 100%;box-sizing: border-box;
+	background: rgba(255,255,255,.6);width: 0;border-radius: 5px;
+}
+#mainBox{
+	position:relative;height: 100%;height: 100%;
+	background: #fff;font-size: 3.6rem;
+}
+.page{
+	width: 100%;height:100%;position:absolute;top:0;left:0;&:extend(.flex-center);overflow: hidden;
+	opacity: 0;visibility: hidden;
+}
+.page.active{visibility: visible;opacity:1;}
+.page-inner{color:#5d4d3d;font-size:3rem;text-align: center;}
+
+.footer-btn{
+	position: absolute;bottom: 20px;left: 0;right:0;text-align: center;
+	.btn-pre,.btn-next{display:inline-block;width:78px; height:78px; background: url(../images/footer-btn.png);}
+	// .btn-pre.active{background-position: -2px -146px}
+	.btn-pre{background-position: -2px -162px;margin-right: 135px;}
+	.btn-next{background-position: -2px -82px}
+	.btn-next.disabled{background-position: -2px -2px}
+}
+
+.scroll-wrap{background:#f9eeda ;border: 2px solid #e4c9ac;overflow: hidden;position: relative;}
+.scroll-wrap{
+	width: 510px;height: 110px;margin:20px auto 0 auto;
+	.scroll-line{
+		position: absolute;top: 0px;left:50%;margin-left: -3px;
+		background: #ff9636;width:3px;height: 60px;
+	}
+}
+#ageScroll img{width: 990px;height: 110px;}
+
+/***     收入  ****/
+.w450{min-width: 450px;}
+
+.salary-scroll-wrap {
+  width: 125px;
+  height: 625px;
+  margin: 50px auto;
+}
+.salary-scroll-wrap #salaryScroll {
+  width: 100%;
+  height: 100%;
+}
+.salary-scroll-wrap img {
+  width: 125px;
+  height: 1083px;
+}
+.salary-scroll-wrap .scroll-line{
+  width: 66px;
+  height: 3px;
+  top: 135px;
+  left: 0;
+}
+.f60{font-size: 6rem;}
+.scroll-text{.f60{width: 80px;text-align: center;display: inline-block;}}
+
+.select-outer{border: none;display: inline-block;position: relative;width: 200px;}
+
+.select-outer select{
+	position: absolute;top: 0;left: 0;width: 100%;height: 100%;height: 4rem;
+	opacity: 0;outline: none;z-index: 1;outline: none;
+}
+.sel-text{&:extend(.cred);}
+.select-arrow{
+	position: absolute;right: 10px;top: 50%;margin-top: -1rem;width: 2rem;height: 2rem;
+	border-radius: 5px;display: block;background: #ff7f00;
+}
+.select-arrow:after{
+	&:extend(.absolute-center);
+	display: block;content: '';	width:0;height:0;	
+	border-top:10px solid #fff;
+	border-right:10px solid transparent;
+	border-left:10px solid transparent
+	
+}
+
+// 居住城市
+.db{display: block;}
+.map-box{
+	position: relative;
+	margin-top:120px;
+}
+.location-box{position: absolute;width: 165px;height: 234px;top: -120px;left: 50%;margin-left: -83px;}
+.location-text{
+	position: absolute;top:30px;left:0;width: 100%;color: #fff;
+}
+
+/*浮层*/
+#pageEnd{
+	position: absolute;top:0;left: 0;width: 100%;min-height: 100%;padding: 0px 50px;
+	background:#fff;font-size: 2.4rem;color: #4a4a4a;box-sizing: border-box;/* overflow: hidden; */
+	input{
+		box-sizing:border-box;width: 100%;height: 76px;line-height: normal;display: block;
+		padding-left: 65px;margin-bottom: 25px;border-radius: 10px;border: 1px solid #979797;
+		outline: none;
+	}
+	.input-box{position: relative;}
+	.input-box:before{
+		position: absolute;top: 20px;left: 15px;
+		display: block;content: "";width:30px; height:36px; background: url(../images/icon.png);
+
+	}
+	.input-box:before{background-position: -2px -68px;}
+	.input-box:last-child:before{background-position:  -2px -30px;}
+	.icon-error:after{
+		position: absolute;right: -30px;top:20px;
+		display: block;content: "";background: url(../images/icon.png);
+		width:26px; height:26px; background-position: -29px -2px;
+
+	}
+	#perror{text-align: left;margin-top: -20px;padding-left: 65px;color: #fe8c61;margin-bottom: 5px;}
+
+	#btnSubmit,#btnReturn{
+		height: 76px;line-height: 76px;margin:25px 15px 0 15px;
+		color: #fff;font-size: 3rem;border-radius: 10px;box-sizing: border-box;
+		background: #ff8a00;
+	}
+	#btnReturn{background: #d5d5d5;margin-top: 20px;}
+
+	.mb50{margin-bottom: 50px;}
+	.tl{text-align: left;}
+	.icon1{margin-top:10px;display:block;float:left;width:25px; height:26px; background: url(../images/icon.png);background-position: -2px -2px}
+	.icon1~span{display: block;padding-left: 30px;}
+
+
+	
+
+}
+.mt15{margin-top: 15px;}
+.mt30{margin-top: 30px;}
+#bossTip{display: none;font-size: 2rem;}
+#mask{
+	position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,.7);
+	&:extend(.flex-center);color:#fff;font-size: 3rem;opacity: 0;visibility: hidden;
+
+}
+#mask.active{
+	opacity: 1;visibility: visible;
+}
+
+// 动画开始
+
+// 性别
+
+#pageSex.active,#pageWork.active{
+	/*  .slideToLeft{animation:slideToLeft 1s ease both;}
+		.slideToRight{animation:slideToRight 1s ease both;} */
+	.fade{animation:fade .5s ease both;animation-play-state:paused;}
+}
+
+
+.active .running{animation-play-state:running!important;}
+
+
+#pageSex #boyImg.move{
+	animation:boymove 1s ease both;
+}
+@keyframes boymove{
+	0%{transform:translate(0,0);}
+	100%{transform:translate(-45px,25px);}
+}
+
+#pageSex #girlImg.move{
+	animation:grilmove 1s ease both;
+}
+@keyframes grilmove{
+	0%{transform:translate(0,0);}
+	100%{transform: translate(-15px,-370px);}
+}
+
+#pageWork #bossImg.move{
+	animation:bossmove 1s ease both;
+}
+@keyframes bossmove{
+	0%{transform:translate(0,0);}
+	100%{transform:  translate(-140px,5px);}
+	
+}
+
+#pageWork #workerImg.move{
+	animation:workermove 1s ease both;
+}
+@keyframes workermove{
+	0%{transform:translate(0,0);}
+	100%{transform: translate(-140px,380px)}
+}
+// 年龄
+#pageAge{
+	.scroll-wrap{
+		opacity: 0;
+		transition:opacity .5s ease;
+	}
+}
+#pageWorkTime{
+	.scroll-wrap{opacity: 0;transition:opacity 1.5s ease;}
+
+}
+#pageAge.active,#pageWorkTime.active{
+	.scroll-wrap {
+		opacity: 1;
+
+	}
+}
+// 居住城市
+#pageCity.active{
+	 .scaleUpDown{animation:scaleUpDown .5s ease both;animation-delay:1s;}
+	 .slideDownIn{animation:slideDownIn .4s ease-out both;}
+	.pullUp{
+		animation:pullUp 1.1s ease-out both;
+		transform-origin:50% 100%;
+	}
+
+
+}	
+.active	{
+	.slideDown{animation:slideDown 1s ease both;}
+	.slideUp{animation:slideUp 1s ease both;}
+	.slideToLeft{animation:slideToLeft 1s ease both;}
+	.slideToRight{animation:slideToRight 1s ease both;}
+
+	} 
+
+ 
+	
+.delay-500{animation-delay:500ms!important;}
+
+.drive{
+	animation-name:drive;
+	-webkit-animation-name:drive;
+	animation-duration:2s;
+	-webkit-animation-duration:2s;
+	animation-timing-function:ease-in-out;
+	-webkit-animation-timing-function:ease-in-out;
+	animation-fill-mode:forwards;
+	-webkit-animation-fill-mode:forwards;
+
+}
+@keyframes drive{
+	0%{transform:translateX(0);}
+	20%{transform:translateX(-10%);}
+	50%{transform:translateX(150%);}
+	100%{transform:translateX(150%);}
+}
+@-webkit-keyframes drive{
+	0%{-webkit-transform:translateX(0);}
+	20%{-webkit-transform:translateX(-10%);}
+	50%{-webkit-transform:translateX(150%);}
+	100%{-webkit-transform:translateX(150%);}
+}
+
+
+@keyframes slideToLeft{
+	0%{transform:translateX(200%)}
+	50%{transform:translateX(-8%)}
+	65%{transform:translateX(4%)}
+	80%{transform:translateX(-4%)}
+	95%{transform:translateX(2%)}
+	100%{transform:translateX(0%)}
+}
+@-webkit-keyframes slideToLeft{
+	0%{-webkit-transform:translateX(200%)}
+	50%{-webkit-transform:translateX(-8%)}
+	65%{-webkit-transform:translateX(4%)}
+	80%{-webkit-transform:translateX(-4%)}
+	95%{-webkit-transform:translateX(2%)}
+	100%{-webkit-transform:translateX(0%)}
+}
+@keyframes slideToRight{
+	0%{transform:translateX(-200%)}
+	50%{transform:translateX(8%)}
+	65%{transform:translateX(-4%)}
+	80%{transform:translateX(4%)}
+	95%{transform:translateX(-2%)}
+	100%{transform:translateX(0%)}
+}
+@-webkit-keyframes slideToRight{
+	0%{-webkit-transform:translateX(-200%)}
+	50%{-webkit-transform:translateX(8%)}
+	65%{-webkit-transform:translateX(-4%)}
+	80%{-webkit-transform:translateX(4%)}
+	95%{-webkit-transform:translateX(-2%)}
+	100%{-webkit-transform:translateX(0%)}
+}
+
+
+@-webkit-keyframes fade{to{opacity:0}}
+@keyframes fade{to{opacity:0}}
+
+ @-webkit-keyframes fadeIn{
+	0{opacity: 0%}
+	100%{opacity:100%}
+}
+@keyframes fadeIn{
+	0{opacity: 0%}
+	100%{opacity:100%}
+} 
+@keyframes slideDownIn{
+	from{transform:translateY(-100%);opacity: 0;}
+}
+@-webkit-keyframes slideDownIn{
+	from{-webkit-transform:translateY(-100%);opacity: 0}
+}
+
+
+
+@keyframes pullUp{0%{-webkit-transform:scaleY(0.1);transform:scaleY(0.1)}
+40%{-webkit-transform:scaleY(1.02);transform:scaleY(1.02)}
+100%,60%{-webkit-transform:scaleY(0.98);transform:scaleY(0.98)}
+80%{-webkit-transform:scaleY(1.01);transform:scaleY(1.01)}
+100%{-webkit-transform:scaleY(1);transform:scaleY(1)}}
+@-webkit-keyframes pullUp{0%{-webkit-transform:scaleY(0.1)}
+40%{-webkit-transform:scaleY(1.02)}
+100%,60%{-webkit-transform:scaleY(0.98)}
+80%{-webkit-transform:scaleY(1.01)}
+100%{-webkit-transform:scaleY(1)}}
+
+
+@keyframes scaleUpDown{from{opacity:0;transform:scale(.5)}}
+@-webkit-keyframes scaleDownUp{to{opacity:0;-webkit-transform:scaleX(.5)}}
+
+
+ @keyframes slideDown{0%{-webkit-transform:translateY(-100%);transform:translateY(-100%)}
+50%{-webkit-transform:translateY(8%);transform:translateY(8%)}
+65%{-webkit-transform:translateY(-4%);transform:translateY(-4%)}
+80%{-webkit-transform:translateY(4%);transform:translateY(4%)}
+95%{-webkit-transform:translateY(-2%);transform:translateY(-2%)}
+100%{-webkit-transform:translateY(0%);transform:translateY(0%)}}
+@-webkit-keyframes slideDown{0%{-webkit-transform:translateY(-100%)}
+50%{-webkit-transform:translateY(8%)}
+65%{-webkit-transform:translateY(-4%)}
+80%{-webkit-transform:translateY(4%)}
+95%{-webkit-transform:translateY(-2%)}
+100%{-webkit-transform:translateY(0%)}} 
+
+@keyframes slideUp{0%{webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+50%{-webkit-transform:translateY(-8%);transform:translateY(-8%)}
+65%{-webkit-transform:translateY(4%);transform:translateY(4%)}
+80%{-webkit-transform:translateY(-4%);transform:translateY(-4%)}
+95%{-webkit-transform:translateY(2%);transform:translateY(2%)}
+100%{-webkit-transform:translateY(0%);transform:translateY(0%)}}
+@-webkit-keyframes slideUp{0%{-webkit-transform:translateY(100%)}
+50%{-webkit-transform:translateY(-8%)}
+65%{-webkit-transform:translateY(4%)}
+80%{-webkit-transform:translateY(-4%)}
+95%{-webkit-transform:translateY(2%)}
+100%{-webkit-transform:translateY(0%)}}
+
+
+//2015-05-05
+//演示手势
+.scroll-mask{
+	position: absolute;top: 0;height: 0;height: 100%;width: 100%;
+	background: rgba(0,0,0,.5);
+
+}
+.scroll-mask.fade{
+	animation:fadeOut .5s ease-out 2.5s forwards;
+	animation-play-state:paused;
+}
+.active .scroll-mask.fade{
+
+	animation-play-state:running;
+}
+@keyframes fadeOut{
+	to{opacity: 0;visibility: hidden;}
+
+}
+.swing{
+	animation:swing 1.5s ease 1s both;
+	animation-play-state:paused;
+}
+.active .swing{
+	animation-play-state:running;
+}
+@keyframes swing{
+	0%{transform:translateX(0%);}
+	20%{transform:translateX(-150%);}
+	40%{transform:translateX(150%);}
+	60%{transform:translateX(-150%);}
+	80%{transform:translateX(150%);}
+	100%{transform:translateX(0%);}
+}
+@-webkit-keyframes swing{
+	0%{-webkit-transform:translateX(0%);}
+	20%{-webkit-transform:translateX(-150%);}
+	40%{-webkit-transform:translateX(150%);}
+	60%{-webkit-transform:translateX(-150%);}
+	80%{-webkit-transform:translateX(150%);}
+	100%{-webkit-transform:translateX(0%);}
+}
+
+
+
+

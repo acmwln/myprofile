@@ -1,0 +1,86 @@
+.m6{margin:0 3rem;}
+.m10{margin:0 4rem;}
+.cred{color:#c21616}
+.pt10{padding-top: 1rem;}
+.pb0{padding-bottom: 0!important;}
+@basefont:1.2rem;
+
+body{
+	color: #626060;
+
+}
+header{
+		background:#f3dac9;
+		border-bottom: none;
+		padding: 0 1.5rem;
+		position: relative;
+		.icon-close{
+			position: absolute;
+			font-size: 1.5rem;
+			line-height: 4rem;
+			width: 4rem;
+			height: 100%;
+			display: block;		
+			box-sizing: border-box;
+		}
+
+		h1{
+			font-size: 1.5rem;
+			line-height: 4rem;
+			color:#595959;
+			text-align: center;
+		}
+	}
+article{font-size: @basefont;padding-bottom: 1rem;}
+ul{padding-top: .5rem;}
+
+ul li{font-size: 1rem;margin-bottom: .2rem;position: relative;padding-left: 1rem;}
+ul li:before{
+	content: '';
+	color: #c21616;
+	width: .6rem;
+	height: .6rem;
+	border-radius: .3rem;
+	display: block;
+	position: absolute;
+	top: 50%;
+	margin-top: -.3rem;
+	left: 0;
+	background: #c21616;
+}
+article.m10{
+	background: #fbfbfb;
+	color: #1b1b1b;
+	font-family: '黑体';
+	font-size: 1.5rem;
+	padding:1rem;
+	z-index: 99;
+	p{padding-bottom:1rem; }
+
+}
+.codeBox{
+	background: url(../images/wx_line.jpg) left top no-repeat;
+	background-size: contain;
+	text-align: center;
+	img{
+		width: 30%;
+		border: 1rem solid #f3dac9;
+	}
+}
+#btnActivity{
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 14.0625%;
+	width:7rem;
+	height: 2rem;
+}
+#btnSure{
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -19%;
+	width:37.5%;
+	height: 3rem;
+}

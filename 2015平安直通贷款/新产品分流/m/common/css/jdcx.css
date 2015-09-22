@@ -1,0 +1,74 @@
+body {
+  background: #f8f0ea;
+}
+.main {
+  margin: 1rem;
+  margin-left: 2rem;
+  font-size: 1.2rem;
+  color: #999;
+}
+.wrapper {
+  position: relative;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  border-left: 2px solid #fac08f;
+}
+.wrapper:last-child {
+  border: none;
+}
+.wrapper.show {
+  display: block;
+}
+.wrapper.active li.active {
+  color: #ea5404;
+}
+.wrapper.active li.active .time,
+.wrapper.active li.active h2,
+.wrapper.active li.active p {
+  color: #575757;
+}
+.wrapper.active h1 {
+  color: #575757;
+}
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1.3rem;
+}
+.content {
+  display: none;
+  overflow: hidden;
+  background: #fdfbf9;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 20px;
+  list-style: disc;
+}
+.content li {
+  font-size: 1.2rem;
+  margin: .5rem 0 .5rem 1rem;
+}
+.content p {
+  font-size: 1.1rem;
+  margin: .5rem 0;
+}
+.actived .content,
+.active .content {
+  display: block;
+}
+canvas {
+  position: absolute;
+  top: 0;
+  left: -30px;
+}
+.btn {
+  background: #f79d4d;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  width: 45%;
+  height: 3rem;
+  line-height: 3rem;
+  margin: .5rem 0;
+}

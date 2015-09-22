@@ -1,0 +1,76 @@
+@import "common/base";
+@import "common/common";
+@import "common/w640";
+
+.f30 {font-size:3rem;}
+.f48 {font-size:4.8rem;}
+.mr40 {margin-right:40px;}
+.mb30 {margin-bottom:30px;}
+
+body {.grad(#F5F5F5,#787878);}
+.txt-lq {color:#252525;&:extend(.f30,.tc);margin:20px 0 30px;line-height:1.125;}
+.showInfo {.grad(#fff,#ECEAEA);&:extend(.dib,.tl);}
+.showInfoCont {&:extend(.pr,.f30);border:1px dashed #050001;margin:10px;min-height:166px;width:308px;padding:30px;}
+.btn-close {&:extend(.pa,.f0);top:-1px;right:-1px;}
+.btn-close2 {&:extend(.pa,.f0);top:10px;right:10px;}
+.mycard {height:100%;width:100%;background:url("@{url}/bg.jpg") no-repeat;background-size:cover;padding-top:130px;&:extend(.pr);}
+.list-cards {
+    width:506px;height:700px;&:extend(.mau,.pr);-webkit-perspective: 800px;z-index:2;
+    li {&:extend(.f0,.pa);top:0;left:0;width:506px;height:700px;.transition(all .3s linear);-webkit-transform-origin: 0 50%;-webkit-transform-style: preserve-3d;-webkit-backface-visibility: hidden;}
+    li:nth-child(1) {z-index:8;}
+    li:nth-child(2) {opacity:1;-webkit-transform: scale(.96) translateX(40px);z-index:7;}
+    li:nth-child(3),li:nth-child(4),li:nth-child(5),li:nth-child(6),li:nth-child(7) {opacity:.8;-webkit-transform: scale(.92) translateX(80px);z-index:1;}
+    li:nth-child(3),li:nth-child(4),li:nth-child(5) {opacity:0;}
+}
+.overli {/*-webkit-transform: rotateY(-180deg);*/.animation(overli 1.2s linear forwards);}
+.overli2 {/*-webkit-transform: rotateY(-180deg);*/.animation(overli2 1.2s ease-out forwards);}
+@-webkit-keyframes overli {
+    0% {-webkit-transform: scale(1) translateX(0);z-index:9;}
+    25% {-webkit-transform: scale(1) translateX(0);z-index:9;}
+    50% {-webkit-transform: scale(1) translateX(-478px);z-index:9;}
+    75% {-webkit-transform: scale(.96) translateX(0);z-index:1;}
+    100% {-webkit-transform: scale(.92) translateX(80px);z-index:1;}
+}
+
+@-webkit-keyframes overli2 {
+    0% {-webkit-transform: scale(.92) translateX(80px);opacity:1;z-index:1;}
+    25% {-webkit-transform: scale(.96) translateX(0);opacity:1;z-index:1;}
+    50% {-webkit-transform: scale(1) translateX(-478px);opacity:1;z-index:9;}
+    75% {-webkit-transform: scale(1) translateX(0);opacity:1;z-index:9;}
+    100% {-webkit-transform: scale(1) translateX(0);opacity:1;z-index:9;}
+}
+
+.cardNumWrap {&:extend(.tc,.pr);margin:20px 55px 55px;z-index:1;}
+.cardNum {&:extend(.cwhite,.pa);right:0;bottom:0;font-size:4rem;text-shadow: 1px 1px 3px #000;}
+.toleft {&:extend(.pa);left:20px;top:400px;}
+/*
+.toleft {
+    &:extend(.pa);right:0;top:12px;
+    img:nth-child(1) {.animation(img1 1s infinite linear);}
+    img:nth-child(2) {.animation(img2 1s infinite linear);margin:0 -10px;}
+    img:nth-child(3) {.animation(img3 1s infinite linear);}
+}
+@-webkit-keyframes img1 {
+    0% {opacity:1;}
+    75% {opacity:.1;}
+    100% {opacity:1;}
+}
+@-webkit-keyframes img2 {
+    0% {opacity:1;}
+    50% {opacity:.1;}
+    100% {opacity:1;}
+}
+@-webkit-keyframes img3 {
+    0% {opacity:1;}
+    25% {opacity:.1;}
+    100% {opacity:1;}
+}
+*/
+
+.formWrap {width:400px;padding:40px;&:extend(.pr);background-color:#F6E982;text-shadow: 1px 1px 1px rgba(0,0,0,.8);}
+.list-form {
+    border-top:1px dashed #000;margin-top:20px;padding-top:20px;
+    li:not(:last-child) {margin-bottom:20px;}
+}
+.inp-form {&:extend(.noBorder,.f24,.pl10);background-color:#fff;width:286px;height:50px;.shadow(inset 2px 4px 4px rgba(0,0,0,.5));}
+.btn-qj {&:extend(.pa);top:197px;left:0;width:100%;}

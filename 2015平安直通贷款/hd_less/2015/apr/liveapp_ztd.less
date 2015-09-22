@@ -1,0 +1,40 @@
+@import "../../common/reset";
+@import "../../common/common";
+@import "../../common/liveapp";
+@import "../../common/w750";
+
+.page {background-color:#72BBC1;}
+#page-5 {background-color:#59A8AB;}
+.arrow span {border-left-color:#fff;border-top-color:#fff;}
+.p1 {&:extend(.pa);top:420px;left:305px;animation: p1 1.4s step-start infinite;}
+@keyframes p1 {
+    0%,30% {transform: scale(1,1);}
+    45%,55% {transform: scale(1.1,.2);}
+    60%,100% {transform: scale(1,1);}
+}
+.p2-0,.p3-0,.p3-3,.p4-0 {height:738px;}
+.p2-0 {background:url("@{url}/p2_0.png") no-repeat;animation: p2 1.4s step-start infinite;}
+@keyframes p2 {
+    0% {.bgp(0,0);}
+    50% {.bgp(0,-768px);}
+    100% {.bgp(0,0);}
+}
+.p3-0 {background:url("@{url}/p3_0.png") 0 -32px no-repeat;}
+.p3-2 {&:extend(.pa);background:url("@{url}/p3_2.png") 0 -600px no-repeat;left:420px;top:80px;width:243px;height:164px;animation: p3-2 1.4s step-start .6s forwards;}
+@keyframes p3-2 {
+    0% {.bgp(0,-600px);}
+    33% {.bgp(0,0);}
+    66%,100% {.bgp(0,-164px);}
+}
+.p3-3 {background:url("@{url}/p3_3.png") no-repeat;animation: p2 1.4s step-start infinite;}
+.p4-0 {background:url("@{url}/p4_0.png") no-repeat;animation: p2 1.4s step-start infinite;}
+.btn-dai,.btn-share {&:extend(.pa);left:170px;width:410px;height:90px;}
+.btn-dai {top:572px;}
+.btn-share {top:702px;}
+.share1 {&:extend(.pa);left:450px;top:80px;animation: share1 1s step-start infinite;}
+.share2 {&:extend(.pa);left:174px;top:288px;}
+@keyframes share1 {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
+    100% {transform: translateY(0);}
+}

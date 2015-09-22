@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>手机验证</title>
+	
+  	<meta name="format-detection" content="telephone=no" />
+  	<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  	<meta HTTP-EQUIV="Expires" CONTENT="-1">
+  	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  	<meta name="apple-mobile-web-app-capable" content="yes"> 
+  	<meta name="screen-orientation" content="portrait">
+  	<meta name="x5-orientation" content="portrait">
+  	<meta name="x5-fullscreen" content="true">
+  	<meta name="360-fullscreen" content="true">
+  	<meta name="renderer" content="webkit">
+
+    <link rel="stylesheet" href="../common/css/zt-ui.css" />
+    <link rel="stylesheet" href="../common/css/font.css" />
+</head>
+<body>
+	<div class="acBox">
+		<i class="icon-people"></i>
+		<p id="topIntroText">为了确保您的个人信息安全，请输入您申请贷款时提交的手机号码，并验证！</p>
+	</div>
+	<section class="main">
+	
+		<div class="item-wrap">
+			<div class="item-left">手机号码</div>
+			<div class="item-right">
+					<input id="phoneNum" type="tel" value="181****1989" placeholder="请输入手机号码" maxLength="11">	
+			</div>
+				
+		</div>	
+		<div class="item-wrap">
+			<div class="item-left">验证码</div>
+			<div class="item-right flex nbg">
+				<p  class="box flex-1"><input id="codeInp" type="tel" placeholder="6位数字" maxLength="6"></p>
+				<p class="btnCode" id="btnCode" >获取验证码</p>
+			</div>				
+		</div>
+	
+		<footer>
+			<div class="btn" id="btnNext">提交</div>
+		</footer>			
+	</section>
+	<div id="mask"></div>
+	
+
+	<script  src="../common/js/jquery.min.js"></script>
+	<script  src="../common/js/selfCommon.js"></script>
+	<script  src="../common/js/header2.js"></script>
+	<script  src="../common/js/check2.js"></script>
+
+
+
+<!--数据统计-->
+<script>                                                                                                       
+	setTimeout('exesdcjs()',0);
+    function exesdcjs(){
+      var jDomain="www.pingan.com";
+      var js_path="/app_js/sdc/src/web.js";
+      var domain="http"+(window.location.protocol.indexOf('https:')==0?'s':'')+"://"+jDomain;
+      var SDC_js=document.createElement("script");
+      SDC_js.src=domain+js_path;
+      var headElem=document.getElementsByTagName("head")[0];
+      headElem.appendChild(SDC_js);
+     }
+</script>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KWWS7Z" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWWS7Z');
+</script>
+<!-- End Google Tag Manager -->
+<!--数据统计-->
+
+
+</body>
+
+</html>
