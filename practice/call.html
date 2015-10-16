@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>call方法</title>
+</head>
+<body>
+<script>
+	// function add(a,b)  
+	// {  
+	//     alert(a+b);  
+	// }  
+	// function sub(a,b)  
+	// {  
+	//     alert(a-b);  
+	// }  
+	  
+	// add.call(sub,3,1); 
+// 	function Animal(){    
+// 	    this.name = "Animal";    
+// 	    this.showName = function(){    
+// 	        alert(this.name);    
+// 	    }    
+//    }    
+  
+// 	function Cat(){    
+// 	    this.name = "Cat";    
+// 	}    
+   
+// 	var animal = new Animal();    
+// 	var cat = new Cat();    
+    
+// //通过call或apply方法，将原本属于Animal对象的showName()方法交给对象cat来使用了。    
+// //输入结果为"Cat"    
+// animal.showName.call(cat,",");    
+//animal.showName.apply(cat,[]); 
+
+ 
+// function Animal(name){
+// 	this.name = name;
+// 	this.showName = function(){
+// 		alert(this.name);
+// 	}
+// }
+
+// function Cat(name){
+// 	Animal.call(this,name);
+// }
+// var cat = new Cat("Black cat");
+// cat.showName();
+
+// function Person(name,age){
+//   this.name = name;
+//   this.age = age;
+// }
+// function Student(name,age,grade){
+//   Person.apply(this,arguments);
+//   this.grade = grade;
+// }
+// var student = new Student("张三",21,"一年级");
+// alert("name:"+student.name+"\n"+"age:"+student.age+"\n"+"grade:"+student.grade);
+// var arr1=new Array("1","2","3");  
+// var max = Math.max.apply(null,arr1);
+// alert(max);
+var arr1 = new Array("1","2","3");
+
+var arr2 = new Array("4","5","6");
+Array.prototype.push.apply(arr1,arr2);
+alert(arr1);
+
+</script>
+</body>
+</html>

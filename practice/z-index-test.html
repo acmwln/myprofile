@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	   .red, .green, .blue {
+		  position: absolute;
+		  width: 100px;
+		  color:white;
+		  line-height:100px;
+		  text-align:center;
+		}
+		.red {
+		  z-index:1;
+		  top: 20px;
+		  left: 20px;
+		  background:red;
+		}
+		div:first-child{opacity:.99}
+		.green {
+		  top: 60px;
+		  left: 60px;
+		  background: green;
+		}
+		.blue {
+		  top: 100px;
+		  left: 100px;
+		  background:blue;
+		}	
+
+	</style>
+
+</head>
+<body>
+	<div style="border:1px solid red;height:300px;width:100px;"><!-- 1 -->
+     <span class="red"><!-- 1.1 -->red</span>
+    </div>
+    <div style="border:1px solid blue;height:250px;width:150px;">
+      <span class="green"><!-- 4 -->green</span>
+    </div>
+    <div style="border:1px solid yellow;height:200px;width:300px;"><!-- 3 -->
+      <span class="blue"><!-- 5 -->blue</span>
+    </div>
+</body>
+</html>

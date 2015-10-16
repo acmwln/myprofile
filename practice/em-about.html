@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>em和rem单位</title>
+	<style>
+	/*html{font-size:1em;}
+	h1{font-size:3rem;}
+	h2{font-size:2.25rem;}
+	h3{font-size:1.5rem;}
+	h4{font-size:1.313rem;}
+	h5{font-size:1.125rem;}
+	h6{font-size:1rem;}
+	p{font-size:48px;font-weight:bold;}*/
+       /*.slider-wrap{margin:1rem;width:30rem;}
+       .currentSize{margin:1rem; }  */                                                                                                                                                   
+      /* .inheritance_demo{padding:1.5em;font-size:1.2em;}
+       .box{background:red;color:#fff;}
+       .wrapper{font-size:1.25em;}*/
+      /* .ball{
+       	animation-name:ballmove;
+       	animation-duration:2s;
+       	animation-timing-function:ease-in-out;
+       	animation-iteration-count:1;
+       	animation-delay:2s;
+       	animation-fill-mode:forwards;
+
+       }
+       @keyframes ballmove{
+       	0%{transform:translateX(100px) rotate(0);}
+       	20%{transform:translateX(-10px) rotate(-0.5turn);}
+       	100%{transform:translateX(450px) rotate(2turn);}
+       }*/
+       body {
+		  background: #678bb3;
+		  padding: 0;
+		  margin: 0;
+		}
+
+.sky {
+  width: 100%;
+  height: 1000px;
+  background: transparent url(http://www.w3cplus.com/sites/default/files/blogs/2015/1506/sky.jpg) top left no-repeat;
+  background-size: 100% 100%;
+  margin: auto;
+  position: relative;
+}
+
+.cloud {
+  width: 248px;
+  height: 131px;
+  position: absolute;
+  background: transparent url(http://www.w3cplus.com/sites/default/files/blogs/2015/1506/cloud.png) 0 0 no-repeat;
+}
+
+.cloud01 {
+  top: 100px;
+  left: 300px;
+  z-index: 100;
+  -webkit-animation: drift 25s linear infinite;
+          animation: drift 25s linear infinite;
+}
+
+.cloud02 {
+  top: 240px;
+  z-index: 200;
+  -webkit-animation: drift 35s linear 10s infinite backwards;
+          animation: drift 35s linear 10s infinite backwards;
+}
+
+@-webkit-keyframes drift {
+  from {
+    -webkit-transform: translateX(-255px);
+            transform: translateX(-255px);
+  }
+  to {
+    -webkit-transform: translateX(1350px);
+            transform: translateX(1350px);
+  }
+}
+
+@keyframes drift {
+  from {
+    -webkit-transform: translateX(-255px);
+            transform: translateX(-255px);
+  }
+  to {
+    -webkit-transform: translateX(1350px);
+  }
+	</style>
+</head>
+<body>
+<!-- 	<div class="slider-wrap">
+		<div id="slider"></div>
+	</div>
+	<div class="currentSize">
+		Current html font size:<code>16px</code>
+	</div> -->
+	<!-- <div class="wrapper">
+		<div class="inheritance_demo box">
+			jsjdgslkjgaslgjddal
+		</div>
+    </div> -->
+<!-- <img class="ball" src="http://www.w3cplus.com/sites/default/files/blogs/2015/1506/ball.png" alt="ball"width="111" height="111" /> -->
+<div class="sky">
+    <div class="cloud cloud01"></div>
+    <div class="cloud cloud02"></div>
+</div>
+  
+</body>
+</html>

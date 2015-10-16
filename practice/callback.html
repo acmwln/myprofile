@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	 <script src="js/jquery.min.js"></script>
+</head>
+<body>
+	<div>hello world!</div>
+<script type="text/javascript">
+// 1.
+    debugger;
+	var Box = document.querySelector('div');
+    debugger;
+	Example = function(callback) {
+		debugger;
+		Box.style.background = 'red';
+		debugger;
+		setTimeout(function(){
+			debugger;
+			callback(Box);
+			debugger;
+		},2000);
+	
+	};
+// 2.
+	// Example(function($Obj) {
+	// 	debugger;	
+	// 	$Obj.innerHTML = '001';
+	// 	debugger;	
+	// });
+    	Example(function() {
+    		debugger;
+		Box.innerHTML = '001';
+		debugger;
+	});
+// 3.
+// Example = function(callback) {
+// 	debugger;
+// 		var Box = document.querySelector('div');
+// 		debugger;
+// 		Box.style.background = 'red';
+// 		debugger;
+// 		setTimeout(function() {
+// 			debugger;
+// 			callback(Box);
+// 			debugger;
+// 		},2e3)
+// 	};
+
+// 	debugger;
+// 	Example(function($Tga) {
+// 		debugger;
+// 		$Tga.innerHTML = 'My is Keith';
+// 		debugger;
+// 		$Tga.style.background = 'green';
+// 		debugger;
+// 	});
+
+
+// 4.
+//  var One = function(number, callback) {
+//  	debugger;
+//  alert(number + callback);
+// };
+// debugger;
+// var Two = function(number) {
+// 	return number;
+// };
+
+// One(10,Two(5));
+
+</script>
+</body>
+</html>

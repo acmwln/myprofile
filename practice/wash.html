@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>洗车商户</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta content="telephone=no" name="format-detection">
+		<link rel="stylesheet" href="../css/my.css">
+		<link rel="stylesheet" href="../css/main.css">
+		<script src="../js/jquery-1.10.2.js"></script>
+		<style type="text/css">
+			/*排序*/
+
+			.listcont{
+				display: none;
+				position: fixed;
+				top: 92px;
+				left: 0;
+				width: 100%;
+				height: 240px;
+				z-index: 200;
+				background: #fff;
+				clear: both;
+				font-size: 1.6em;
+				overflow-y:hidden;
+			}
+			.listcont .cont li:last-child{
+				border: none;
+			}
+			.distul{
+				width: 40%;float: left;height: 240px;background: #edeeed;
+			}
+			.distul li{
+				height: 46px;line-height: 46px;text-indent: 20px;font-size: 14px;
+			}
+			#disulcur{
+				background: #fff;
+			}
+			#dislicur{
+				background: url(../imgs/right-ico.png) no-repeat;background-position: right;background-size: 16px;color: #fc7944;
+			}
+			.disrig{
+				width: 60%;float: right;display: none;
+			}
+			.disrig,.distsmart,.distype{
+				background: #fff;overflow-y:scroll;height: 240px;line-height: 45px;
+			}
+			.disrig li,.distype ul li,.distsmart ul li{
+				height: 45px;border-bottom: 1px solid #edeeed;margin: 0 15px;font-size: 14px;
+			}
+			.distype ul li,.distsmart ul li{
+				line-height: 45px;
+			}
+			.disbg{
+				width: 100%;height: 1000px;position: fixed;top: 0;left: 0;z-index: 50;display: none;background: rgba(0,0,0,0.5);
+			}
+			.selectmenu{
+				width: 100%;height: 46px;position: fixed;top: 46px;z-index: 20;background: #fff;
+			}
+			.top_top img{
+				width: 10px;position: relative;left: 4px;top: -3px;
+				/*transform:rotate3d(0,0,1,180deg);
+				-webkit-transform:rotate3d(0,0,1,180deg);
+				-webkit-transform-style: preserve-3d;
+				transform-style:preserve-3d;
+				-webkit-transition:-webkit-transform .5s;
+				transition:transform .5s;*/
+
+				/*-webkit-transform:rotate3d(0,1,0,180deg);
+				transform:rotate3d(0,1,0,180deg);*/
+			}
+			.com5s{
+				width: 20px;height: 20px;margin-right: 6px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="head">
+			<a href="javascript:pub.back()" class="back btnact"></a>
+			<label>选择商户</label>
+			<span class="wash_location"><img src="../imgs/position_icon.png" width="15px" height="19px"></span>
+		</div>
+		<div class="wrapping" id="main">
+			<div class="mask" style="display:none;"></div>
+			<div class="selectmenu">
+				<a href="javascript:" id="distinct">
+					<label>附近</label><span class="top_top top_top1"><img src="../imgs/drop_arrow.png"></span></a>
+				<a href="javascript:" class="select_com_top_mid" id="price">
+					<label>类型</label><span class="top_top top_top2"><img src="../imgs/drop_arrow.png"></span></a>
+				<a href="javascript:" id="point">
+					<label>智能</label><span class="top_top top_top3"><img src="../imgs/drop_arrow.png"></span></a>
+			</div>
+			<div class="listcont">
+				<div class="cont discont">
+					<ul class="distul">
+						<li id="disulcur" data="disli">距离</li>
+						<li data="disqy">区域</li>
+					</ul>
+					<ul class="disli disrig" style="display:block">
+						<li id="dislicur" data="">附近</li>
+						<li data="1">1公里内</li>
+						<li data="2">3公里内</li>
+						<li data="3">5公里内</li>
+					</ul>
+					<ul class="disqy disrig">
+						<li id="dislicur">全部</li>
+						<li>黄浦区</li>
+					</ul>
+				</div>
+				<div class="cont distype">
+					<ul>
+						<li id="dislicur">类型</li>
+						<li>经济型</li>
+						<li>高端型</li>
+						
+					</ul>
+				</div>
+				<div class="cont distsmart">
+					<ul>
+						<li id="dislicur" class="nodis">智能</li>
+						<li class="_price">价格最低</li>
+						<li class="__price">价格最高</li>
+						<li class="_distance">离我最近</li>
+						<li class="_better">评价最好</li>
+						<li class="_hot">人气最高</li>
+					</ul>
+				</div>
+			</div>
+			<section class="section-shop">
+				 <div class="shop-list-box">
+           <div class="shop-img">
+               <img src="../imgs/shop.jpg" width="80px" height="80px"/>
+           </div>
+           <div class="shop-body">
+              <h3>上海华胜汽修连锁</h3> 
+              <div class="shop-star-box">
+                  <div class="shop-star">
+                    <div class="star-cover mtop">
+                       <div class="star-uncover"></div> 
+                    </div>  
+                  </div>
+                  <div class="price-right">
+                      工时价<font style="color:#fc7944;font-size:1.7rem;">￥320</font>
+                  </div>
+              </div>
+              <div class="shop-star-box">
+                  <div class="shop-ser">
+                        <ul>
+                            <li class="blue li_style"><span><a href="#">上</a></span></li>
+					<li class="orange li_style"><span><a href="#">赔</a></span></li>
+					<li class="green li_style"><span><a href="#">速</a></span></li>
+					</ul>
+			</div>
+			<div class="range"> &lt;500m </div>
+		</div>
+		</div>
+		</div>
+			</section>
+
+		</div>
+		<!--<dl class="reply">
+			<dt><img src="images/shape-404@2x.png"/></dt>
+			<dd class="font_s20">抱歉，未找到商户！</dd>
+			<dd class="font_s14 margin_t8">亲，您可能选择了过多的冷门项目哦!</dd>
+		</dl>-->
+		<script type="text/javascript" src="../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../js/script.js"></script>
+		<script type="text/javascript" src="../js/tools.js"></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	</body>
+
+</html>

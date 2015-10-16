@@ -1,0 +1,37 @@
+.box {
+  width: 300px;
+  height: 300px;
+  border: 5px solid red;
+}
+.border {
+  border: 5px solid red;
+}
+.box2 {
+  width: 300px;
+  height: 300px;
+  border: 5px solid red;
+  margin-left: 100px;
+}
+.test_mix {
+  width: 400px;
+  height: 200px;
+  border: solid #ffff00 10px;
+}
+.test_mix_03 {
+  width: 400px;
+  height: 200px;
+  border: solid #008000 10px;
+}
+.radius_test {
+  width: 100px;
+  height: 80px;
+  background-color: green;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+.sanjiao {
+  border-width: 100px;
+  border-color: transparent transparent #cccccc transparent;
+  border-style: dashed dashed solid dashed;
+}

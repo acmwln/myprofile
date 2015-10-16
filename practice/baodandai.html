@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="format-detection" content="telephone=no" />
+  	<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  	<meta HTTP-EQUIV="Expires" CONTENT="-1">
+  	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  	<meta name="apple-mobile-web-app-capable" content="yes"> 
+  	<meta name="screen-orientation" content="portrait">
+  	<meta name="x5-orientation" content="portrait">
+  	<meta name="x5-fullscreen" content="true">
+  	<meta name="360-fullscreen" content="true">
+  	<meta name="renderer" content="webkit">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+</head>
+<body>
+	<header>
+	    <div class="headRight">
+	    	<P><img src="images/topbar-rule.png"></P>
+	    	<p><img src="images/topbar-product.png"></p>
+	    </div>
+		<p class="logoBox">
+			<img src="images/logo.png">
+		</p>
+	</header>
+	<div class="acBox">
+		<i class="icon-people"></i>
+		<p class="topIntroText">
+			本产品最高额度<span class="cred">2-15</span>万元，提交您的贷款预审信息，请务必<span class="cred">准确及如实填写</span>，后续实际审核阶段若出现信息不符，将会对您的贷款通过产生直接影响。
+		</p>
+	</div>
+	<section class="main">
+		<div class="item-wrap">
+			<div class="item-left">缴费方式</div>
+			<div class="item-right">
+				<div class="select-outer">
+					<i class="select-arrow"></i>
+					<span class="sel-text placeholder">请选择</span>
+					<select>
+						<option value="请选择">请选择</option>
+						<option value="Y">分期缴付</option>
+						<option value="N">一次性缴付</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="item-wrap">
+			<div class="item-left">已生效时间</div>
+			<div class="item-right">
+				<div class="select-outer">
+					<i class="select-arrow"></i>
+					<span class="sel-text placeholder">请选择</span>
+					<select>
+						<option value="请选择">请选择</option>
+						<option value="Y">1年以上</option>
+						<option value="N">6-12个月</option>
+						<option value="N">1-5个月</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="item-wrap">
+			<div class="item-left">寿险投保人</div>
+			<div class="item-right">
+				<div class="select-outer">
+					<i class="select-arrow"></i>
+					<span class="sel-text placeholder">请选择</span>
+					<select>
+						<option value="请选择">请选择</option>
+						<option value="Y">投保人为本人</option>
+						<option value="N">投保人为亲属</option>
+						<option value="N">其他</option>
+					</select>
+				</div>
+			</div>
+		</div>
+  </section>
+  <P></P>
+  <script  src="js/jquery.min.js"></script>
+  <script>
+     $(function(){
+        //select绑定事件及取值
+$('select').on('change',function(){
+	$('.icon-error').removeClass('icon-error r0');
+	$('.perror').hide();
+	var $selectedOption= $(this).find("option:selected");
+
+	var textVal = $.trim($selectedOption.text());  
+
+	var dataVal = $.trim($selectedOption.val());
+
+	if(textVal.indexOf('请选择') !='-1') {
+			return;
+	}    
+	$(this).siblings('.sel-text').text(textVal).attr('data-val','Y').removeClass('placeholder');		
+});
+// 获取select选中值
+function getSelectVal(selectId){
+	var valArr = {};
+	valArr['text'] = $(selectId).prev('.sel-text').text();
+	valArr['dataVal'] = $(selectId).prev('.sel-text').attr('data-val');
+	return valArr;
+}
+// select初始化
+function initSelect(selectId,notId){
+	if(selectId == 'initAll'){
+		var $arr = $('select:not(#'+notId+')');
+		$arr.each(function(){
+	
+			init($(this));
+		})
+	}else{
+		init($(selectId));
+	}
+	function init($obj){
+		var $select = $obj;
+		$select.prev('.sel-text').text('请选择').attr('data-val','N').addClass('placeholder');
+		$($select.find('option')[0]).attr('selected',true);
+
+	}
+}
+     })
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+var startTime;
+var log = function (msg) {
+
+    console.log(new Date().getTime() - startTime);
+    console.log(msg);
+   
+};
+var mouseDown = function () {
+
+    startTime = new Date().getTime();
+    
+    log('mouseDown');
+   
+};
+var mouseClick = function () {
+
+    log('mouseClick');
+    
+};
+var mouseUp = function () {
+
+    log('mouseUp');
+    
+};
+ 
+document.addEventListener('mousedown', mouseDown);
+
+document.addEventListener('click', mouseClick);
+
+document.addEventListener('mouseup', mouseUp);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

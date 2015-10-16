@@ -1,0 +1,11 @@
+.dib {
+  display: inline-block;
+}
+/*.icon {&:extend(.dib);background:url("@{url}/i.png") no-repeat;}
+.btn {&:extend(.dib);background:url("@{url}/btn.png") no-repeat;}*/
+.after {
+  content: "\200B";
+  clear: both;
+  display: block;
+  height: 0;
+}

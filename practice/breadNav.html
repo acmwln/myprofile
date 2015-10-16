@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+ul{
+    margin: 0;
+	padding:0;
+	list-style: none;
+}
+.demo{
+  width:600px; 
+  margin:100px auto; 
+  background:#f0f0f0; 
+  height:32px; 
+  overflow:hidden; 
+  line-height:32px; 
+  position:relative;
+}
+
+.demo li{
+  float:left; 
+  width:200px; 
+  text-align:center; 
+  position:relative; 
+  z-index:2; 
+  font-weight:bold; 
+  font-size:14px;
+}
+.demo li em{
+  position:absolute; 
+  right:-24px; 
+  top:-8px; 
+  width:0; 
+  height:0; 
+  line-height:0; 
+  border-width:24px 0 24px 24px; 
+  border-color:transparent  transparent transparent #fff; 
+  border-style:dashed dashed dashed solid;
+}
+.demo li i{
+  position:absolute; 
+  right:-16px; 
+  top:0; 
+  width:0; 
+  height:0; 
+  line-height:0; 
+  border-width:16px 0 16px 16px; 
+  border-color:transparent  transparent transparent #f0f0f0; 
+  border-style:dashed dashed dashed solid;
+}
+.demo li.current{
+  background:#f60; 
+  color:#fff; 
+  z-index:1;
+}
+.demo li.current i{
+  border-color:transparent  transparent transparent #f60;
+}
+
+</style>
+</head>
+<body>
+  <section class="demo">
+	<ul class="clearfix">
+	  <li>面包屑一<em></em><i></i></li>
+	  <li class="current">面包屑二<em></em><i></i></li>
+	  <li>面包屑二<em></em><i></i></li>
+	</ul>
+</section>
+</body>
+</html>

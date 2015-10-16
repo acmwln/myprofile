@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组迭代</title>
+</head>
+<body>
+	<script>
+	var i = 0,n = 10;
+	var arr = [1,2,3,4];
+	for (; i < n; i++) {
+		console.log(arr[i]+'gggggggggggg');
+	};
+	for(i in arr){
+		console.log(arr[i]+'qqqqq');
+	}
+   Array.prototype.x = "inherited";
+   for(i in arr){
+   	console.log(arr[i]+'nihao');
+   }
+   for(i in arr){
+   	if(arr.hasOwnProperty(i)){
+   		console.log(arr[i]+'hello');
+   	}
+   }
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>数组属性的操作</title>
+	</head>
+	<body>
+		<script>
+		var arr = [];
+		arr[0] = 1;
+		arr[1] = 2;
+		arr.push(3);
+		arr;     //[1,2,3]
+		arr[arr.length] = 4;
+		arr;  //[1,2,3,4]
+		arr.unshift(0); //在数组头部添加一个元素
+		arr;   //[0.1,2,3,4]
+		delete arr[2];
+		arr;   //[0,1,undefined,3,4]
+		arr.length;  //5
+		2 in arr;  //false
+		arr.length -=1; //4
+		arr;   //[0,1,undefined]
+		arr.pop();//删除最尾部元素
+		arr;
+		;
+		arr.shift();//删除最头部元素
+			arr;
+			console.log()
+		</script>
+	</body>
+	</html>	

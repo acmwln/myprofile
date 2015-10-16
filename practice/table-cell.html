@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+
+html, body, section, div {
+  height: 100%;
+}
+
+body { 
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 1.25rem;
+  line-height: 150%;
+  text-align: center;
+  text-shadow: 0 2px 2px #b6701e;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin: 0 0 0.75rem 0;
+}
+.container {
+  display:flex;
+ 
+}
+
+div {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.left-half {
+ flex:1;
+ background:red;
+ padding:1rem;
+}
+
+.right-half {
+	flex:1;
+	padding:1rem;
+    background: #b6701e;
+}
+	</style>
+</head>
+<body>
+  <section class="container">
+	  <div class="left-half">
+	    <article>
+	      <h1>Left Half</h1>
+	      <p>Weekends don't count unless you spend them doing something completely pointless.</p>
+	    </article>
+	  </div>
+	  <div class="right-half">
+	    <article>
+	      <h1>Right Half</h1>
+	      <p>If your knees aren't green by the end of the day, you ought to seriously re-examine your life.</p>
+	    </article>
+	  </div>
+</section>	
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transform-origin</title>
+	<style>
+	.pie {
+		width: 100px; height: 100px;
+		border-radius: 50%;
+		background: yellowgreen;
+		background-image: linear-gradient(to right, transparent 50%, currentColor 0);
+		color: #ccc;
+	}
+.pie::before {
+  content: '';
+  display: block;
+  margin-left: 50%;
+  height: 100%;
+  background-color:inherit;
+  border-radius:0 100% 100% 0 / 50%;
+  transform:rotate(30deg);
+  transform-origin:left;
+ /* background:#ccc;*/
+
+
+}
+    </style>
+</head>
+	<body>
+       <div class="pie"></div>
+	</body>
+</html>
