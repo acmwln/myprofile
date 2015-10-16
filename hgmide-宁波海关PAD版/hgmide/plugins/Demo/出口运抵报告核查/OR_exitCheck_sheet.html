@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动单兵系统出口运抵报告核查</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../res/css/reset.css">
+	<link rel="stylesheet" href="../res/css/index-rem.css">
+</head>
+<body>
+	<header class="header-box">
+		<div class="index-logo left-arrow">
+			<a href="OR_exitCheck_list.html">
+				<img src="../res/images/left-arrow.png" alt="">
+			</a>
+		</div>
+		<h3>出口运抵报告核查</h3>
+		<p class="header-glass">
+			<a href="OR_checkInput.html">
+				<img src="../res/images/home.png">
+			</a>
+		</p>
+	</header>
+	<div class="main-body">
+		<div class="main-box" style="position:relative;padding-bottom:5rem;">
+			<ul class="item-ul">
+			<li class="flex flex-flow-row">
+					<div class="item-left">人工审核</div>
+					<div class="item-right" id="auditkind"><!-- THALASSAHELLAS --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">船名</div>
+					<div class="item-right" id="shipName"><!-- THALASSAHELLAS --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">航次</div>
+					<div class="item-right" id="airplane"><!-- 0817W --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">提单号</div>
+					<div class="item-right" id="fetch_num"><!-- COSU6100691330G --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">箱号</div>
+					<div class="item-right" id="equipment_num"><!-- FUIU9878316 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">货物描述</div>
+					<div class="item-right" id="goods_des"><!-- 9615110000000000*梳子 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">运抵时间</div>
+					<div class="item-right" id="arrivetime"><!-- 2015/03/09 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">进场仓库</div>
+					<div class="item-right" id="location"><!-- 龙星(新) --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">核查</div>
+					<div class="item-right" id="check"><!-- 2015/03/10 14:44:46 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">流转状态</div>
+					<div class="item-right" id="status"><!-- 2015/03/10 14:44:46 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">接收时间</div>
+					<div class="item-right" id="taketime"><!-- 2015/03/10 14:44:46 --></div>
+				</li>
+			</ul>
+		    <div class="btn" style="bottom:0px;">
+			   <a href="OR_checkInput.html">检 查</a>
+		    </div>
+		</div>
+	</div>
+		<script src="../js/jquerymobile-1.4.2.js"></script>
+	<script>
+		$(function(){
+			var chkjson = {"OpResult":[{"ID":"04388370-D26A-491C-B0F1-76ADB9CBEE76","AuditKind":"1","ArrivalReportID":"E12A41F2-E058-4135-B3C7-9FD4CEF9308C","TransportName":"GEORG MAERSK","JourneyID":"1202","AssociatedTransportDocument":"564495423L","EquipmentIdentificationID":"TCLU5550815","ArrivalDate":"2011/11/23 0:00:00","UnloadingLocationID":"NBDNL/3106","ManualReason":"","AuditResult":"0","IsCheck":"0","IsCapture":"0","State":"0","CreateTime":"2011/11/24 10:37:25","IsCanonical":"0","CargoDescription":"9615110000000*梳子","DelFlag":"0"}]}
+		var chkObj = eval(chkjson.OpResult);
+		$("#auditkind").text(chkObj[0].AuditKind);//人工审核
+		$("#shipName").text(chkObj[0].TransportName);//船名
+		$("#airplane").text(chkObj[0].JourneyID);//航次
+		$("#fetch_num").text(chkObj[0].AssociatedTransportDocument);//提单号  
+		$("#equipment_num").text(chkObj[0].EquipmentIdentificationID);//箱号
+		$("#goods_des").text(chkObj[0].CargoDescription);//货物描述
+		$("#arrivetime").text(chkObj[0].ArrivalDate);//运抵时间
+		$("#location").text(chkObj[0].UnloadingLocationID);//进场仓库
+		$("#check").text(chkObj[0].IsCheck);//核查
+		$("#status").text(chkObj[0].State);//流转状态
+		$("#taketime").text(chkObj[0].CreateTime);//接收时间
+		})
+	</script>
+</body>
+</html>

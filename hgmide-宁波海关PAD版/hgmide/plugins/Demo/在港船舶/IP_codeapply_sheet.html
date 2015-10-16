@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动单兵系统UN代码申报单</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../res/css/reset.css">
+	<link rel="stylesheet" href="../res/css/index-rem.css">
+</head>
+<body>
+	<header class="header-box">
+		<div class="index-logo left-arrow">
+			<a href="IP_shipInfo_board.html">
+				<img src="../res/images/left-arrow.png" alt="">
+			</a>
+		</div>
+		<h3>UN代码申报单</h3>
+		<p class="header-glass">
+			<a href="#">
+				<img src="../res/images/glass.png">
+			</a>
+		</p>
+	</header>
+	<div class="main-body">
+		<div class="main-box">
+			<ul class="item-ul">
+				<li class="flex flex-flow-row">
+					<div class="item-left">申报编号</div>
+					<div class="item-right" id="apply_number"><!-- 31061209190848063204 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">船舶UN代码</div>
+					<div class="item-right" id="ship_code"><!-- UN9198329 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">船舶英文名称</div>
+					<div class="item-right" id="shipEName"><!-- XIN PING YANG --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">船舶中文名称</div>
+					<div class="item-right" id="shipCName"><!-- 新平洋 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">船舶代理公司</div>
+					<div class="item-right" id="agent"><!-- 宁波中海船务代理有线公司 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">代理人联系方式</div>
+					<div class="item-right" id="agentRelate"><!-- 王洪亮， 27890271 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">MMSI</div>
+					<div class="item-right" id="mmsi"><!-- 477109900 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">申报日期</div>
+					<div class="item-right" id="apply_date"><!-- 2012/09/09 08:48:26 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">IMO编号(总署)</div>
+					<div class="item-right" id="imo_number"><!-- UN918329 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">英文船名(总署)</div>
+					<div class="item-right" id="EName_total"><!-- XIN PING YANG --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">中文船名(总署)</div>
+					<div class="item-right item-right-row" id="CName_total"><!-- 新平洋 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">船旗国(总署)</div>
+					<div class="item-right" id="country"><!-- 香港 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">监管类型(总署)</div>
+					<div class="item-right" id="slare"><!-- 国际航行 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">船舶种类(总署)</div>
+					<div class="item-right" id="sort_total"><!-- 油轮 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">净吨位(总署)</div>
+					<div class="item-right" id="tonnage"><!-- 90656 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">船舶运营企业(船公司)编码（总署）</div>
+					<div class="item-right" id="comcode"><!-- 0 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">船舶运营企业(船公司)（总署）</div>
+					<div class="item-right" id="corp_total"><!-- 90656 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">马力(总署)</div>
+					<div class="item-right" id="horse_total"><!-- 0 --></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script src="../js/jquerymobile-1.4.2.js"></script>
+	<script>
+		var codejson = {"OpResult":[{"DeclareID":null,"VesselUNCode":"UN9235737","VesselNameEN":"SKOPELOS","VesselNameCN":"普洛斯","ShippingAgent":"宁波中远物流有限公司（中国宁波外轮代理有限公司）","AgentInfo":"陈潮峰,13705747655","MMSI":"229780000","CreatedDate":"2014/7/2 13:48:21","CusIMO":"UN9235737","CusVesselNameEn":"SKOPELOS","CusVesselNameCn":"NULL","CusNationality":"GR","CusControlTypeCode":"NULL","CusVesselSortCode":"5","CusNetTonnage":"110526","CusCoCode":null,"CusVesselCorpNameEn":"HIBIYA MARITIME S.A.","CusHorsePower":"NULL"}]}
+		var codeObj = eval(codejson.OpResult);
+		$("#apply_number").text(codeObj[0].DeclareID);//申报编号
+		$("#ship_code").text(codeObj[0].VesselUNCode);//船舶UN代码
+		$("#shipEName").text(codeObj[0].VesselNameEN);//船舶英文名称
+		$("#shipCName").text(codeObj[0].VesselNameCN);//船舶中文名称
+		$("#agent").text(codeObj[0].ShippingAgent);//船舶代理公司
+		$("#agentRelate").text(codeObj[0].AgentInfo);//代理人联系方式
+		$("#mmsi").text(codeObj[0].MMSI);//MMSI
+		$("#apply_date").text(codeObj[0].CreatedDate);//申报日期
+		$("#imo_number").text(codeObj[0].CusIMO);//IMO编号(总署)
+		$("#EName_total").text(codeObj[0].CusVesselNameEn);//英文船名(总署)
+		$("#CName_total").text(codeObj[0].CusVesselNameCn);//中文船名(总署)
+		$("#country").text(codeObj[0].CusNationality);//船旗国(总署)
+		$("#slare").text(codeObj[0].CusControlTypeCode);//监管类型(总署)
+		$("#sort_total").text(codeObj[0].CusVesselSortCode);//船舶总类(总署)
+		$("#tonnage").text(codeObj[0].CusNetTonnage);//净吨位(总署)
+		$("#comcode").text(codeObj[0].CusCoCode);//船舶运营企业(船公司)编码（总署）
+		$("#corp_total").text(codeObj[0].CusVesselCorpNameEn);//船舶运营企业(船公司)（总署）
+		$("#horse_total").text(codeObj[0].CusHorsePower);//马力(总署)
+	</script>
+</body>
+</html>

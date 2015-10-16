@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动单兵系统待办事项</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../res/css/reset.css">
+	<link rel="stylesheet" href="../res/css/index-rem.css">
+</head>
+<body>
+	<header class="header-box">
+		<div class="index-logo left-arrow">
+			<a href="../index.html">
+				<img src="../res/images/left-arrow.png" alt="">
+			</a>
+		</div>
+		<h3>待办事项</h3>
+		<p class="header-glass">
+			<a href="BL_queryInfo.html">
+				<img src="../res/images/glass.png">
+			</a>
+		</p>
+	</header>
+	<div class="main-body" id="port">
+		<section class="port-banner flex">
+			<div class="flex-1" style="padding-top:25px">
+				<div class="flex-2-item">总计登轮<strong id ="voyage"><!-- 100000 --></strong>航次</div>
+				<div class="scroll_cover">
+					<div class="scroll_uncover"></div>
+				</div>
+			</div>
+			<div class="flex-1">
+				<div class="flex-2-item flex-1-item">本月登轮
+				<strong id ="monthship"><!-- 10000 --></strong>艘次</div>
+				<div class="bar_cover">
+					<div class="bar_uncover"></div>
+				</div>
+				<div class="flex-2-item flex-1-item flex-wait">待查
+				<strong id ="checkship"><!-- 50 --></strong>艘次</div>
+				<div class="bar_cover">
+					<div class="bar_uncover"></div>
+				</div>
+			</div>
+		</section>
+		<!-- <section class="part-section">
+			<a href="BL_instruInfo_check.html" class="status-navigate">
+				<div class="status yellow">暂存</div>
+				<div class="status-body">
+					<div class="flex mr10">
+						<div class="flex-1">
+							<p>船名：MAERSK</p>
+						</div>
+						<div class="flex-1">
+							<p>航次：511N</p>
+						</div>
+						<div class="flex-1">
+							<p>码头：一期码头</p>
+						</div>
+					</div>
+					<div class="flex">
+						<div class="flex-2">
+							<p>指令标号：20150000001</p>
+						</div>
+						<div class="flex-1">
+							<p>日期：2015/08/06</p>
+						</div>
+					</div>
+				</div>
+			</a>
+		</section>
+		<section class="part-section">
+			<a href="#" class="status-navigate">
+				<div class="status yellow">暂存</div>
+				<div class="status-body">
+					<div class="flex mr10">
+						<div class="flex-1">
+							<p>船名：MAERSK</p>
+						</div>
+						<div class="flex-1">
+							<p>航次：511N</p>
+						</div>
+						<div class="flex-1">
+							<p>码头：一期码头</p>
+						</div>
+					</div>
+					<div class="flex">
+						<div class="flex-2">
+							<p>指令标号：20150000001</p>
+						</div>
+						<div class="flex-1">
+							<p>日期：2015/08/06</p>
+						</div>
+					</div>
+				</div>
+			</a>
+		</section>
+		<section class="part-section">
+			<a href="instruInfo_check.html" class="status-navigate">
+				<div class="status cray">待查</div>
+				<div class="status-body">
+					<div class="flex mr10">
+						<div class="flex-1">
+							<p>船名：MAERSK</p>
+						</div>
+						<div class="flex-1">
+							<p>航次：511N</p>
+						</div>
+						<div class="flex-1">
+							<p>码头：一期码头</p>
+						</div>
+					</div>
+					<div class="flex">
+						<div class="flex-2">
+							<p>指令标号：20150000001</p>
+						</div>
+						<div class="flex-1">
+							<p>日期：2015/08/06</p>
+						</div>
+					</div>
+				</div>
+			</a>
+		</section>
+		<section class="part-section">
+			<a href="instruInfo_check.html" class="status-navigate">
+				<div class="status cray">待查</div>
+				<div class="status-body">
+					<div class="flex mr10">
+						<div class="flex-1">
+							<p>船名：MAERSK</p>
+						</div>
+						<div class="flex-1">
+							<p>航次：511N</p>
+						</div>
+						<div class="flex-1">
+							<p>码头：一期码头</p>
+						</div>
+					</div>
+					<div class="flex">
+						<div class="flex-2">
+							<p>指令标号：20150000001</p>
+						</div>
+						<div class="flex-1">
+							<p>日期：2015/08/06</p>
+						</div>
+					</div>
+				</div>
+			</a>
+		</section> -->
+	</div>
+	<script type="text/javascript" charset="utf-8" src="../js/jquerymobile-1.4.2.js"></script>
+	<script>
+		$(function(){
+           var cou={"OpResult":[{"TOTALNUM":"500","THISMONTHNUM":"30","WAITNUM":"20"},{"TOTALNUM":"a","THISMONTHNUM":"b","WAITNUM":"c"},{"TOTALNUM":"a1","THISMONTHNUM":"b1","WAITNUM":"c1"}]};
+           var obj1 = eval(cou.OpResult);
+           //alert(obj1[0].TOTALNUM);
+           $('#voyage').text(obj1[0].TOTALNUM);  //总计登轮
+           $('#monthship').text(obj1[0].THISMONTHNUM);  //本月登轮
+           $('#checkship').text(obj1[0].WAITNUM);  //待查
+
+			var json={"OpResult":[{"IMO":"UN9234367","SHIP_NAME_EN":"XIN YAN TIAN","VOYAGE_IN":"0138E","PORT_CODE":null,"ARRIVED_TIME":null,"CREATE_TIME":null,"ORDER_NO":"2015000059","VOYAGE_OUT":"20141207","SHIP_NAME_CN":null,"CONTROL_TYPE":"2","CONTROL_REASON":"01,04,06","CHECK_FORM":"3","CHECK_DEMAND":"01,08,09,10,11","CHECK_RESULT":"1","APP_GOODNO":"1","CHECK_ADD_DEMAND":"q","APPLY_USER_ID":"EA8A0886-79CC-4EF3-8491-8F4815045DD4","APPLY_USER_TEL":"89091271","ORDER_TIME":"2015/6/29","STEP":"APPLY_CK","CHECK_USER_ID":null,"CHECK_TIME":null,"ORDER_STATUS":"01","CHECK_ADD_NOTE":"1 ","IS_TEMP":"0"},{"IMO":"UN9143465","SHIP_NAME_EN":"LILA BHUM","VOYAGE_IN":"8097W","PORT_CODE":null,"ARRIVED_TIME":null,"CREATE_TIME":null,"ORDER_NO":"2015000003","VOYAGE_OUT":null,"SHIP_NAME_CN":"东暎首尔","CONTROL_TYPE":"2","CONTROL_REASON":"01,07","CHECK_FORM":"7","CHECK_DEMAND":"03,11","CHECK_RESULT":null,"APP_GOODNO":"2013000007","CHECK_ADD_DEMAND":null,"APPLY_USER_ID":"775d51b2-aae0-4a8d-853a-4dfbeaf1d18d","APPLY_USER_TEL":"89090813","ORDER_TIME":"2015/4/1","STEP":"CHECK","CHECK_USER_ID":null,"CHECK_TIME":"NULL","ORDER_STATUS":"02","CHECK_ADD_NOTE":" ","IS_TEMP":"0"},{"IMO":"CN3114044","SHIP_NAME_EN":null,"VOYAGE_IN":null,"PORT_CODE":null,"ARRIVED_TIME":null,"CREATE_TIME":null,"ORDER_NO":"2014000020","VOYAGE_OUT":"140727","SHIP_NAME_CN":null,"CONTROL_TYPE":null,"CONTROL_REASON":null,"CHECK_FORM":null,"CHECK_DEMAND":null,"CHECK_RESULT":null,"APP_GOODNO":null,"CHECK_ADD_DEMAND":null,"APPLY_USER_ID":"d00778ff-de0a-46db-9807-1986a08d4f1b","APPLY_USER_TEL":"89090558","ORDER_TIME":null,"STEP":"TEMP","CHECK_USER_ID":null,"CHECK_TIME":"NULL","ORDER_STATUS":null,"CHECK_ADD_NOTE":" ","IS_TEMP":"1"},{"IMO":"CN3104015","SHIP_NAME_EN":null,"VOYAGE_IN":null,"PORT_CODE":null,"ARRIVED_TIME":null,"CREATE_TIME":null,"ORDER_NO":"2014000021","VOYAGE_OUT":"140820","SHIP_NAME_CN":null,"CONTROL_TYPE":"4","CONTROL_REASON":null,"CHECK_FORM":"7","CHECK_DEMAND":null,"CHECK_RESULT":"0","APP_GOODNO":null,"CHECK_ADD_DEMAND":null,"APPLY_USER_ID":"d00778ff-de0a-46db-9807-1986a08d4f1b","APPLY_USER_TEL":"89090558","ORDER_TIME":null,"STEP":"TEMP","CHECK_USER_ID":null,"CHECK_TIME":"NULL","ORDER_STATUS":null,"CHECK_ADD_NOTE":" ","IS_TEMP":"0"},{"IMO":null,"SHIP_NAME_EN":null,"VOYAGE_IN":null,"PORT_CODE":null,"ARRIVED_TIME":null,"CREATE_TIME":null,"ORDER_NO":"2014000029","VOYAGE_OUT":null,"SHIP_NAME_CN":null,"CONTROL_TYPE":"2","CONTROL_REASON":"05,06","CHECK_FORM":"2","CHECK_DEMAND":"09,10","CHECK_RESULT":"0","APP_GOODNO":null,"CHECK_ADD_DEMAND":null,"APPLY_USER_ID":"d00778ff-de0a-46db-9807-1986a08d4f1b","APPLY_USER_TEL":"89090558","ORDER_TIME":null,"STEP":"TEMP","CHECK_USER_ID":null,"CHECK_TIME":"NULL","ORDER_STATUS":null,"CHECK_ADD_NOTE":" ","IS_TEMP":"1"},{"IMO":"FC0000151","SHIP_NAME_EN":"QIYUN","VOYAGE_IN":"HM039","PORT_CODE":null,"ARRIVED_TIME":null,"CREATE_TIME":null,"ORDER_NO":"2014000017","VOYAGE_OUT":null,"SHIP_NAME_CN":"齐运","CONTROL_TYPE":"2","CONTROL_REASON":"02,03","CHECK_FORM":"9","CHECK_DEMAND":"02,04,11","CHECK_RESULT":null,"APP_GOODNO":null,"CHECK_ADD_DEMAND":null,"APPLY_USER_ID":"EA8A0886-79CC-4EF3-8491-8F4815045DD4","APPLY_USER_TEL":"89091271","ORDER_TIME":"2014/9/9","STEP":"APPLY_SKSF","CHECK_USER_ID":null,"CHECK_TIME":"NULL","ORDER_STATUS":"07","CHECK_ADD_NOTE":" ","IS_TEMP":"1"},{"IMO":null,"SHIP_NAME_EN":null,"VOYAGE_IN":null,"PORT_CODE":null,"ARRIVED_TIME":null,"CREATE_TIME":null,"ORDER_NO":"2014000026","VOYAGE_OUT":null,"SHIP_NAME_CN":null,"CONTROL_TYPE":null,"CONTROL_REASON":null,"CHECK_FORM":null,"CHECK_DEMAND":null,"CHECK_RESULT":null,"APP_GOODNO":null,"CHECK_ADD_DEMAND":null,"APPLY_USER_ID":"d00778ff-de0a-46db-9807-1986a08d4f1b","APPLY_USER_TEL":"89090558","ORDER_TIME":null,"STEP":"TEMP","CHECK_USER_ID":null,"CHECK_TIME":"NULL","ORDER_STATUS":null,"CHECK_ADD_NOTE":" ","IS_TEMP":"1"},{"IMO":"UN9143465","SHIP_NAME_EN":"LILA BHUM","VOYAGE_IN":"0138E","PORT_CODE":null,"ARRIVED_TIME":null,"CREATE_TIME":null,"ORDER_NO":"2015000004","VOYAGE_OUT":"20141207","SHIP_NAME_CN":"东暎首尔","CONTROL_TYPE":"1","CONTROL_REASON":null,"CHECK_FORM":"1","CHECK_DEMAND":null,"CHECK_RESULT":"0","APP_GOODNO":"2013000007","CHECK_ADD_DEMAND":null,"APPLY_USER_ID":"775d51b2-aae0-4a8d-853a-4dfbeaf1d18d","APPLY_USER_TEL":"89090813","ORDER_TIME":"2015/4/1","STEP":"END","CHECK_USER_ID":"8b86cd97-5402-4711-9116-f83ed174e13c","CHECK_TIME":"NULL","ORDER_STATUS":"04","CHECK_ADD_NOTE":" ","IS_TEMP":"1"},{"IMO":"UN8914881 ","SHIP_NAME_EN":"HONG XIANG","VOYAGE_IN":null,"PORT_CODE":null,"ARRIVED_TIME":null,"CREATE_TIME":null,"ORDER_NO":"2015000067","VOYAGE_OUT":"141208","SHIP_NAME_CN":"鸿翔","CONTROL_TYPE":"1","CONTROL_REASON":"03,05","CHECK_FORM":"1","CHECK_DEMAND":"01,02,09","CHECK_RESULT":"1","APP_GOODNO":"12","CHECK_ADD_DEMAND":null,"APPLY_USER_ID":"EA8A0886-79CC-4EF3-8491-8F4815045DD4","APPLY_USER_TEL":"89091271","ORDER_TIME":"2015/7/24","STEP":"APPLY_SKSF","CHECK_USER_ID":null,"CHECK_TIME":null,"ORDER_STATUS":"02","CHECK_ADD_NOTE":"092 ","IS_TEMP":"1"},{"IMO":"UN8914881","SHIP_NAME_EN":"AA","VOYAGE_IN":null,"PORT_CODE":null,"ARRIVED_TIME":null,"CREATE_TIME":null,"ORDER_NO":"2015000058","VOYAGE_OUT":"141208","SHIP_NAME_CN":"AA","CONTROL_TYPE":"1","CONTROL_REASON":null,"CHECK_FORM":"3","CHECK_DEMAND":"01,08,09,10,11","CHECK_RESULT":null,"APP_GOODNO":null,"CHECK_ADD_DEMAND":"AA","APPLY_USER_ID":"EA8A0886-79CC-4EF3-8491-8F4815045DD4","APPLY_USER_TEL":"89091271","ORDER_TIME":"2015/6/29","STEP":"TEMP","CHECK_USER_ID":null,"CHECK_TIME":"NULL","ORDER_STATUS":null,"CHECK_ADD_NOTE":" ","IS_TEMP":"1"},{"IMO":null,"SHIP_NAME_EN":null,"VOYAGE_IN":null,"PORT_CODE":null,"ARRIVED_TIME":null,"CREATE_TIME":null,"ORDER_NO":"2014000027","VOYAGE_OUT":null,"SHIP_NAME_CN":null,"CONTROL_TYPE":null,"CONTROL_REASON":null,"CHECK_FORM":null,"CHECK_DEMAND":null,"CHECK_RESULT":null,"APP_GOODNO":null,"CHECK_ADD_DEMAND":null,"APPLY_USER_ID":"d00778ff-de0a-46db-9807-1986a08d4f1b","APPLY_USER_TEL":"89090558","ORDER_TIME":null,"STEP":"TEMP","CHECK_USER_ID":null,"CHECK_TIME":"NULL","ORDER_STATUS":null,"CHECK_ADD_NOTE":" ","IS_TEMP":"1"},{"IMO":"CN3114044","SHIP_NAME_EN":null,"VOYAGE_IN":null,"PORT_CODE":null,"ARRIVED_TIME":null,"CREATE_TIME":null,"ORDER_NO":"2014000040","VOYAGE_OUT":"140805","SHIP_NAME_CN":null,"CONTROL_TYPE":null,"CONTROL_REASON":null,"CHECK_FORM":null,"CHECK_DEMAND":null,"CHECK_RESULT":null,"APP_GOODNO":null,"CHECK_ADD_DEMAND":null,"APPLY_USER_ID":"7663cea9-8c34-4549-8c85-8f18173c02e3","APPLY_USER_TEL":"89090071","ORDER_TIME":"2014/10/16","STEP":"TEMP","CHECK_USER_ID":null,"CHECK_TIME":"NULL","ORDER_STATUS":null,"CHECK_ADD_NOTE":" ","IS_TEMP":"1"},{"IMO":"UN1232112","SHIP_NAME_EN":"Agdag","VOYAGE_IN":null,"PORT_CODE":null,"ARRIVED_TIME":null,"CREATE_TIME":null,"ORDER_NO":"2014000035","VOYAGE_OUT":"12121","SHIP_NAME_CN":"昂贵的打嘎","CONTROL_TYPE":"2","CONTROL_REASON":"04,05","CHECK_FORM":"3","CHECK_DEMAND":"10,11","CHECK_RESULT":"1","APP_GOODNO":"12121","CHECK_ADD_DEMAND":null,"APPLY_USER_ID":"7663cea9-8c34-4549-8c85-8f18173c02e3","APPLY_USER_TEL":"89090071","ORDER_TIME":"2014/10/15","STEP":"END","CHECK_USER_ID":"c9165a5a-e515-411b-a434-e3a2d9226769","CHECK_TIME":null,"ORDER_STATUS":"06","CHECK_ADD_NOTE":" ","IS_TEMP":"1"},{"IMO":null,"SHIP_NAME_EN":null,"VOYAGE_IN":null,"PORT_CODE":null,"ARRIVED_TIME":null,"CREATE_TIME":null,"ORDER_NO":"2014000023","VOYAGE_OUT":null,"SHIP_NAME_CN":null,"CONTROL_TYPE":null,"CONTROL_REASON":null,"CHECK_FORM":null,"CHECK_DEMAND":null,"CHECK_RESULT":null,"APP_GOODNO":null,"CHECK_ADD_DEMAND":null,"APPLY_USER_ID":"d00778ff-de0a-46db-9807-1986a08d4f1b","APPLY_USER_TEL":"89090558","ORDER_TIME":null,"STEP":"TEMP","CHECK_USER_ID":null,"CHECK_TIME":"NULL","ORDER_STATUS":null,"CHECK_ADD_NOTE":" ","IS_TEMP":"1"},{"IMO":null,"SHIP_NAME_EN":null,"VOYAGE_IN":null,"PORT_CODE":null,"ARRIVED_TIME":null,"CREATE_TIME":null,"ORDER_NO":"2014000022","VOYAGE_OUT":null,"SHIP_NAME_CN":null,"CONTROL_TYPE":null,"CONTROL_REASON":null,"CHECK_FORM":null,"CHECK_DEMAND":null,"CHECK_RESULT":null,"APP_GOODNO":null,"CHECK_ADD_DEMAND":null,"APPLY_USER_ID":"d00778ff-de0a-46db-9807-1986a08d4f1b","APPLY_USER_TEL":"89090558","ORDER_TIME":null,"STEP":"TEMP","CHECK_USER_ID":null,"CHECK_TIME":"NULL","ORDER_STATUS":null,"CHECK_ADD_NOTE":" ","IS_TEMP":"1"},{"IMO":"UN9143465","SHIP_NAME_EN":"LILA BHUM","VOYAGE_IN":null,"PORT_CODE":null,"ARRIVED_TIME":null,"CREATE_TIME":null,"ORDER_NO":"2015000005","VOYAGE_OUT":"130109","SHIP_NAME_CN":"东暎首尔","CONTROL_TYPE":"3","CONTROL_REASON":null,"CHECK_FORM":"3","CHECK_DEMAND":null,"CHECK_RESULT":null,"APP_GOODNO":null,"CHECK_ADD_DEMAND":"rr","APPLY_USER_ID":"775d51b2-aae0-4a8d-853a-4dfbeaf1d18d","APPLY_USER_TEL":"89090813","ORDER_TIME":"2015/4/1","STEP":"APPLY_CK","CHECK_USER_ID":null,"CHECK_TIME":"NULL","ORDER_STATUS":"07","CHECK_ADD_NOTE":" ","IS_TEMP":"1"},{"IMO":null,"SHIP_NAME_EN":null,"VOYAGE_IN":null,"PORT_CODE":null,"ARRIVED_TIME":null,"CREATE_TIME":null,"ORDER_NO":"2014000030","VOYAGE_OUT":null,"SHIP_NAME_CN":null,"CONTROL_TYPE":"3","CONTROL_REASON":null,"CHECK_FORM":"3","CHECK_DEMAND":"09,11","CHECK_RESULT":"1","APP_GOODNO":null,"CHECK_ADD_DEMAND":null,"APPLY_USER_ID":"d00778ff-de0a-46db-9807-1986a08d4f1b","APPLY_USER_TEL":"89090558","ORDER_TIME":null,"STEP":"TEMP","CHECK_USER_ID":null,"CHECK_TIME":"NULL","ORDER_STATUS":null,"CHECK_ADD_NOTE":" ","IS_TEMP":"1"},{"IMO":null,"SHIP_NAME_EN":null,"VOYAGE_IN":null,"PORT_CODE":null,"ARRIVED_TIME":null,"CREATE_TIME":null,"ORDER_NO":"2015000007","VOYAGE_OUT":"1","SHIP_NAME_CN":null,"CONTROL_TYPE":"3","CONTROL_REASON":null,"CHECK_FORM":"3","CHECK_DEMAND":"01,03","CHECK_RESULT":null,"APP_GOODNO":"1","CHECK_ADD_DEMAND":null,"APPLY_USER_ID":"EA8A0886-79CC-4EF3-8491-8F4815045DD4","APPLY_USER_TEL":"89091271","ORDER_TIME":"2015/4/7","STEP":"APPLY_CK","CHECK_USER_ID":"f19d5487-5595-4884-91bd-7eb226beda6e","CHECK_TIME":null,"ORDER_STATUS":"02","CHECK_ADD_NOTE":"11 ","IS_TEMP":"1"},{"IMO":"UN9143465","SHIP_NAME_EN":"LILA BHUM","VOYAGE_IN":null,"PORT_CODE":null,"ARRIVED_TIME":null,"CREATE_TIME":null,"ORDER_NO":"2015000006","VOYAGE_OUT":"130109","SHIP_NAME_CN":"东暎首尔","CONTROL_TYPE":"4","CONTROL_REASON":null,"CHECK_FORM":"4","CHECK_DEMAND":null,"CHECK_RESULT":null,"APP_GOODNO":null,"CHECK_ADD_DEMAND":null,"APPLY_USER_ID":"775d51b2-aae0-4a8d-853a-4dfbeaf1d18d","APPLY_USER_TEL":"89090813","ORDER_TIME":"2015/4/1","STEP":"APPLY_SKSF","CHECK_USER_ID":null,"CHECK_TIME":"NULL","ORDER_STATUS":"02","CHECK_ADD_NOTE":" ","IS_TEMP":"1"},{"IMO":null,"SHIP_NAME_EN":null,"VOYAGE_IN":null,"PORT_CODE":null,"ARRIVED_TIME":null,"CREATE_TIME":null,"ORDER_NO":"2015000010","VOYAGE_OUT":"22","SHIP_NAME_CN":null,"CONTROL_TYPE":"2","CONTROL_REASON":null,"CHECK_FORM":"2","CHECK_DEMAND":null,"CHECK_RESULT":"1","APP_GOODNO":"11","CHECK_ADD_DEMAND":null,"APPLY_USER_ID":"EA8A0886-79CC-4EF3-8491-8F4815045DD4","APPLY_USER_TEL":"89091271","ORDER_TIME":"2015/4/7","STEP":"APPLY_SKSF","CHECK_USER_ID":null,"CHECK_TIME":null,"ORDER_STATUS":"02","CHECK_ADD_NOTE":"11w23 ","IS_TEMP":"1"}]};
+
+				var obj = eval(json.OpResult);
+				var content = '';
+				for (var i = 0; i < obj.length; i++) {
+					content += '<section class="part-section">';
+					content += '<a href="BL_instruInfo_check.html" class="status-navigate">';
+				if(obj[i].IS_TEMP == '1') {
+					content += '<div class="status yellow">暂存</div>';
+				}else {
+					content += '<div class="status cray">待查</div>';
+				}
+				
+					content += '<div class="status-body">\
+					<div class="flex mr10">\
+						<div class="flex-1">\
+							<p>船名：'+obj[i].SHIP_NAME_CN+ '</p>\
+						</div>\
+						<div class="flex-1">\
+							<p>航次：' +obj[i].VOYAGE_IN+ '</p>\
+						</div>\
+						<div class="flex-1">\
+							<p>码头：' +obj[i].IMO+ '</p>\
+						</div>\
+					</div>\
+					<div class="flex">\
+						<div class="flex-2">\
+							<p>指令标号：' +obj[i].ORDER_NO+ '</p>\
+						</div>\
+						<div class="flex-1">\
+							<p>日期：' +obj[i].ORDER_TIME+ '</p>\
+						</div>\
+					</div>\
+				</div>\
+			</a>\
+		</section>';
+				}
+				$("#port").append(content);	
+			
+		});	
+	</script>
+</body>
+</html>

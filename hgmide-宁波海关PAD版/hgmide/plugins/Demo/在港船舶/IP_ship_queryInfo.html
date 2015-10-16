@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动单兵系统在港船舶查询</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../res/css/reset.css">
+	<link rel="stylesheet" href="../res/css/index-rem.css">
+	<script src="../js/jquerymobile-1.4.2.js"></script>
+	<script language="javascript" type="text/javascript" src="../My97DatePicker/WdatePicker.js">
+	</script>
+</head>
+<body>
+	<header class="header-box">
+		<div class="index-logo left-arrow">
+			<a href="../index.html">
+				<img src="../res/images/left-arrow.png" alt="">
+			</a>
+		</div>
+		<h3>在港船舶查询</h3>
+		<p class="header-glass">
+			<a href="IP_portShipList.html">
+				<img src="../res/images/glass.png">
+			</a>
+		</p>
+	</header>
+	<div class="main-body">
+		<div class="main-query">
+			<div class="query-box">
+				<div class="query-core">
+					<a href="#" class="glass-logo"><img src="../res/images/glass_big.png"></a>
+					<div class="queryInfo">
+						<p>查询信息</p>
+						<div class="progress_cover">
+							<div class="progress_uncover">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="query-wraper">
+				<section class="section-input">
+					<div class="input-item">
+						<p>MMSI</p>
+						<div class="input-bg">
+							<input type="text" placeholder="" class="input-border">
+						</div>
+					</div>
+				</section>
+				<section class="section-input">
+					<div class="input-item">
+						<p>英文船名</p>
+						<div class="input-bg">
+							<input type="text" placeholder="" class="input-border">
+						</div>
+					</div>
+				</section>
+				<section class="section-input">
+					<div class="input-item">
+						<p>关区</p>
+						<div class="input-bg" style="position:relative;">
+							<div class="select_drop">
+								   <span class="select-text" id="first-text">全部</span>
+								   <div class="drop_box" id="first-drop" style="display:none;top:44px;">
+								   		<span>全部</span>
+								   		<span>部分</span>
+								   </div>
+							</div>
+							<i class="triangle trangle-white" id="first"></i>
+						</div>
+					</div>
+				</section>
+				<section class="section-input">
+					<div class="input-item">
+						<p>靠泊时间</p>
+						<div class="input-bg">
+							<div class="calendar-order">
+								<div class="calendar-item">
+									<input type="text" placeholder = "" class="calendar-input" onClick="WdatePicker()">
+									<a href="#" class="calendar">
+										<img src="../res/images/calendar.png">
+									</a>
+								</div>
+								<i class="line"></i>
+								<div class="calendar-item">
+									<input type="text" placeholder = "" class="calendar-input" onClick="WdatePicker()">
+									<a href="#" class="calendar">
+										<img src="../res/images/calendar.png">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section-input">
+					<div class="input-item">
+						<p>靠泊码头</p>
+						<div class="input-bg">
+							<input type="text" placeholder="" class="input-border">
+						</div>
+					</div>
+				</section>
+				<section class="section-input">
+					<div class="input-item">
+						<p>登轮结果</p>
+						<div class="input-bg" style="position:relative;">
+							<div class="select_drop">
+								   <span class="select-text" id="second-text">全部</span>
+								   <div class="drop_box" id="second-drop" style="display:none;top:44px;">
+								   		<span>全部</span>
+								   		<span>部分</span>
+								   </div>
+							</div>
+							<i class="triangle trangle-white" id="second"></i>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="query">
+				<a href="IP_portShipList.html">查 询</a>
+			</div>
+		</div>	
+	</div>
+	<script>
+		$(function(){
+			// 点击右边箭头展开
+			$("#first").on('click',function(){
+				if($("#first-drop").is(":hidden")) {
+					$("#first-drop").show();
+				}else{
+					$("#first-drop").hide();
+				}
+				return false;
+			})	
+
+			$("#first-drop span").on('click',function(){
+				var value = $(this).text();
+				$("#first-text").text(value);
+				$("#first-drop").hide();
+				return false;
+			});
+
+
+			$("#second").on('click',function(){
+				if($("#second-drop").is(":hidden")) {
+					$("#second-drop").show();
+				}else{
+					$("#second-drop").hide();
+				}
+				return false;
+			})	
+
+			$("#second-drop span").on('click',function(){
+				var value = $(this).text();
+				$("#second-text").text(value);
+				$("#second-drop").hide();
+				return false;
+			});	
+		})
+	</script>
+</body>
+</html>

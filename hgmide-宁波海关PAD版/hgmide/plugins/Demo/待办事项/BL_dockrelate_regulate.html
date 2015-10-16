@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动单兵系统码头相关监管资质</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../res/css/reset.css">
+	<link rel="stylesheet" href="../res/css/index-rem.css">
+</head>
+<body>
+	<header class="header-box">
+		<div class="index-logo left-arrow">
+			<a href="BL_shipInfo_dynamic.html">
+				<img src="../res/images/left-arrow.png" alt="">
+			</a>
+		</div>
+		<h3>码头相关监管资质</h3>
+		<p class="header-glass">
+			<a href="#">
+				<img src="../res/images/glass.png">
+			</a>
+		</p>
+	</header>
+	<div class="main-body">
+		<div class="main-box">
+			<ul class="item-ul">
+				<li class="flex flex-flow-row">
+					<div class="item-left">靠停泊地点</div>
+					<div class="item-right" id="park_place"><!-- 四期码头 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">泊位</div>
+					<div class="item-right" id="berth"><!-- 2号泊位 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">靠停泊时间</div>
+					<div class="item-right" id="berth_time"><!-- 2015/2/10 14:01:27 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">是否对外开放</div>
+					<div class="item-right" id="isOpen">
+						<font style="color:red;"><!-- 否 --></font>
+					</div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">是否监管场所</div>
+					<div class="item-right" id="isListener">
+						<font style="color:red;"><!-- 否 --></font>
+					</div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">是否需要泊位申请</div>
+					<div class="item-right" id="isApplyPark">
+						<font style="color:red;"><!-- 是 --></font>
+					</div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">是否允许先卸后放</div>
+					<div class="item-right" id="isCharge"><!-- 是 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">靠泊申请单编号</div>
+					<div class="item-right" id="parkApplyNum"><!-- 153106100147 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">靠泊申请单状态</div>
+					<div class="item-right" id="isPass"><!-- 审批通过 --></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" charset="utf-8" src="../js/jquerymobile-1.4.2.js">
+	</script>
+	<script>
+		$(function(){
+			  var json={"OpResult":[{"PARKBERTH":"四期码头","BERTH":"2号泊位","PARKTIME":"2015/2/10 14:01:27","ISOPEN":"否","ISSUPERINTEND":"否","ISFIRSTDISCHARGE":"是","APPLYNO":153106100147,"APPLYSTATE":"审批通过"}]}
+           var obj = eval(json.OpResult);
+           //alert(obj1[0].TOTALNUM);
+           $('#park_place').text(obj[0].PARKBERTH);  //靠停泊地点
+           $('#berth').text(obj[0].BERTH);  // 泊位
+           $('#berth_time').text(obj[0].PARKTIME);  //靠停泊时间
+           $('#isOpen font').text(obj[0].ISOPEN);  //是否对外开放
+           $('#isListener font').text(obj[0].ISSUPERINTEND);  //是否监管场所
+           $('#isApplyPark font').text(obj[0].ISAPPLYBERTH);  //是否需要靠泊申请
+           $('#isCharge').text(obj[0].ISFIRSTDISCHARGE);  //是否允许先卸后放
+           $('#parkApplyNum').text(obj[0].APPLYNO);  //靠泊申请单编号
+           $('#isPass').text(obj[0].APPLYSTATE);  //靠泊申请单状态
+		})
+	</script>
+</body>
+</html>

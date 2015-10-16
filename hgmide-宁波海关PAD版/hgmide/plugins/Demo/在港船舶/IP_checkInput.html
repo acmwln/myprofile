@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动单兵系统船舶动态信息</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../res/css/reset.css">
+	<link rel="stylesheet" href="../res/css/index-rem.css">
+	<script src="../js/jquerymobile-1.4.2.js"></script>
+	<script language="javascript" type="text/javascript" src="../My97DatePicker/WdatePicker.js">
+	</script>
+</head>
+<body>
+	<header class="header-box">
+		<div class="index-logo left-arrow">
+			<a href="IP_informationView_check.html">
+				<img src="../res/images/left-arrow.png" alt="">
+			</a>
+		</div>
+		<h3>检查录入</h3>
+		<p class="header-glass" style="padding-top:1.5rem;">
+			<a href="IP_photo.html"><img src="../res/images/camera.png"></a>
+		</p>
+	</header>
+	<div class="main-body">
+		<div class="main-box">
+			<div class="main-again">
+				<ul class="check-ul">
+					<li>
+						<div class="check-item">
+							<i class="check-sign">
+								<img src="../res/images/sign01.png" alt="">
+							</i>
+							<div class="check-right">
+								<h3>检查人员：小芳</h3>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="check-row">联系方式</p>
+						<div class="check-item">
+							<i class="check-sign">
+								<img src="../res/images/sign02.png" alt="">
+							</i>
+							<div class="check-right check-border">
+								<input type="text" value="18721793870" class="common-input">
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="check-row">检查结果录入时间</p>
+						<div class="check-item">
+							<i class="check-sign">
+								<img src="../res/images/sign03.png" alt="">
+							</i>
+							<div class="check-right input-bg">
+								<!-- <input type="text" value="2015-03-04   15:22" class="common-input common-inputer"> -->
+								<input type="text" id="d241" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" class="common-input common-inputer"/>
+								<a href="#" class="calendar">
+								  <img src="../res/images/calendar.png">
+							    </a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="check-row">检查结果</p>
+						<div class="check-item">
+							<i class="check-sign">
+								<img src="../res/images/sign04.png" alt="">
+							</i>
+							<div class="check-right input-bg" style="height:50px;">
+								<div class="select_drop">
+								   <span class="select-text">正常</span>
+								   <div class="drop_box" style="display:none;">
+								   		<span>正常</span>
+								   		<span>非正常</span>
+								   </div>
+								 </div>
+								 <i class="drop-arrow"></i>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="check-row">附件</p>
+						<div class="check-item">
+							<i class="check-sign">
+								<img src="../res/images/sign05.png" alt="">
+							</i>
+							<div class="check-right input-bg" style="height:50px;">
+								<input type="text" value="3张" class="common-input common-inputer">
+								<i class="pointo"></i>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="check-row">检查情况补充说明</p>
+						<div class="check-item">
+							<i class="check-sign">
+								<img src="../res/images/sign06.png" alt="">
+							</i>
+							<div class="check-right check-border">
+								<input type="text" value="" class="common-input">
+							</div>
+						</div>
+					</li>
+				</ul>
+		    </div>
+		    <div class="button">
+		    	<ul>
+		    		<li style="float:left;">
+		    			<a href="#"><img src="../res/images/save.png"></a>
+		    		</li>
+		    		<li style="float:right;">
+		    			<a href="#"><img src="../res/images/upload.png"></a>
+		    		</li>
+		    	</ul>
+		    </div>
+	    </div>
+    </div>
+	<script>
+		$(function(){
+			// 点击右边箭头展开
+			$(".drop-arrow").on('click',function(){
+				var value = $(this).parents("li").index(".item-box li");
+				
+				if($(".drop_box").is(":hidden")) {
+					$(".drop_box").show();
+				}else{
+					$(".drop_box").hide();
+				}
+				return false;
+			})	
+
+			$(".drop_box span").on('click',function(){
+				var value = $(this).text();
+				$(".select-text").text(value);
+				$(".drop_box").hide();
+				return false;
+			});	
+		})
+	</script>
+</body>
+</html>

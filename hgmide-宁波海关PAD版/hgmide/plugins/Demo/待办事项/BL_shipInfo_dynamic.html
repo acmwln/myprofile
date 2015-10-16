@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动单兵系统船舶动态信息</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../res/css/reset.css">
+	<link rel="stylesheet" href="../res/css/index-rem.css">
+	<script src="../js/jquerymobile-1.4.2.js"></script>
+</head>
+<body>
+	<header class="header-box">
+		<div class="index-logo left-arrow">
+			<a href="BL_instruInfo_check.html">
+				<img src="../res/images/left-arrow.png" alt="">
+			</a>
+		</div>
+		<h3>船舶动态信息</h3>
+		<p class="header-glass">
+			<a href="BL_dockrelate_regulate.html">
+				<img src="../res/images/home.png">
+			</a>
+		</p>
+	</header>
+	<div class="main-body">
+		<div class="main-box">
+			<div class="card-wrap">
+			<!-- 出境单证开始 -->
+				<ul class="item-box">
+					<li>
+						<div class="item">
+							<span><img src="../res/images/row-icon05.png"></span>
+							<h3>船舶动态信息</h3>
+						</div>
+						<div class="spread" id="detail">
+							<!-- <table>
+								<tr>
+									<td>IMO编号：</td>
+									<td>UN9638898</td>
+								</tr>
+								<tr class="current">
+									<td>船名:</td>
+									<td>OOCL NINGBO</td>
+								</tr>
+								<tr>
+									<td>出境(港)航次: </td>
+									<td>108E</td>
+								</tr>
+								<tr class="current">
+									<td>进境(港)航次:</td>
+									<td>109W</td>
+								</tr>
+							</table> -->
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<span><img src="../res/images/row-icon01.png"></span>
+							<h3>进境预报动态</h3>
+							<i class="pointHover"></i>
+						</div>
+						<div class="spread">
+							<ul class="order-ul" id="entry_predict">
+								<!-- <li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>1</span>
+											<i class="seperate"></i>
+										</div>
+									</div>
+									<div class="order-spread">
+										<table>
+											<tr>
+												<td>抵港时间</td>
+												<td>2015-01-24 22:00</td>
+											</tr>
+											<tr class="active">
+												<td>泊位代码</td>
+												<td>五期码头7号泊位</td>
+											</tr>
+											<tr>
+												<td>装船时间</td>
+												<td>2015-01-24 22:00</td>
+											</tr>
+											<tr>
+												<td>出发港</td>
+												<td>上海港</td>
+											</tr>
+											<tr>
+												<td>目的港</td>
+												<td>宁波</td>
+											</tr>
+											<tr>
+												<td>关区范围</td>
+												<td>北仑海关</td>
+											</tr>
+											<tr>
+												<td>申报时间</td>
+												<td>2015-01-23 01:00</td>
+											</tr>
+											<tr>
+												<td>申报人</td>
+												<td>宁波船务代理有限公司</td>
+											</tr>
+											<tr>
+												<td>申报联系人</td>
+												<td>唐依阳</td>
+											</tr>
+											<tr>
+												<td>备注</td>
+												<td></td>
+											</tr>
+										</table>
+									</div>
+								</li> -->
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<span><img src="../res/images/row-icon04.png"></span>
+							<h3>进境确报动态</h3>
+							<i class="pointHover"></i>
+						</div>
+						<div class="spread">
+							<ul class="order-ul" id="entry_acknow">
+								<!-- <li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>1</span>
+											<i class="seperate"></i>
+										</div>
+									</div>
+									<div class="order-spread">
+										<table>
+											<tr>
+												<td>抵港时间</td>
+												<td>2015-01-24 22:00</td>
+											</tr>
+											<tr class="active">
+												<td>泊位代码</td>
+												<td>五期码头7号泊位</td>
+											</tr>
+											<tr>
+												<td>装船时间</td>
+												<td>2015-01-24 22:00</td>
+											</tr>
+											<tr>
+												<td>出发港</td>
+												<td>上海港</td>
+											</tr>
+											<tr>
+												<td>目的港</td>
+												<td>宁波</td>
+											</tr>
+											<tr>
+												<td>关区范围</td>
+												<td>北仑海关</td>
+											</tr>
+											<tr>
+												<td>申报时间</td>
+												<td>2015-01-23 01:00</td>
+											</tr>
+											<tr>
+												<td>申报人</td>
+												<td>宁波船务代理有限公司</td>
+											</tr>
+											<tr>
+												<td>申报联系人</td>
+												<td>唐依阳</td>
+											</tr>
+											<tr>
+												<td>备注</td>
+												<td></td>
+											</tr>
+										</table>
+									</div>
+								</li> -->
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<span><img src="../res/images/row-icon03.png"></span>
+							<h3>抵港报动态</h3>
+							<i class="pointHover"></i>
+						</div>
+						<div class="spread">
+							<ul class="order-ul" id="arrive">
+								<!-- <li>
+									<div class="order-item">
+										<div class="order">姓名</div>
+										<div class="order-right">
+											<span>赵军生</span>
+											<i class="seperate"></i>
+										</div>
+									</div>
+									<div class="order-spread">
+										<table>
+											<tr>
+												<td>性别</td>
+												<td>男</td>
+											</tr>
+											<tr class="active">
+												<td>国籍</td>
+												<td>中国</td>
+											</tr>
+											<tr>
+												<td>职务</td>
+												<td>船长</td>
+											</tr>
+											<tr>
+												<td>出生日期</td>
+												<td>1966-01-06</td>
+											</tr>
+											<tr>
+												<td>出生地点</td>
+												<td>中国</td>
+											</tr>
+											<tr>
+												<td>船员证件类型</td>
+												<td>海员证</td>
+											</tr>
+											<tr>
+												<td>船员证件号码</td>
+												<td>A00258105</td>
+											</tr>
+											<tr>
+												<td>备注</td>
+												<td>免办签证</td>
+											</tr>
+										</table>
+									</div>
+								</li> -->
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<span><img src="../res/images/row-icon01.png"></span>
+							<h3>在港信息动态</h3>
+							<i class="pointHover"></i>
+						</div>
+						<div class="spread">
+							<ul class="order-ul" id="onport">
+								<!-- <li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>1</span>
+											<i class="seperate"></i>
+										</div>
+									</div>
+									<div class="order-spread">
+										<table>
+											<tr>
+												<td>装货港</td>
+												<td>麦寮（TWMLI）</td>
+											</tr>
+											<tr class="active">
+												<td>货物数量</td>
+												<td>1.00000</td>
+											</tr>
+											<tr>
+												<td>毛重</td>
+												<td>3982.17</td>
+											</tr>
+											<tr>
+												<td>货物类型</td>
+												<td>化工原料</td>
+											</tr>
+											<tr>
+												<td>标记唛吗</td>
+												<td>N/M</td>
+											</tr>
+										</table>
+									</div>
+								</li> -->
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<span><img src="../res/images/row-icon02.png"></span>
+							<h3>出境预报动态</h3>
+							<i class="pointHover"></i>
+						</div>
+						<div class="spread">
+							<ul class="order-ul" id="exit_pre">
+								<!-- <li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>1</span>
+											<i class="seperate"></i>
+										</div>
+									</div>
+									<div class="order-spread">
+										<table>
+											<tr>
+												<td>停靠港代码</td>
+												<td>麦寮（TWMLI）</td>
+											</tr>
+											<tr class="active">
+												<td>抵达时间</td>
+												<td>2015-01-16</td>
+											</tr>
+											<tr>
+												<td>驶离时间</td>
+												<td>2015-01-17</td>
+											</tr>
+											<tr>
+												<td>备注</td>
+												<td></td>
+											</tr>
+										</table>
+									</div>
+								</li> -->
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<span><img src="../res/images/row-icon04.png"></span>
+							<h3>出境确报动态</h3>
+							<i class="pointHover"></i>
+						</div>
+						<div class="spread">
+							<ul class="order-ul" id="exit_acknow">
+								<!-- <li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>1</span>
+											<i class="seperate"></i>
+										</div>
+									</div>
+									<div class="order-spread">
+										<table>
+											<tr>
+												<td>抵港时间</td>
+												<td>2015-01-24 22:00</td>
+											</tr>
+											<tr class="active">
+												<td>泊位代码</td>
+												<td>五期码头7号泊位</td>
+											</tr>
+											<tr>
+												<td>装船时间</td>
+												<td>2015-01-24 22:00</td>
+											</tr>
+											<tr>
+												<td>出发港</td>
+												<td>上海港</td>
+											</tr>
+											<tr>
+												<td>目的港</td>
+												<td>宁波</td>
+											</tr>
+											<tr>
+												<td>关区范围</td>
+												<td>北仑海关</td>
+											</tr>
+											<tr>
+												<td>申报时间</td>
+												<td>2015-01-23 01:00</td>
+											</tr>
+											<tr>
+												<td>申报人</td>
+												<td>宁波船务代理有限公司</td>
+											</tr>
+											<tr>
+												<td>申报联系人</td>
+												<td>唐依阳</td>
+											</tr>
+											<tr>
+												<td>备注</td>
+												<td></td>
+											</tr>
+										</table>
+									</div>
+								</li> -->
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<!-- 进境单证结束 -->
+			</div>
+		</div>
+	</div>
+	<script>
+		$(function(){
+			// 动态信息
+			var detailjson = {"OpResult":[{"IMO":"UN8914881","ID":"910e13b9-8cb3-409d-a222-1a567a9b93b1","VesselNameEn":"HONG XIANG","Pre_JourneyIDIn":"141206","Pre_JourneyIDOut":"141208"}]}
+			var detailObj = eval(detailjson.OpResult);
+			var detailhtml =  '';
+			for (var i = 0; i < detailObj.length; i++) {
+				detailhtml += '<table>\
+								<tr>\
+									<td>IMO编号：</td>\
+									<td>'+ detailObj[i].IMO +'</td>\
+								</tr>\
+								<tr class="current">\
+									<td>英文船名:</td>\
+									<td>'+ detailObj[i].VesselNameEn +'</td>\
+								</tr>\
+								<tr>\
+									<td>出境预报航次: </td>\
+									<td>'+ detailObj[i].Pre_JourneyIDOut +'</td>\
+								</tr>\
+								<tr class="current">\
+									<td>进境预报航次:</td>\
+									<td>'+ detailObj[i].Pre_JourneyIDIn +'</td>\
+								</tr>\
+							</table>';
+			};
+			$("#detail").html(detailhtml);
+
+			// 进境预报动态
+			var entryprejson = {"OpResult":[{"meansID":null,"JourneyIDIn":null,"ItineraryArrivalDateTime":"2014/12/16 0:00:00","StayID":"31040201","LoadingDate":"2014/12/12 0:00:00","DepartureConveyanceID":"THRYG","ArrivalConveyanceID":"CNNBO/3104","ArrivalRange":"3104","IssueDate":"2014/12/12 0:00:00","AgentID":"3100144089542","AgentContactName":"ningbo","AdditionalInformationContent":null},{"meansID":null,"JourneyIDIn":"1423E","ItineraryArrivalDateTime":"2014/12/13 8:00:00","StayID":"31041503","LoadingDate":"2014/12/13 0:00:00","DepartureConveyanceID":"VNSGN","ArrivalConveyanceID":"CNNBO/3104","ArrivalRange":"3104","IssueDate":"2014/12/12 0:00:00","AgentID":"3100551136019","AgentContactName":"陈钱江","AdditionalInformationContent":null},{"meansID":null,"JourneyIDIn":null,"ItineraryArrivalDateTime":"2014/12/10 12:45:00","StayID":"31041601","LoadingDate":"2014/12/10 0:00:00","DepartureConveyanceID":"AUPWL","ArrivalConveyanceID":"CNNBO/3104","ArrivalRange":"3104","IssueDate":"2014/12/10 0:00:00","AgentID":"3100557958048","AgentContactName":"黎臣","AdditionalInformationContent":null}]}
+			var entrypreObj = eval(entryprejson.OpResult);
+			var entryprehtml = '';
+			for (var i = 0; i < entrypreObj.length; i++) {
+				entryprehtml += '<li>\
+									<div class="order-item">\
+										<div class="order">序号</div>\
+										<div class="order-right">\
+											<span>'+ (i + 1) +'</span>\
+											<i class="seperate"></i>\
+										</div>\
+									</div>\
+									<div class="order-spread">\
+										<table>\
+											<tr>\
+												<td>抵港时间</td>\
+												<td>'+ entrypreObj[i].ItineraryArrivalDateTime + '</td>\
+											</tr>\
+											<tr class="active">\
+												<td>泊位代码</td>\
+												<td>'+ entrypreObj[i].StayID + '</td>\
+											</tr>\
+											<tr>\
+												<td>装船时间</td>\
+												<td>'+ entrypreObj[i].LoadingDate + '</td>\
+											</tr>\
+											<tr>\
+												<td>出发港</td>\
+												<td>'+ entrypreObj[i].DepartureConveyanceID + '</td>\
+											</tr>\
+											<tr>\
+												<td>目的港</td>\
+												<td>'+ entrypreObj[i].ArrivalConveyanceID + '</td>\
+											</tr>\
+											<tr>\
+												<td>关区范围</td>\
+												<td>'+ entrypreObj[i].ArrivalConveyanceID+ '</td>\
+											</tr>\
+											<tr>\
+												<td>申报时间</td>\
+												<td>'+ entrypreObj[i].IssueDate + '</td>\
+											</tr>\
+											<tr>\
+												<td>申报人</td>\
+												<td>'+ entrypreObj[i].AgentID + '</td>\
+											</tr>\
+											<tr>\
+												<td>申报联系人姓名</td>\
+												<td>'+ entrypreObj[i].AgentContactName + '</td>\
+											</tr>\
+											<tr>\
+												<td>备注</td>\
+												<td>'+ entrypreObj[i].AdditionalInformationContent + '</td>\
+											</tr>\
+										</table>\
+									</div>\
+								</li>';
+			};
+			$("#entry_predict").html(entryprehtml);
+			// 进境确报动态
+			var entryAcknowjson = {"OpResult":[{"ItineraryArrivalDateTime":"2014/12/12 13:00:00","StayID":"31160001","CargoDescription":"NULL","DepartureConveyanceID":"CNSHG","ArrivalConveyanceID":"CNNBO/3116","ArrivalRange":"3116","IssueDate":"2014/12/11 0:00:00","AgentID":"3100254097535","AgentContactName":"唐依阳","AdditionalInformationContent":null},{"ItineraryArrivalDateTime":"2014/12/12 14:45:00","StayID":"31160001","CargoDescription":"NULL","DepartureConveyanceID":"CNSHG","ArrivalConveyanceID":"CNNBO/3116","ArrivalRange":"3116","IssueDate":"2014/12/11 0:00:00","AgentID":"3100254097535","AgentContactName":"唐依阳","AdditionalInformationContent":null},{"ItineraryArrivalDateTime":"2014/12/12 20:45:00","StayID":"31160002","CargoDescription":"NULL","DepartureConveyanceID":"CNSHG","ArrivalConveyanceID":"CNNBO/3116","ArrivalRange":"3116","IssueDate":"2014/12/11 0:00:00","AgentID":"3100144089542","AgentContactName":"ningbo","AdditionalInformationContent":null}]}
+			var entryAcknowObj = eval(entryAcknowjson.OpResult);
+			var entryAcknowhtml = '';
+			for (var i = 0; i < entryAcknowObj.length; i++) {
+				entryAcknowhtml += '<li>\
+									<div class="order-item">\
+										<div class="order">序号</div>\
+										<div class="order-right">\
+											<span>'+ (i + 1) +'</span>\
+											<i class="seperate"></i>\
+										</div>\
+									</div>\
+									<div class="order-spread">\
+										<table>\
+											<tr>\
+												<td>抵港时间</td>\
+												<td>'+ entryAcknowObj[i].ItineraryArrivalDateTime+ '</td>\
+											</tr>\
+											<tr class="active">\
+												<td>泊位代码</td>\
+												<td>'+ entryAcknowObj[i].StayID + '</td>\
+											</tr>\
+											<tr>\
+												<td>进口货类</td>\
+												<td>'+ entryAcknowObj[i].CargoDescription + '</td>\
+											</tr>\
+											<tr>\
+												<td>出发港</td>\
+												<td>'+ entryAcknowObj[i].DepartureConveyanceID + '</td>\
+											</tr>\
+											<tr>\
+												<td>目的港</td>\
+												<td>'+ entryAcknowObj[i].ArrivalConveyanceID + '</td>\
+											</tr>\
+											<tr>\
+												<td>关区范围</td>\
+												<td>'+ entryAcknowObj[i].ArrivalConveyanceID + '</td>\
+											</tr>\
+											<tr>\
+												<td>申报时间</td>\
+												<td>'+ entryAcknowObj[i].IssueDate + 
+												'</td>\
+											</tr>\
+											<tr>\
+												<td>申报人</td>\
+												<td>'+ entryAcknowObj[i].AgentID + 
+												'</td>\
+											</tr>\
+											<tr>\
+												<td>申报联系人姓名</td>\
+												<td>'+ entryAcknowObj[i].AgentContactName + '</td>\
+											</tr>\
+											<tr>\
+												<td>备注</td>\
+												<td>'+ entryAcknowObj[i].AdditionalInformationContent  + '</td>\
+											</tr>\
+										</table>\
+									</div>\
+								</li>';
+			};
+			$("#entry_acknow").html(entryAcknowhtml);
+
+			// 抵港报动态
+				var arrivejson = {"OpResult":[{"ItineraryArrivalDateTime":"2014/12/11 5:00:00","StayID":"31041503","DepartureConveyanceID":"CNSHG","ArrivalConveyanceID":"CNNBO/3104","ArrivalRange":"3104","IssueDate":"2014/12/11 0:00:00","AgentID":"3100254097535","AgentContactName":"唐依阳","AdditionalInformationContent":null},{"ItineraryArrivalDateTime":"2014/12/11 5:30:00","StayID":"31060204","DepartureConveyanceID":"KRINC","ArrivalConveyanceID":"CNNBO/3104","ArrivalRange":"3104","IssueDate":"2014/12/11 0:00:00","AgentID":"3100750367370","AgentContactName":"曹大敏","AdditionalInformationContent":null},{"ItineraryArrivalDateTime":"2014/12/11 7:00:00","StayID":"31041402","DepartureConveyanceID":"RUVVO","ArrivalConveyanceID":"CNNBO/3104","ArrivalRange":"3104","IssueDate":"2014/12/11 0:00:00","AgentID":"3100144089542","AgentContactName":"ningbo","AdditionalInformationContent":null}]}
+		var arriveObj = eval(arrivejson.OpResult);
+		var arrivehtml = '';
+		for (var i = 0; i < arriveObj.length; i++) {
+			arrivehtml += '<li>\
+								<div class="order-item">\
+									<div class="order">序号</div>\
+									<div class="order-right">\
+										<span>'+ (i + 1) +'</span>\
+										<i class="seperate"></i>\
+									</div>\
+								</div>\
+								<div class="order-spread">\
+									<table>\
+										<tr>\
+											<td>抵港时间</td>\
+											<td>'+ arriveObj[i].ItineraryArrivalDateTime+ '</td>\
+										</tr>\
+										<tr class="active">\
+											<td>泊位代码</td>\
+											<td>'+ arriveObj[i].StayID + '</td>\
+										</tr>\
+										<tr>\
+											<td>出发港</td>\
+											<td>'+ arriveObj[i].DepartureConveyanceID + '</td>\
+										</tr>\
+										<tr>\
+											<td>目的港</td>\
+											<td>'+ arriveObj[i].ArrivalConveyanceID + '</td>\
+										</tr>\
+										<tr>\
+											<td>关区范围</td>\
+											<td>'+ arriveObj[i].ArrivalConveyanceID + '</td>\
+										</tr>\
+										<tr>\
+											<td>申报时间</td>\
+											<td>'+ arriveObj[i].IssueDate + 
+											'</td>\
+										</tr>\
+										<tr>\
+											<td>申报人</td>\
+											<td>'+ arriveObj[i].AgentID + 
+											'</td>\
+										</tr>\
+										<tr>\
+											<td>申报联系人姓名</td>\
+											<td>'+ arriveObj[i].AgentContactName + '</td>\
+										</tr>\
+										<tr>\
+											<td>备注</td>\
+											<td>'+ arriveObj[i].AdditionalInformationContent  + '</td>\
+										</tr>\
+									</table>\
+								</div>\
+							</li>';
+		};
+		$("#arrive").html(arrivehtml);
+			// 在港信息动态
+			var onportjson = {"OpResult":[{"ItineraryArrivalDateTime":"2014/12/12 17:00:00","DateTime":"1900/1/1 0:00:00","StayIDIn":"31041104","StayIDOut":"31041104","DepartureConveyanceID":"SGSIN","ArrivalConveyanceID":"CNNBO/3104","ArrivalRange":"3104","IssueDate":"2014/12/11 0:00:00","AgentID":"3100756256401","AgentContactName":"胡慧慧","AdditionalInformationContent":null}]}
+			var onportObj = eval(onportjson.OpResult);
+			var onporthtml = '';
+			for (var i = 0; i < onportObj.length; i++) {
+				onporthtml += '<li>\
+									<div class="order-item">\
+										<div class="order">序号</div>\
+										<div class="order-right">\
+											<span>'+ (i + 1) +'</span>\
+											<i class="seperate"></i>\
+										</div>\
+									</div>\
+									<div class="order-spread">\
+										<table>\
+											<tr>\
+												<td>抵港时间</td>\
+												<td>'+ onportObj[i].ItineraryArrivalDateTime  + '</td>\
+											</tr>\
+											<tr class="active">\
+												<td>移泊时间</td>\
+												<td>'+ onportObj[i].DateTime  + '</td>\
+											</tr>\
+											<tr>\
+												<td>当前泊位</td>\
+												<td>'+ onportObj[i].StayIDIn  + '</td>\
+											</tr>\
+											<tr>\
+												<td>移至泊位</td>\
+												<td>'+ onportObj[i].StayIDOut  + '</td>\
+											</tr>\
+											<tr>\
+												<td>出发港 </td>\
+												<td>'+ onportObj[i].DepartureConveyanceID  + '</td>\
+											</tr>\
+											<tr>\
+												<td>目的港 </td>\
+												<td>'+ onportObj[i].ArrivalConveyanceID  + '</td>\
+											</tr>\
+											<tr>\
+												<td>关区范围</td>\
+												<td>'+ onportObj[i].ArrivalConveyanceID + '</td>\
+											</tr>\
+											<tr>\
+												<td>申报时间</td>\
+												<td>'+ onportObj[i].IssueDate + 
+												'</td>\
+											</tr>\
+											<tr>\
+												<td>申报人</td>\
+												<td>'+ onportObj[i].AgentID + 
+												'</td>\
+											</tr>\
+											<tr>\
+												<td>申报联系人姓名</td>\
+												<td>'+ onportObj[i].AgentContactName + '</td>\
+											</tr>\
+											<tr>\
+												<td>备注</td>\
+												<td>'+ onportObj[i].AdditionalInformationContent  + '</td>\
+											</tr>\
+										</table>\
+									</div>\
+								</li>';
+			};
+			$("#onport").html(onporthtml);
+
+			// 出境预报动态
+			var exitprejson = {"OpResult":[{"ItineraryArrivalDateTime":"2014/12/11 9:30:00","StayID":"31040604","ItineraryDepartureDateTime":"2014/12/11 17:00:00","DepartureConveyanceID":"CNNBO/3104","ArrivalConveyanceID":"CNSHG","ArrivalRange":"NSHG","IssueDate":"2014/12/10 0:00:00","AgentID":"3100756256401","AgentContactName":"胡慧慧","AdditionalInformationContent":null},{"ItineraryArrivalDateTime":"2014/12/10 17:30:00","StayID":"31040601","ItineraryDepartureDateTime":"2014/12/11 12:30:00","DepartureConveyanceID":"CNNBO/3104","ArrivalConveyanceID":"TWKHH","ArrivalRange":"WKHH","IssueDate":"2014/12/10 0:00:00","AgentID":"3100756256401","AgentContactName":"胡慧慧","AdditionalInformationContent":null},{"ItineraryArrivalDateTime":"2014/12/9 19:00:00","StayID":"31040602","ItineraryDepartureDateTime":"2014/12/10 10:00:00","DepartureConveyanceID":"CNNBO/3104","ArrivalConveyanceID":"CNQGD","ArrivalRange":"NQGD","IssueDate":"2014/12/9 0:00:00","AgentID":"3100144089542","AgentContactName":"ningbo","AdditionalInformationContent":null}]}
+			var exitpreObj = eval(exitprejson.OpResult);
+			var exitprehtml = '';
+			for (var i = 0; i < exitpreObj.length; i++) {
+				exitprehtml += '<li>\
+									<div class="order-item">\
+										<div class="order">序号</div>\
+										<div class="order-right">\
+											<span>'+ (i + 1) +'</span>\
+											<i class="seperate"></i>\
+										</div>\
+									</div>\
+									<div class="order-spread">\
+										<table>\
+											<tr>\
+												<td>抵港时间</td>\
+												<td>'+ exitpreObj[i].ItineraryArrivalDateTime  + '</td>\
+											</tr>\
+											<tr class="active">\
+												<td>泊位代码</td>\
+												<td>'+ exitpreObj[i].StayID  + '</td>\
+											</tr>\
+											<tr>\
+												<td>离港时间</td>\
+												<td>'+ exitpreObj[i].ItineraryDepartureDateTime  + '</td>\
+											</tr>\
+											<tr>\
+												<td>出发港 </td>\
+												<td>'+ exitpreObj[i].DepartureConveyanceID  + '</td>\
+											</tr>\
+											<tr>\
+												<td>目的港 </td>\
+												<td>'+ exitpreObj[i].ArrivalConveyanceID  + '</td>\
+											</tr>\
+												<tr>\
+												<td>关区范围</td>\
+												<td>'+ exitpreObj[i].ArrivalConveyanceID + '</td>\
+											</tr>\
+											<tr>\
+												<td>申报时间</td>\
+												<td>'+ exitpreObj[i].IssueDate + 
+												'</td>\
+											</tr>\
+											<tr>\
+												<td>申报人</td>\
+												<td>'+ exitpreObj[i].AgentID + 
+												'</td>\
+											</tr>\
+											<tr>\
+												<td>申报联系人姓名</td>\
+												<td>'+ exitpreObj[i].AgentContactName + '</td>\
+											</tr>\
+											<tr>\
+												<td>备注</td>\
+												<td>'+ exitpreObj[i].AdditionalInformationContent  + '</td>\
+											</tr>\
+										</table>\
+									</div>\
+								</li>';
+			};
+			$("#exit_pre").html(exitprehtml);
+
+			// 出境确报动态
+			var exitAcknowjson = {"OpResult":[{"ItineraryArrivalDateTime":"2014/12/7 20:00:00","StayID":"31041503","ItineraryDepartureDateTime":"2014/12/8 12:00:00","DepartureConveyanceID":"CNNBO/3104","ArrivalConveyanceID":"SGSIN","ArrivalRange":"GSIN","IssueDate":"2014/12/10 0:00:00","AgentID":"3100726398484","AgentContactName":"蒋建秋","AdditionalInformationContent":null},{"ItineraryArrivalDateTime":"2014/12/7 13:20:00","StayID":"31040602","ItineraryDepartureDateTime":"2014/12/7 21:40:00","DepartureConveyanceID":"CNNBO/3104","ArrivalConveyanceID":"CNHME","ArrivalRange":"NHME","IssueDate":"2014/12/9 0:00:00","AgentID":"3100704846258","AgentContactName":"楼向阳","AdditionalInformationContent":null},{"ItineraryArrivalDateTime":"2014/11/15 10:00:00","StayID":"31060801","ItineraryDepartureDateTime":"2014/12/3 7:00:00","DepartureConveyanceID":"CNNBO/3104","ArrivalConveyanceID":"SGSIN","ArrivalRange":"GSIN","IssueDate":"2014/12/9 0:00:00","AgentID":"3100704834505","AgentContactName":"王洪良","AdditionalInformationContent":null}]}
+			var exitAcknowObj = eval(exitAcknowjson.OpResult);
+			var exitAcknowhtml = '';
+			for (var i = 0; i < exitAcknowObj.length; i++) {
+				exitAcknowhtml += '<li>\
+									<div class="order-item">\
+										<div class="order">序号</div>\
+										<div class="order-right">\
+											<span>'+ (i + 1) +'</span>\
+											<i class="seperate"></i>\
+										</div>\
+									</div>\
+									<div class="order-spread">\
+										<table>\
+											<tr>\
+												<td>抵港时间</td>\
+												<td>'+ exitAcknowObj[i].ItineraryArrivalDateTime  + '</td>\
+											</tr>\
+											<tr class="active">\
+												<td>泊位代码</td>\
+												<td>'+ exitAcknowObj[i].StayID  + '</td>\
+											</tr>\
+											<tr>\
+												<td>离港时间</td>\
+												<td>'+ exitAcknowObj[i].ItineraryDepartureDateTime  + '</td>\
+											</tr>\
+											<tr>\
+												<td>出发港 </td>\
+												<td>'+ exitAcknowObj[i].DepartureConveyanceID  + '</td>\
+											</tr>\
+											<tr>\
+												<td>目的港 </td>\
+												<td>'+ exitAcknowObj[i].ArrivalConveyanceID  + '</td>\
+											</tr>\
+												<tr>\
+												<td>关区范围</td>\
+												<td>'+ exitAcknowObj[i].ArrivalConveyanceID + '</td>\
+											</tr>\
+											<tr>\
+												<td>申报时间</td>\
+												<td>'+ exitAcknowObj[i].IssueDate + 
+												'</td>\
+											</tr>\
+											<tr>\
+												<td>申报人</td>\
+												<td>'+ exitAcknowObj[i].AgentID + 
+												'</td>\
+											</tr>\
+											<tr>\
+												<td>申报联系人姓名</td>\
+												<td>'+ exitAcknowObj[i].AgentContactName + '</td>\
+											</tr>\
+											<tr>\
+												<td>备注</td>\
+												<td>'+ exitAcknowObj[i].AdditionalInformationContent  + '</td>\
+											</tr>\
+										</table>\
+									</div>\
+								</li>';
+			};
+			$("#exit_acknow").html(exitAcknowhtml);
+
+			// 点击右边箭头展开
+			$(".item i").on('click',function(){
+				var index = $(this).parents("li").index(".item-box li");
+				
+				if($(".item-box li").eq(index).find(".spread").is(":hidden")) {
+					$(this).addClass("pointHover");
+					$(".item-box li").eq(index).find(".spread").show();
+				}else{
+					$(this).removeClass("pointHover").addClass("point");
+					$(".item-box li").eq(index).find(".spread").hide();
+				}
+				return false;
+			})
+
+			// 点击序号时候展开
+			$(".order-item").on('click',function(){
+				var index = $(this).parent("li").index(".order-ul li");
+				if($(".order-ul li").eq(index).find(".order-spread").is(":visible") == false) {
+					$(".order-ul li").eq(index).find(".order-spread").show();
+				}else{
+					$(".order-ul li").eq(index).find(".order-spread").hide();
+				}
+				return false;
+			})
+
+			$(".nav-menu li").on('click',function(){
+				var index = $(this).index(".nav-menu li");
+				$(".active").removeClass("active");
+				$(".nav-menu li").eq(index).addClass("active");
+				$(".item-box").eq(index).show().siblings(".item-box").hide();
+				return false;
+			});
+			// 点击序号时候展开
+			$(".order-right").on('click',function(){
+				var index = $(this).parents("li").index(".order-ul li");
+				if($(".order-ul li").eq(index).find(".order-spread").is(":visible") == false) {
+					$(this).find("i").removeClass("plus");
+					$(".order-ul li").eq(index).find(".order-spread").show();
+
+				}else{
+					$(this).find("i").addClass("plus");
+					$(".order-ul li").eq(index).find(".order-spread").hide();
+				}
+				return false;
+			})
+
+		})
+	</script>
+</body>
+</html>

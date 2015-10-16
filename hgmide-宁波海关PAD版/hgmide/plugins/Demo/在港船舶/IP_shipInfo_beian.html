@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动单兵系统船舶备案信息</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../res/css/reset.css">
+	<link rel="stylesheet" href="../res/css/index-rem.css">
+</head>
+<body>
+	<header class="header-box">
+		<div class="index-logo left-arrow">
+			<a href="IP_informationView.html">
+				<img src="../res/images/left-arrow.png" alt="">
+			</a>
+		</div>
+		<h3>船舶备案信息</h3>
+		<p class="header-glass">
+			<a href="#">
+				<img src="../res/images/glass.png">
+			</a>
+		</p>
+	</header>
+	<div class="main-body">
+		<div class="main-box">
+			<ul class="item-ul">
+				<li class="flex flex-flow-row">
+					<div class="item-left">船舶UN代码</div>
+					<div class="item-right" id="shipUN"><!-- 636014357 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">船舶英文船名</div>
+					<div class="item-right" id="shipEName"><!-- EVEREXCEL --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">净吨位</div>
+					<div class="item-right" id="netton"></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">船舶呼号</div>
+					<div class="item-right" id="callSign"></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">国籍</div>
+					<div class="item-right" id="nationality"><!-- 英国 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">承运人</div>
+					<div class="item-right" id="carrier"><!-- 长荣香港有限公司宁波代理处 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">船舶代理公司</div>
+					<div class="item-right" id="shipAgent"><!-- 宁波船务代理有线公司 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">代理人及联系方式</div>
+					<div class="item-right" id="agentRelate"></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">备案日期</div>
+					<div class="item-right" id="recordDate"><!-- 2010/2/9 11:27:34 --></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" charset="utf-8" src="../js/jquerymobile-1.4.2.js">
+	</script>
+	<script>
+		$(function(){
+		   var json={"OpResult":[{"VSL_UN":"UN9241322","VSL_ENAME":"RDOCCONERT","VSL_NETTON":"","VSL_CALLSIGN":"","NATIONALITY":"英国","CARRIER":"长荣香港有限公司宁波代表处","SHIP_AGENT":"宁波船务代理有限公司","AGENT_PHONE":"","RECORD_TIME":"2010-2-9 11:27:34"}]}
+           var obj = eval(json.OpResult);
+           $('#shipUN').text(obj[0].VSL_UN);  //船泊UN代码
+           $('#shipEName').text(obj[0].VSL_ENAME);  // 船泊英文船名
+           $('#netton').text(obj[0].VSL_NETTON);  //净吨位
+           $('#callSign').text(obj[0].VSL_CALLSIGN);  //船泊呼号
+           $('#nationality').text(obj[0].NATIONALITY);  //国籍
+           $('#carrier').text(obj[0].CARRIER);  //承运人
+           $('#shipAgent').text(obj[0].SHIP_AGENT);  //船泊代理公司
+           $('#agentRelate').text(obj[0].AGENT_PHONE);  //代理人及联系方式
+           $('#recordDate').text(obj[0].RECORD_TIME);  //备案日期
+           
+		})
+	</script>
+</body>
+</html>

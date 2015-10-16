@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动单兵系统大兵散杂货提存监管单兵</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../res/css/reset.css">
+	<link rel="stylesheet" href="../res/css/index-rem.css">
+	<script src="../js/jquerymobile-1.4.2.js"></script>
+</head>
+<body>
+	<header class="header-box">
+		<div class="index-logo left-arrow">
+			<a href="DEC_soldier_queryInfo.html">
+				<img src="../res/images/left-arrow.png" alt="">
+			</a>
+		</div>
+		<h3>大兵散杂货提存监管单兵</h3>
+		<p class="header-glass">
+			<a href="DEC_declarCustom_list.html">
+				<img src="../res/images/home.png">
+			</a>
+		</p>
+	</header>
+	<div class="main-body">
+		<div class="main-box">
+			<div class="card-wrap">
+				<ul class="item-box">
+					<li>
+						<div class="spread">
+							<ul class="order-ul" id="soldier">
+								<!-- <li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>1</span>
+											<i class="seperate"></i>
+										</div>
+									</div>
+									<div class="order-spread">
+										<table>
+											<tr>
+												<td>UN代码</td>
+												<td>UN123456</td>
+											</tr>
+											<tr class="active">
+												<td>航次</td>
+												<td>150311</td>
+											</tr>
+											<tr>
+												<td>货物类型</td>
+												<td>金属矿石</td>
+											</tr>
+											<tr>
+												<td>货物描述</td>
+												<td>铁矿石</td>
+											</tr>
+											<tr>
+												<td>重量</td>
+												<td>100000</td>
+											</tr>
+											<tr>
+												<td>重量单位</td>
+												<td>吨</td>
+											</tr>
+											<tr>
+												<td>备注</td>
+												<td></td>
+											</tr>
+										</table>
+									</div>
+								</li>
+								<li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>2</span>
+											<i class="seperate plus"></i>
+										</div>
+									</div>
+									<div class="order-spread" style="display:none;">
+										<table>
+											<tr>
+												<td>装货港</td>
+												<td>麦寮（TWMLI）</td>
+											</tr>
+											<tr class="active">
+												<td>货物数量</td>
+												<td>1.00000</td>
+											</tr>
+											<tr>
+												<td>毛重</td>
+												<td>3982.17</td>
+											</tr>
+											<tr>
+												<td>货物类型</td>
+												<td>化工原料</td>
+											</tr>
+											<tr>
+												<td>标记唛吗</td>
+												<td>N/M</td>
+											</tr>
+											<tr>
+												<td>集装箱(器)尺寸和类型</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>重箱或者空箱标识代码</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>备注</td>
+												<td>货物申报单货物申报单</td>
+											</tr>
+										</table>
+									</div>
+								</li>
+								<li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>3</span>
+											<i class="seperate plus"></i>
+										</div>
+									</div>
+									<div class="order-spread"  style="display:none;">
+										<table>
+											<tr>
+												<td>装货港</td>
+												<td>麦寮（TWMLI）</td>
+											</tr>
+											<tr class="active">
+												<td>货物数量</td>
+												<td>1.00000</td>
+											</tr>
+											<tr>
+												<td>毛重</td>
+												<td>3982.17</td>
+											</tr>
+											<tr>
+												<td>货物类型</td>
+												<td>化工原料</td>
+											</tr>
+											<tr>
+												<td>标记唛吗</td>
+												<td>N/M</td>
+											</tr>
+											<tr>
+												<td>集装箱(器)尺寸和类型</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>重箱或者空箱标识代码</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>备注</td>
+												<td>货物申报单货物申报单</td>
+											</tr>
+										</table>
+									</div>
+								</li> -->
+							</ul>
+						</div>
+					</li>	
+				</ul>
+			</div>		
+		</div>
+	</div>
+</div>
+	<script>
+		$(function(){
+			var json = {"OpResult":[{"IMO":"UN9516428","Voyage":"007W","CargoType":"18","FunctionDesc":null,"GrossWeight":"5886.3","Unit":"120","Memo":null,"MessageID":"CN_CSM101_1p0_3100726398484_20141210103930628"},{"IMO":"UN9594810","Voyage":null,"CargoType":"13","FunctionDesc":"对二甲苯","GrossWeight":"5241","Unit":"70","Memo":null,"MessageID":"CN_CSM101_1p0_3100704834505_20141209194716403"},{"IMO":"UN9252254","Voyage":"016E","CargoType":"18","FunctionDesc":null,"GrossWeight":"5538.6","Unit":"7","Memo":null,"MessageID":"CN_CSM101_1p0_3100254097535_20141209154452596"},{"IMO":"UN9404508","Voyage":"1426W","CargoType":"18","FunctionDesc":null,"GrossWeight":"980","Unit":"7","Memo":null,"MessageID":"CN_CSM101_1p0_3100551136019_20141209143352620"},{"IMO":"UN9397913","Voyage":"1448W","CargoType":"18","FunctionDesc":null,"GrossWeight":"2600.4","Unit":"7","Memo":null,"MessageID":"CN_CSM101_1p0_3100254097535_20141209133832687"},{"IMO":"UN9469962","Voyage":null,"CargoType":"1","FunctionDesc":null,"GrossWeight":"78517","Unit":"70","Memo":null,"MessageID":"CN_CSM101_1p0_3100768506578_20141209103621530"},{"IMO":"UN9256212","Voyage":"1407N","CargoType":"18","FunctionDesc":null,"GrossWeight":"4515","Unit":"7","Memo":null,"MessageID":"CN_CSM101_1p0_3100254097535_20141209091713162"},{"IMO":"UN9516428","Voyage":"007W","CargoType":"18","FunctionDesc":null,"GrossWeight":"12316.2","Unit":"120","Memo":null,"MessageID":"CN_CSM101_1p0_3100726398484_20141210103930628"},{"IMO":"UN9601871","Voyage":null,"CargoType":"13","FunctionDesc":"乙烯","GrossWeight":"2301.666","Unit":"70","Memo":null,"MessageID":"CN_CSM101_1p0_3100144089542_20141210103901269"},{"IMO":"UN9409041","Voyage":"037E","CargoType":"18","FunctionDesc":null,"GrossWeight":"5166","Unit":"7","Memo":null,"MessageID":"CN_CSM101_1p0_3100254097535_20141210102239364"},{"IMO":"UN9409041","Voyage":"037E","CargoType":"18","FunctionDesc":null,"GrossWeight":"8583.61","Unit":"7","Memo":null,"MessageID":"CN_CSM101_1p0_3100254097535_20141210102239364"},{"IMO":"UN9244130","Voyage":"152W","CargoType":"18","FunctionDesc":null,"GrossWeight":"23.1","Unit":"7","Memo":null,"MessageID":"CN_CSM101_1p0_3100254097535_20141210094152882"},{"IMO":"UN9244130","Voyage":"152W","CargoType":"18","FunctionDesc":null,"GrossWeight":"940","Unit":"7","Memo":null,"MessageID":"CN_CSM101_1p0_3100254097535_20141210094152882"},{"IMO":"UN9244130","Voyage":"152W","CargoType":"18","FunctionDesc":null,"GrossWeight":"57.5","Unit":"7","Memo":null,"MessageID":"CN_CSM101_1p0_3100254097535_20141210094152882"},{"IMO":"UN9244130","Voyage":"152W","CargoType":"18","FunctionDesc":null,"GrossWeight":"452","Unit":"7","Memo":null,"MessageID":"CN_CSM101_1p0_3100254097535_20141210094152882"},{"IMO":"UN9244130","Voyage":"152W","CargoType":"18","FunctionDesc":null,"GrossWeight":"40","Unit":"7","Memo":null,"MessageID":"CN_CSM101_1p0_3100254097535_20141210094152882"},{"IMO":"UN9244130","Voyage":"152W","CargoType":"18","FunctionDesc":null,"GrossWeight":"1200.4","Unit":"7","Memo":null,"MessageID":"CN_CSM101_1p0_3100254097535_20141210094152882"},{"IMO":"UN9244130","Voyage":"152W","CargoType":"18","FunctionDesc":null,"GrossWeight":"236.9","Unit":"7","Memo":null,"MessageID":"CN_CSM101_1p0_3100254097535_20141210094152882"},{"IMO":"UN9244130","Voyage":"152W","CargoType":"18","FunctionDesc":null,"GrossWeight":"1808","Unit":"7","Memo":null,"MessageID":"CN_CSM101_1p0_3100254097535_20141210094152882"},{"IMO":"UN9244130","Voyage":"152W","CargoType":"18","FunctionDesc":null,"GrossWeight":"210","Unit":"7","Memo":null,"MessageID":"CN_CSM101_1p0_3100254097535_20141210094152882"},{"IMO":"UN9244130","Voyage":"152W","CargoType":"18","FunctionDesc":null,"GrossWeight":"2441.8","Unit":"7","Memo":null,"MessageID":"CN_CSM101_1p0_3100254097535_20141210094152882"},{"IMO":"UN9244130","Voyage":"152W","CargoType":"18","FunctionDesc":null,"GrossWeight":"4.6","Unit":"7","Memo":null,"MessageID":"CN_CSM101_1p0_3100254097535_20141210094152882"},{"IMO":"UN9244130","Voyage":"152W","CargoType":"18","FunctionDesc":null,"GrossWeight":"120","Unit":"7","Memo":null,"MessageID":"CN_CSM101_1p0_3100254097535_20141210094152882"}]}
+			var obj = eval(json.OpResult);
+			var con = '';
+			for (var i = 0; i < obj.length; i++) {
+				con += '<li>\
+									<div class="order-item">\
+										<div class="order">序号</div>\
+										<div class="order-right">\
+											<span> '+ (i + 1) + '</span>\
+											<i class="seperate"></i>\
+										</div>\
+									</div>\
+									<div class="order-spread">\
+										<table>\
+											<tr>\
+												<td>UN代码</td>\
+												<td>'+ obj[i].IMO +'</td>\
+											</tr>\
+											<tr class="active">\
+												<td>航次</td>\
+												<td>'+ obj[i].Voyage +'</td>\
+											</tr>\
+											<tr>\
+												<td>货物类型</td>\
+												<td>'+ obj[i].CargoType +'</td>\
+											</tr>\
+											<tr>\
+												<td>货物描述</td>\
+												<td>'+ obj[i].FunctionDesc +'</td>\
+											</tr>\
+											<tr>\
+												<td>重量</td>\
+												<td>'+ obj[i].GrossWeight +'</td>\
+											</tr>\
+											<tr>\
+												<td>重量单位</td>\
+												<td>'+ obj[i].Unit +'</td>\
+											</tr>\
+											<tr>\
+												<td>备注</td>\
+												<td>'+ obj[i].Memo +'</td>\
+											</tr>\
+										</table>\
+									</div>\
+								</li>';
+			};
+			$("#soldier").html(con);
+			
+			// 点击序号时候展开
+			$(".order-right").on('click',function(){
+				var index = $(this).parents("li").index(".order-ul li");
+				if($(".order-ul li").eq(index).find(".order-spread").is(":visible") == false) {
+					$(this).find("i").removeClass("plus");
+					$(".order-ul li").eq(index).find(".order-spread").show();
+
+				}else{
+					$(this).find("i").addClass("plus");
+					$(".order-ul li").eq(index).find(".order-spread").hide();
+				}
+				return false;
+			})
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,1762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动单兵系统进出境单证信息</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../res/css/reset.css">
+	<link rel="stylesheet" href="../res/css/index-rem.css">
+	<script src="../js/jquerymobile-1.4.2.js"></script>
+</head>
+<body>
+	<header class="header-box">
+		<div class="index-logo left-arrow">
+			<a href="IP_informationView.html">
+				<img src="../res/images/left-arrow.png" alt="">
+			</a>
+		</div>
+		<h3>进出境单证信息</h3>
+		<p class="header-glass"><a href="#"><img src="../res/images/home.png"></a></p>
+	</header>
+	<div class="main-body">
+		<div class="main-box">
+			<nav class="nav-menu-box">
+				<ul class="nav-menu">
+					<li class="active"><a href="#">进境单证</a></li>
+					<li><a href="#">出境单证</a></li>
+				</ul>
+			</nav>
+			<div class="card-wrap">
+			<!-- 出境单证开始 -->
+				<ul class="item-box">
+					<li>
+						<div class="item">
+							<span><img src="../res/images/row-icon01.png"></span>
+							<h3>单证信息</h3>
+							<i class="pointHover"></i>
+						</div>
+						 <div class="spread" id="docinfo">
+						<!--	<table>
+								<tr>
+									<td>IMO编号：</td>
+									<td>UN9638898</td>
+								</tr>
+								<tr class="current">
+									<td>抵港/离港状态:</td>
+									<td>抵港</td>
+								</tr>
+								<tr>
+									<td>抵港/离港航次: </td>
+									<td>150018</td>
+								</tr>
+								<tr class="current">
+									<td>申报港口代码:</td>
+									<td>宁波(CNNB)</td>
+								</tr>
+								<tr>
+									<td>船员人数:</td>
+									<td>21</td>
+								</tr>
+								<tr class="current">
+									<td>旅客人数: </td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>载货吃水:</td>
+									<td>6.2/6.4</td>
+								</tr>
+								<tr class="current">
+									<td>海关业务类型:</td>
+									<td>正常进出境</td>
+								</tr>
+								<tr>
+									<td>来港目的: </td>
+									<td>卸货</td>
+								</tr>
+								<tr class="current">
+									<td>船舶经营人: </td>
+									<td>CSIC IMC</td>
+								</tr>
+								<tr>
+									<td>船舶经营人性质: </td>
+									<td>国有</td>
+								</tr>
+								<tr class="current">
+									<td>经营航线: </td>
+									<td>国际</td>
+								</tr>
+								<tr>
+									<td>抵/离日期及时间: </td>
+									<td>2015-01-20</td>
+								</tr>
+								<tr class="current">
+									<td>申报人: </td>
+									<td>中国宁波外轮代理有限公司</td>
+								</tr>
+								<tr>
+									<td>申报人地址: </td>
+									<td>宁波江北</td>
+								</tr>
+								<tr class="current">
+									<td>申报人联系人姓名: </td>
+									<td>陈朝奉</td>
+								</tr>
+								<tr>
+									<td>申报时间: </td>
+									<td>陈朝奉</td>
+								</tr>
+							</table> -->
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<span><img src="../res/images/row-icon02.png"></span>
+							<h3>货物申报单</h3>
+							<i class="pointHover"></i>
+						</div>
+						<div class="spread" >
+							<ul class="order-ul" id ="goods_sheet">
+<!-- 								<li>
+	<div class="order-item">
+		<div class="order">序号</div>
+		<div class="order-right">
+			<span>1</span>
+			<i class="seperate"></i>
+		</div>
+	</div>
+	<div class="order-spread" id = "">
+		<table>
+			<tr>
+				<td>装货港</td>
+				<td>麦寮（TWMLI）</td>
+			</tr>
+			<tr class="active">
+				<td>货物数量</td>
+				<td>1.00000</td>
+			</tr>
+			<tr>
+				<td>毛重</td>
+				<td>3982.17</td>
+			</tr>
+			<tr>
+				<td>货物类型</td>
+				<td>化工原料</td>
+			</tr>
+			<tr>
+				<td>标记唛吗</td>
+				<td>N/M</td>
+			</tr>
+			<tr>
+				<td>集装箱(器)尺寸和类型</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>重箱或者空箱标识代码</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>备注</td>
+				<td>货物申报单货物申报单</td>
+			</tr>
+		</table>
+	</div>
+</li>
+<li>
+	<div class="order-item">
+		<div class="order">序号</div>
+		<div class="order-right">
+			<span>2</span>
+			<i class="seperate plus"></i>
+		</div>
+	</div>
+	<div class="order-spread" style="display:none;">
+		<table>
+			<tr>
+				<td>装货港</td>
+				<td>麦寮（TWMLI）</td>
+			</tr>
+			<tr class="active">
+				<td>货物数量</td>
+				<td>1.00000</td>
+			</tr>
+			<tr>
+				<td>毛重</td>
+				<td>3982.17</td>
+			</tr>
+			<tr>
+				<td>货物类型</td>
+				<td>化工原料</td>
+			</tr>
+			<tr>
+				<td>标记唛吗</td>
+				<td>N/M</td>
+			</tr>
+			<tr>
+				<td>集装箱(器)尺寸和类型</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>重箱或者空箱标识代码</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>备注</td>
+				<td>货物申报单货物申报单</td>
+			</tr>
+		</table>
+	</div>
+</li>
+<li>
+	<div class="order-item">
+		<div class="order">序号</div>
+		<div class="order-right">
+			<span>3</span>
+			<i class="seperate plus"></i>
+		</div>
+	</div>
+	<div class="order-spread" style="display:none;">
+		<table>
+			<tr>
+				<td>装货港</td>
+				<td>麦寮（TWMLI）</td>
+			</tr>
+			<tr class="active">
+				<td>货物数量</td>
+				<td>1.00000</td>
+			</tr>
+			<tr>
+				<td>毛重</td>
+				<td>3982.17</td>
+			</tr>
+			<tr>
+				<td>货物类型</td>
+				<td>化工原料</td>
+			</tr>
+			<tr>
+				<td>标记唛吗</td>
+				<td>N/M</td>
+			</tr>
+			<tr>
+				<td>集装箱(器)尺寸和类型</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>重箱或者空箱标识代码</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>备注</td>
+				<td>货物申报单货物申报单</td>
+			</tr>
+		</table>
+	</div>
+</li> -->
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<span><img src="../res/images/row-icon03.png"></span>
+							<h3>船用物品清单</h3>
+							<i class="pointHover"></i>
+						</div>
+						<div class="spread">
+							<ul class="order-ul" id="ship_sheet">
+								<!-- <li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>1</span>
+											<i class="seperate"></i>
+										</div>
+									</div>
+									<div class="order-spread">
+										<table>
+											<tr>
+												<td>船员证件类型</td>
+												<td>海员证</td>
+											</tr>
+											<tr class="active">
+												<td>船员证件号码</td>
+												<td>A00258105</td>
+											</tr>
+											<tr>
+												<td>物品类型</td>
+												<td>免税烟及制品</td>
+											</tr>
+											<tr>
+												<td>物品名称</td>
+												<td>烟</td>
+											</tr>
+											<tr>
+												<td>物品数量</td>
+												<td>200.00000</td>
+											</tr>
+											<tr>
+												<td>数量单位</td>
+												<td>支</td>
+											</tr>
+											<tr>
+												<td>备注</td>
+												<td></td>
+											</tr>
+										</table>
+									</div>
+								</li>
+								<li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>2</span>
+											<i class="seperate plus"></i>
+										</div>
+									</div>
+									<div class="order-spread" style="display:none;">
+										<table>
+											<tr>
+												<td>船员证件类型</td>
+												<td>海员证</td>
+											</tr>
+											<tr class="active">
+												<td>船员证件号码</td>
+												<td>A00258105</td>
+											</tr>
+											<tr>
+												<td>物品类型</td>
+												<td>免税烟及制品</td>
+											</tr>
+											<tr>
+												<td>物品名称</td>
+												<td>烟</td>
+											</tr>
+											<tr>
+												<td>物品数量</td>
+												<td>200.00000</td>
+											</tr>
+											<tr>
+												<td>数量单位</td>
+												<td>支</td>
+											</tr>
+											<tr>
+												<td>备注</td>
+												<td></td>
+											</tr>
+										</table>
+									</div>
+								</li>
+								<li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>3</span>
+											<i class="seperate plus"></i>
+										</div>
+									</div>
+									<div class="order-spread" style="display:none;">
+										<table>
+											<tr>
+												<td>船员证件类型</td>
+												<td>海员证</td>
+											</tr>
+											<tr class="active">
+												<td>船员证件号码</td>
+												<td>A00258105</td>
+											</tr>
+											<tr>
+												<td>物品类型</td>
+												<td>免税烟及制品</td>
+											</tr>
+											<tr>
+												<td>物品名称</td>
+												<td>烟</td>
+											</tr>
+											<tr>
+												<td>物品数量</td>
+												<td>200.00000</td>
+											</tr>
+											<tr>
+												<td>数量单位</td>
+												<td>支</td>
+											</tr>
+											<tr>
+												<td>备注</td>
+												<td></td>
+											</tr>
+										</table>
+									</div>
+								</li> -->
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<span><img src="../res/images/row-icon04.png"></span>
+							<h3>船员名单</h3>
+							<i class="pointHover"></i>
+						</div>
+						<div class="spread">
+							<ul class="order-ul" id="member_sheet">
+								<!-- <li>
+									<div class="order-item">
+										<div class="order">姓名</div>
+										<div class="order-right">
+											<span>赵军生</span>
+											<i class="seperate"></i>
+										</div>
+									</div>
+									<div class="order-spread">
+										<table>
+											<tr>
+												<td>性别</td>
+												<td>男</td>
+											</tr>
+											<tr class="active">
+												<td>国籍</td>
+												<td>中国</td>
+											</tr>
+											<tr>
+												<td>职务</td>
+												<td>船长</td>
+											</tr>
+											<tr>
+												<td>出生日期</td>
+												<td>1966-01-06</td>
+											</tr>
+											<tr>
+												<td>出生地点</td>
+												<td>中国/td>
+											</tr>
+											<tr>
+												<td>船员证件类型</td>
+												<td>海员证</td>
+											</tr>
+											<tr>
+												<td>船员证件号码</td>
+												<td>A00258105</td>
+											</tr>
+											<tr>
+												<td>备注</td>
+												<td>免办签证</td>
+											</tr>
+										</table>
+									</div>
+								</li>
+								<li>
+									<div class="order-item">
+										<div class="order">姓名</div>
+										<div class="order-right">
+											<span>周道波</span>
+											<i class="seperate plus"></i>
+										</div>
+									</div>
+									<div class="order-spread" style="display:none;">
+										<table>
+											<tr>
+												<td>性别</td>
+												<td>男</td>
+											</tr>
+											<tr class="active">
+												<td>国籍</td>
+												<td>中国</td>
+											</tr>
+											<tr>
+												<td>职务</td>
+												<td>船长</td>
+											</tr>
+											<tr>
+												<td>出生日期</td>
+												<td>1966-01-06</td>
+											</tr>
+											<tr>
+												<td>出生地点</td>
+												<td>中国/td>
+											</tr>
+											<tr>
+												<td>船员证件类型</td>
+												<td>海员证</td>
+											</tr>
+											<tr>
+												<td>船员证件号码</td>
+												<td>A00258105</td>
+											</tr>
+											<tr>
+												<td>备注</td>
+												<td>免办签证</td>
+											</tr>
+										</table>
+									</div>
+								</li>
+								<li>
+									<div class="order-item">
+										<div class="order">姓名</div>
+										<div class="order-right">
+											<span>毕肖波</span>
+											<i class="seperate plus"></i>
+										</div>
+									</div>
+									<div class="order-spread"  style="display:none;">
+										<table>
+											<tr>
+												<td>性别</td>
+												<td>男</td>
+											</tr>
+											<tr class="active">
+												<td>国籍</td>
+												<td>中国</td>
+											</tr>
+											<tr>
+												<td>职务</td>
+												<td>船长</td>
+											</tr>
+											<tr>
+												<td>出生日期</td>
+												<td>1966-01-06</td>
+											</tr>
+											<tr>
+												<td>出生地点</td>
+												<td>中国/td>
+											</tr>
+											<tr>
+												<td>船员证件类型</td>
+												<td>海员证</td>
+											</tr>
+											<tr>
+												<td>船员证件号码</td>
+												<td>A00258105</td>
+											</tr>
+											<tr>
+												<td>备注</td>
+												<td>免办签证</td>
+											</tr>
+										</table>
+									</div>
+								</li> -->
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<span><img src="../res/images/row-icon01.png"></span>
+							<h3>船员物品清单</h3>
+							<i class="pointHover"></i>
+						</div>
+						<div class="spread">
+							<ul class="order-ul" id="mg_sheet">
+								<!-- <li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>1</span>
+											<i class="seperate"></i>
+										</div>
+									</div>
+									<div class="order-spread">
+										<table>
+											<tr>
+												<td>装货港</td>
+												<td>麦寮（TWMLI）</td>
+											</tr>
+											<tr class="active">
+												<td>货物数量</td>
+												<td>1.00000</td>
+											</tr>
+											<tr>
+												<td>毛重</td>
+												<td>3982.17</td>
+											</tr>
+											<tr>
+												<td>货物类型</td>
+												<td>化工原料</td>
+											</tr>
+											<tr>
+												<td>标记唛吗</td>
+												<td>N/M</td>
+											</tr>
+										</table>
+									</div>
+								</li>
+								<li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>2</span>
+											<i class="seperate plus"></i>
+										</div>
+									</div>
+									<div class="order-spread"  style="display:none;">
+										<table>
+											<tr>
+												<td>装货港</td>
+												<td>麦寮（TWMLI）</td>
+											</tr>
+											<tr class="active">
+												<td>货物数量</td>
+												<td>1.00000</td>
+											</tr>
+											<tr>
+												<td>毛重</td>
+												<td>3982.17</td>
+											</tr>
+											<tr>
+												<td>货物类型</td>
+												<td>化工原料</td>
+											</tr>
+											<tr>
+												<td>标记唛吗</td>
+												<td>N/M</td>
+											</tr>
+										</table>
+									</div>
+								</li>
+								<li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>3</span>
+											<i class="seperate plus"></i>
+										</div>
+									</div>
+									<div class="order-spread"  style="display:none;">
+										<table>
+											<tr>
+												<td>装货港</td>
+												<td>麦寮（TWMLI）</td>
+											</tr>
+											<tr class="active">
+												<td>货物数量</td>
+												<td>1.00000</td>
+											</tr>
+											<tr>
+												<td>毛重</td>
+												<td>3982.17</td>
+											</tr>
+											<tr>
+												<td>货物类型</td>
+												<td>化工原料</td>
+											</tr>
+											<tr>
+												<td>标记唛吗</td>
+												<td>N/M</td>
+											</tr>
+										</table>
+									</div>
+								</li> -->
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<span><img src="../res/images/row-icon05.png"></span>
+							<h3>航次摘要</h3>
+							<i class="pointHover"></i>
+						</div>
+						<div class="spread">
+							<ul class="order-ul" id="air">
+								<!-- <li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>1</span>
+											<i class="seperate"></i>
+										</div>
+									</div>
+									<div class="order-spread">
+										<table>
+											<tr>
+												<td>停靠港代码</td>
+												<td>麦寮（TWMLI）</td>
+											</tr>
+											<tr class="active">
+												<td>抵达时间</td>
+												<td>2015-01-16</td>
+											</tr>
+											<tr>
+												<td>驶离时间</td>
+												<td>2015-01-17</td>
+											</tr>
+											<tr>
+												<td>备注</td>
+												<td></td>
+											</tr>
+										</table>
+									</div>
+								</li>
+								<li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>2</span>
+											<i class="seperate plus"></i>
+										</div>
+									</div>
+									<div class="order-spread"  style="display:none;">
+										<table>
+											<tr>
+												<td>停靠港代码</td>
+												<td>麦寮（TWMLI）</td>
+											</tr>
+											<tr class="active">
+												<td>抵达时间</td>
+												<td>2015-01-16</td>
+											</tr>
+											<tr>
+												<td>驶离时间</td>
+												<td>2015-01-17</td>
+											</tr>
+											<tr>
+												<td>备注</td>
+												<td></td>
+											</tr>
+										</table>
+									</div>
+								</li>
+								<li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>3</span>
+											<i class="seperate plus"></i>
+										</div>
+									</div>
+									<div class="order-spread"  style="display:none;">
+										<table>
+											<tr>
+												<td>停靠港代码</td>
+												<td>麦寮（TWMLI）</td>
+											</tr>
+											<tr class="active">
+												<td>抵达时间</td>
+												<td>2015-01-16</td>
+											</tr>
+											<tr>
+												<td>驶离时间</td>
+												<td>2015-01-17</td>
+											</tr>
+											<tr>
+												<td>备注</td>
+												<td></td>
+											</tr>
+										</table>
+									</div>
+								</li> -->
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<!-- 进境单证结束 -->
+				<!-- 出境单证开始 -->
+				<ul class="item-box" style="display:none;">
+					<li>
+						<div class="item">
+							<span><img src="../res/images/row-icon01.png"></span>
+							<h3>单证信息</h3>
+							<i class="pointHover"></i>
+						</div>
+						<div class="spread">
+							<table>
+								<tbody><tr>
+									<td>IMO编号：</td>
+									<td>UN9638898</td>
+								</tr>
+								<tr class="current">
+									<td>抵港/离港状态:</td>
+									<td>抵港</td>
+								</tr>
+								<tr>
+									<td>抵港/离港航次: </td>
+									<td>150018</td>
+								</tr>
+							</tbody></table>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<span><img src="../res/images/row-icon02.png"></span>
+							<h3>货物申报单</h3>
+							<i class="pointHover"></i>
+						</div>
+						<div class="spread">
+							<ul class="order-ul">
+								<li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>1</span>
+											<i class="seperate"></i>
+										</div>
+									</div>
+									<div class="order-spread">
+										<table>
+											<tbody>
+												<tr>
+													<td>装货港</td>
+													<td>麦寮（TWMLI）</td>
+												</tr>
+												<tr>
+													<td>货物数量</td>
+													<td>1.00000</td>
+												</tr>
+												<tr>
+													<td>毛重</td>
+													<td>3982.17</td>
+												</tr>
+												<tr>
+													<td>货物类型</td>
+													<td>化工原料</td>
+												</tr>
+												<tr>
+													<td>标记唛吗</td>
+													<td>N/M</td>
+												</tr>
+											</tbody>
+									   </table>
+									</div>
+								</li>
+								<li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>2</span>
+											<i class="seperate plus"></i>
+										</div>
+									</div>
+									<div class="order-spread"  style="display:none;">
+										<table>
+											<tbody>
+												<tr>
+													<td>装货港</td>
+													<td>麦寮（TWMLI）</td>
+												</tr>
+												<tr>
+													<td>货物数量</td>
+													<td>1.00000</td>
+												</tr>
+												<tr>
+													<td>毛重</td>
+													<td>3982.17</td>
+												</tr>
+												<tr>
+													<td>货物类型</td>
+													<td>化工原料</td>
+												</tr>
+												<tr>
+													<td>标记唛吗</td>
+													<td>N/M</td>
+												</tr>
+											</tbody>
+									   </table>
+									</div>
+								</li>
+								<li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>3</span>
+											<i class="seperate plus"></i>
+										</div>
+									</div>
+									<div class="order-spread"  style="display:none;">
+										<table>
+											<tbody>
+												<tr>
+													<td>装货港</td>
+													<td>麦寮（TWMLI）</td>
+												</tr>
+												<tr>
+													<td>货物数量</td>
+													<td>1.00000</td>
+												</tr>
+												<tr>
+													<td>毛重</td>
+													<td>3982.17</td>
+												</tr>
+												<tr>
+													<td>货物类型</td>
+													<td>化工原料</td>
+												</tr>
+												<tr>
+													<td>标记唛吗</td>
+													<td>N/M</td>
+												</tr>
+											</tbody>
+									   </table>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<span><img src="../res/images/row-icon03.png"></span>
+							<h3>船用物品清单</h3>
+							<i class="pointHover"></i>
+						</div>
+						<div class="spread">
+							<ul class="order-ul">
+								<li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>1</span>
+											<i class="seperate"></i>
+										</div>
+									</div>
+									<div class="order-spread">
+										<table>
+											<tbody>
+												<tr>
+													<td>装货港</td>
+													<td>麦寮（TWMLI）</td>
+												</tr>
+												<tr>
+													<td>货物数量</td>
+													<td>1.00000</td>
+												</tr>
+												<tr>
+													<td>毛重</td>
+													<td>3982.17</td>
+												</tr>
+												<tr>
+													<td>货物类型</td>
+													<td>化工原料</td>
+												</tr>
+												<tr>
+													<td>标记唛吗</td>
+													<td>N/M</td>
+												</tr>
+											</tbody>
+									   </table>
+									</div>
+								</li>
+								<li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>2</span>
+											<i class="seperate plus"></i>
+										</div>
+									</div>
+									<div class="order-spread"  style="display:none;">
+										<table>
+											<tbody>
+												<tr>
+													<td>装货港</td>
+													<td>麦寮（TWMLI）</td>
+												</tr>
+												<tr>
+													<td>货物数量</td>
+													<td>1.00000</td>
+												</tr>
+												<tr>
+													<td>毛重</td>
+													<td>3982.17</td>
+												</tr>
+												<tr>
+													<td>货物类型</td>
+													<td>化工原料</td>
+												</tr>
+												<tr>
+													<td>标记唛吗</td>
+													<td>N/M</td>
+												</tr>
+											</tbody>
+									   </table>
+									</div>
+								</li>
+								<li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>3</span>
+											<i class="seperate plus"></i>
+										</div>
+									</div>
+									<div class="order-spread"  style="display:none;">
+										<table>
+											<tbody>
+												<tr>
+													<td>装货港</td>
+													<td>麦寮（TWMLI）</td>
+												</tr>
+												<tr>
+													<td>货物数量</td>
+													<td>1.00000</td>
+												</tr>
+												<tr>
+													<td>毛重</td>
+													<td>3982.17</td>
+												</tr>
+												<tr>
+													<td>货物类型</td>
+													<td>化工原料</td>
+												</tr>
+												<tr>
+													<td>标记唛吗</td>
+													<td>N/M</td>
+												</tr>
+											</tbody>
+									   </table>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<span><img src="../res/images/row-icon04.png"></span>
+							<h3>船员名单</h3>
+							<i class="pointHover"></i>
+						</div>
+						<div class="spread">
+							<ul class="order-ul">
+								<li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>1</span>
+											<i class="seperate"></i>
+										</div>
+									</div>
+									<div class="order-spread">
+										<table>
+											<tbody>
+												<tr>
+													<td>装货港</td>
+													<td>麦寮（TWMLI）</td>
+												</tr>
+												<tr>
+													<td>货物数量</td>
+													<td>1.00000</td>
+												</tr>
+												<tr>
+													<td>毛重</td>
+													<td>3982.17</td>
+												</tr>
+												<tr>
+													<td>货物类型</td>
+													<td>化工原料</td>
+												</tr>
+												<tr>
+													<td>标记唛吗</td>
+													<td>N/M</td>
+												</tr>
+											</tbody>
+									   </table>
+									</div>
+								</li>
+								<li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>2</span>
+											<i class="seperate plus"></i>
+										</div>
+									</div>
+									<div class="order-spread"  style="display:none;">
+										<table>
+											<tbody>
+												<tr>
+													<td>装货港</td>
+													<td>麦寮（TWMLI）</td>
+												</tr>
+												<tr>
+													<td>货物数量</td>
+													<td>1.00000</td>
+												</tr>
+												<tr>
+													<td>毛重</td>
+													<td>3982.17</td>
+												</tr>
+												<tr>
+													<td>货物类型</td>
+													<td>化工原料</td>
+												</tr>
+												<tr>
+													<td>标记唛吗</td>
+													<td>N/M</td>
+												</tr>
+											</tbody>
+									   </table>
+									</div>
+								</li>
+								<li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>3</span>
+											<i class="seperate plus"></i>
+										</div>
+									</div>
+									<div class="order-spread"  style="display:none;">
+										<table>
+											<tbody>
+												<tr>
+													<td>装货港</td>
+													<td>麦寮（TWMLI）</td>
+												</tr>
+												<tr>
+													<td>货物数量</td>
+													<td>1.00000</td>
+												</tr>
+												<tr>
+													<td>毛重</td>
+													<td>3982.17</td>
+												</tr>
+												<tr>
+													<td>货物类型</td>
+													<td>化工原料</td>
+												</tr>
+												<tr>
+													<td>标记唛吗</td>
+													<td>N/M</td>
+												</tr>
+											</tbody>
+									   </table>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<span><img src="../res/images/row-icon01.png"></span>
+							<h3>船员物品清单</h3>
+							<i class="pointHover"></i>
+						</div>
+						<div class="spread">
+							<ul class="order-ul">
+								<li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>1</span>
+											<i class="seperate"></i>
+										</div>
+									</div>
+									<div class="order-spread">
+										<table>
+											<tr>
+												<td>装货港</td>
+												<td>麦寮（TWMLI）</td>
+											</tr>
+											<tr class="active">
+												<td>货物数量</td>
+												<td>1.00000</td>
+											</tr>
+											<tr>
+												<td>毛重</td>
+												<td>3982.17</td>
+											</tr>
+											<tr>
+												<td>货物类型</td>
+												<td>化工原料</td>
+											</tr>
+											<tr>
+												<td>标记唛吗</td>
+												<td>N/M</td>
+											</tr>
+										</table>
+									</div>
+								</li>
+								<li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>2</span>
+											<i class="seperate plus"></i>
+										</div>
+									</div>
+									<div class="order-spread" style="display:none;">
+										<table>
+											<tr>
+												<td>装货港</td>
+												<td>麦寮（TWMLI）</td>
+											</tr>
+											<tr class="active">
+												<td>货物数量</td>
+												<td>1.00000</td>
+											</tr>
+											<tr>
+												<td>毛重</td>
+												<td>3982.17</td>
+											</tr>
+											<tr>
+												<td>货物类型</td>
+												<td>化工原料</td>
+											</tr>
+											<tr>
+												<td>标记唛吗</td>
+												<td>N/M</td>
+											</tr>
+										</table>
+									</div>
+								</li>
+								<li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>3</span>
+											<i class="seperate plus"></i>
+										</div>
+									</div>
+									<div class="order-spread" style="display:none;">
+										<table>
+											<tr>
+												<td>装货港</td>
+												<td>麦寮（TWMLI）</td>
+											</tr>
+											<tr class="active">
+												<td>货物数量</td>
+												<td>1.00000</td>
+											</tr>
+											<tr>
+												<td>毛重</td>
+												<td>3982.17</td>
+											</tr>
+											<tr>
+												<td>货物类型</td>
+												<td>化工原料</td>
+											</tr>
+											<tr>
+												<td>标记唛吗</td>
+												<td>N/M</td>
+											</tr>
+										</table>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<span><img src="../res/images/row-icon05.png"></span>
+							<h3>航次摘要</h3>
+							<i class="pointHover"></i>
+						</div>
+						<div class="spread">
+							<ul class="order-ul">
+								<li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>1</span>
+											<i class="seperate"></i>
+										</div>
+									</div>
+									<div class="order-spread">
+										<table>
+											<tbody>
+												<tr>
+													<td>装货港</td>
+													<td>麦寮（TWMLI）</td>
+												</tr>
+												<tr>
+													<td>货物数量</td>
+													<td>1.00000</td>
+												</tr>
+												<tr>
+													<td>毛重</td>
+													<td>3982.17</td>
+												</tr>
+												<tr>
+													<td>货物类型</td>
+													<td>化工原料</td>
+												</tr>
+												<tr>
+													<td>标记唛吗</td>
+													<td>N/M</td>
+												</tr>
+											</tbody>
+									   </table>
+									</div>
+								</li>
+								<li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>2</span>
+											<i class="seperate plus"></i>
+										</div>
+									</div>
+									<div class="order-spread" style="display:none;">
+										<table>
+											<tbody>
+												<tr>
+													<td>装货港</td>
+													<td>麦寮（TWMLI）</td>
+												</tr>
+												<tr>
+													<td>货物数量</td>
+													<td>1.00000</td>
+												</tr>
+												<tr>
+													<td>毛重</td>
+													<td>3982.17</td>
+												</tr>
+												<tr>
+													<td>货物类型</td>
+													<td>化工原料</td>
+												</tr>
+												<tr>
+													<td>标记唛吗</td>
+													<td>N/M</td>
+												</tr>
+											</tbody>
+									   </table>
+									</div>
+								</li>
+								<li>
+									<div class="order-item">
+										<div class="order">序号</div>
+										<div class="order-right">
+											<span>3</span>
+											<i class="seperate plus"></i>
+										</div>
+									</div>
+									<div class="order-spread" style="display:none;">
+										<table>
+											<tbody>
+												<tr>
+													<td>装货港</td>
+													<td>麦寮（TWMLI）</td>
+												</tr>
+												<tr>
+													<td>货物数量</td>
+													<td>1.00000</td>
+												</tr>
+												<tr>
+													<td>毛重</td>
+													<td>3982.17</td>
+												</tr>
+												<tr>
+													<td>货物类型</td>
+													<td>化工原料</td>
+												</tr>
+												<tr>
+													<td>标记唛吗</td>
+													<td>N/M</td>
+												</tr>
+											</tbody>
+									   </table>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<!-- 出境单证结束 -->
+			</div>
+		</div>
+	</div>
+	<script>
+		$(function(){
+			// 单证信息
+			var docjson={"OpResult":[{"VesselUNCode":null,"IMO":"UN9227376","Voyage":"NO","MessageID":"CN_CSM101_1p0_3100144089542_20141209124549167","I_E_Flag":"E","Port":"CNNBO/3104","CrewNum":"20","PassengersNum":"0","DeadWeightDraft":null,"BussinessType":"1","PurposeOfCall":"4","LeaserCoName":"LBH SHIPPING CO.,LTD","LeaserCoType":"2","ManageLine":null,"VesselDate":"2014/12/7 21:20:00","AgentCorp":"3100144089542","AgentCorpAddress":null,"Declarer":"陈潮峰","DeclareDate":"2014/12/9 0:00:00","Memo":null,"IsDelete":"0","CreateTime":"2014/12/11 10:38:23"}]};
+
+			var obj = eval(docjson.OpResult);
+
+			html= '<table>\
+								<tr>\
+									<td>IMO编号：</td>\
+									<td>'+obj[0].IMO+'</td>\
+								</tr>\
+								<tr class="current">\
+									<td>抵港/离港状态:</td>\
+									<td>'+obj[0].I_E_Flag+'</td>\
+								</tr>\
+								<tr>\
+									<td>抵港/离港航次: </td>\
+									<td>'+obj[0].Voyage+'</td>\
+								</tr>\
+								<tr class="current">\
+									<td>申报港口代码:</td>\
+									<td>'+obj[0].Port+'</td>\
+								</tr>\
+								<tr>\
+									<td>船员人数:</td>\
+									<td>'+obj[0].CrewNum+'</td>\
+								</tr>\
+								<tr class="current">\
+									<td>旅客人数: </td>\
+									<td>'+obj[0].PassengersNum+'</td>\
+								</tr>\
+								<tr>\
+									<td>载货吃水:</td>\
+									<td>'+obj[0].DeadWeightDraft+'</td>\
+								</tr>\
+								<tr class="current">\
+									<td>海关业务类型:</td>\
+									<td>'+obj[0].BussinessType+'</td>\
+								</tr>\
+								<tr>\
+									<td>来港目的: </td>\
+									<td>'+obj[0].PurposeOfCall+'</td>\
+								</tr>\
+								<tr class="current">\
+									<td>船舶经营人: </td>\
+									<td>'+obj[0].LeaserCoName+'</td>\
+								</tr>\
+								<tr>\
+									<td>船舶经营人性质: </td>\
+									<td>'+obj[0].LeaserCoType+'</td>\
+								</tr>\
+								<tr class="current">\
+									<td>经营航线: </td>\
+									<td>'+obj[0].ManageLine+'</td>\
+								</tr>\
+								<tr>\
+									<td>抵/离日期及时间: </td>\
+									<td>'+obj[0].VesselDate+'</td>\
+								</tr>\
+								<tr class="current">\
+									<td>申报人: </td>\
+									<td>'+obj[0].AgentCorp+'</td>\
+								</tr>\
+								<tr>\
+									<td>申报人地址: </td>\
+									<td>'+obj[0].AgentCorpAddress+'</td>\
+								</tr>\
+								<tr class="current">\
+									<td>申报人联系人姓名: </td>\
+									<td>'+obj[0].Declarer+'</td>\
+								</tr>\
+								<tr>\
+									<td>申报时间: </td>\
+									<td>'+obj[0].DeclareDate+'</td>\
+								</tr>\
+								<tr class="current">\
+									<td>备注: </td>\
+									<td>'+obj[0].Memo+'</td>\
+								</tr>\
+							</table>';
+							$("#docinfo").append(html);	
+
+	// 货物申请单数据
+  	var goodsjson = {"OpResult":[{"MessageID":"7fc118f0-0a7d-41a4-b353-2130b3a26d41","LoadingPort":"AUDAM","DischagedPort":"CNNBO","SignMark":null,"CargoType":"3","ContainModal":null,"LoaEquipmentLoadedStatusdingPort":null,"Wrap":null,"Qty":"1","FunctionDesc":"铁矿1","GrossWeight":"65700","Unit":"70","Memo":"本港货"},{"MessageID":"2e901451-3a1f-46ff-bf31-7ee9dcfc87f1","LoadingPort":"AUDAM","DischagedPort":"CNNBO","SignMark":null,"CargoType":"3","ContainModal":null,"LoaEquipmentLoadedStatusdingPort":null,"Wrap":null,"Qty":"1","FunctionDesc":"铁矿2","GrossWeight":"100722","Unit":"70","Memo":"指运货2"}]};
+
+  	var goodsobj = eval(goodsjson.OpResult);
+	var goodshtml = '';
+	for (var i = 0; i < goodsobj.length; i++) {
+		goodshtml +='<li>\
+						<div class="order-item">\
+							<div class="order">序号</div>\
+							<div class="order-right">\
+								<span>'+(i+1)+'</span>\
+								<i class="seperate"></i>\
+							</div>\
+						</div>\
+						<div class="order-spread">\
+							<table>\
+								<tr>\
+									<td>装货港</td>\
+									<td>'+goodsobj[i].LoadingPort+'</td>\
+								</tr>\
+								<tr class="active">\
+									<td>卸货港代码</td>\
+									<td>'+goodsobj[i].DischagedPort+'</td>\
+								</tr>\
+								<tr>\
+									<td>标记唛码</td>\
+									<td>'+goodsobj[i].SignMark+'</td>\
+								</tr>\
+								<tr>\
+									<td>货物类型</td>\
+									<td>'+goodsobj[i].CargoType+'</td>\
+								</tr>\
+								<tr>\
+									<td>集装箱（器）尺寸和类型</td>\
+									<td>'+goodsobj[i].ContainModal+'</td>\
+								</tr>\
+								<tr>\
+									<td>重箱或者空箱标识代码</td>\
+									<td>'+goodsobj[i].EquipmentLoadedStatus+'</td>\
+								</tr>\
+								<tr>\
+									<td>重箱或者空箱标识代码</td>\
+									<td>'+goodsobj[i].LoadingPort+'</td>\
+								</tr>\
+								<tr>\
+									<td>包装种类代码</td>\
+									<td>'+goodsobj[i].Wrap+'</td>\
+								</tr>\
+								<tr>\
+									<td>货物数量</td>\
+									<td>'+goodsobj[i].Qty+'</td>\
+								</tr>\
+								<tr>\
+									<td>货物摘要说明</td>\
+									<td>'+goodsobj[i].FunctionDesc+'</td>\
+								</tr>\
+								<tr>\
+									<td>毛重</td>\
+									<td>'+goodsobj[i].GrossWeight+'</td>\
+								</tr>\
+								<tr>\
+									<td>数量单位</td>\
+									<td>'+goodsobj[i].Unit+'</td>\
+								</tr>\
+								<tr>\
+									<td>备注</td>\
+									<td>'+goodsobj[i].Memo+'</td>\
+								</tr>\
+							</table>\
+						</div>\
+   				</li>';
+	};
+
+    $("#goods_sheet").append(goodshtml);	
+
+    // 船用物品清单
+    var shipjson = {"OpResult":[{"GoodsType":"201","GoodsName":"重油","GoodsQty":"2775","GoodsUnit":"70","Depositary":null,"Memo":null},{"GoodsType":"202","GoodsName":"轻油","GoodsQty":"100","GoodsUnit":"70","Depositary":null,"Memo":null},{"GoodsType":"301","GoodsName":"烟","GoodsQty":"93","GoodsUnit":"15","Depositary":null,"Memo":null}]}
+    var shipObj = eval(shipjson.OpResult);
+    var shiphtml = '';
+    for (var i = 0; i < shipObj.length; i++) {
+    	shiphtml += '<li>\
+									<div class="order-item">\
+										<div class="order">序号</div>\
+										<div class="order-right">\
+											<span>'+ (i + 1) +'</span>\
+											<i class="seperate"></i>\
+										</div>\
+									</div>\
+									<div class="order-spread">\
+										<table>\
+											<tr>\
+												<td>物品类型</td>\
+												<td>'+ shipObj[i].GoodsType +'</td>\
+											</tr>\
+											<tr class="active">\
+												<td>物品名称</td>\
+												<td>'+ shipObj[i].GoodsName +'</td>\
+											</tr>\
+											<tr>\
+												<td>物品数量</td>\
+												<td>'+ shipObj[i].GoodsQty +'</td>\
+											</tr>\
+											<tr>\
+												<td>数量单位</td>\
+												<td>'+ shipObj[i].GoodsUnit +'</td>\
+											</tr>\
+											<tr>\
+												<td>存放地点</td>\
+												<td>'+ shipObj[i].Depositary +'</td>\
+											</tr>\
+											<tr>\
+												<td>备注</td>\
+												<td>'+ shipObj[i].Memo +'</td>\
+											</tr>\
+										</table>\
+									</div>\
+								</li>';
+    };
+
+    $("#ship_sheet").html(shiphtml);
+
+    // 船员名单
+    var Memberjson = {"OpResult":[{"Name":"AROJADO RAUL CORTEZ","Gender":"M","Nationality":"PH","DutyProfession":"9","Birthday":"1960/5/24 0:00:00","Address":"菲律宾","CertificateType":"14","CertificateNo":"EB9965344","Memo":"免办签证"},{"Name":"OSICOS ORLANDO NAPOLITANO","Gender":"M","Nationality":"PH","DutyProfession":"12","Birthday":"1971/2/13 0:00:00","Address":"菲律宾","CertificateType":"14","CertificateNo":"EB5523124","Memo":"免办签证"},{"Name":"ALIGAEN JEOFFREY MARIA CA","Gender":"M","Nationality":"PH","DutyProfession":"13","Birthday":"1967/9/12 0:00:00","Address":"菲律宾","CertificateType":"14","CertificateNo":"EC1540512","Memo":"免办签证"},{"Name":"YTING IRENEO DIVINO","Gender":"M","Nationality":"PH","DutyProfession":"13","Birthday":"1966/2/10 0:00:00","Address":"菲律宾","CertificateType":"14","CertificateNo":"EC1837627","Memo":"免办签证"},{"Name":"AQUINO ROMMEL ABUAN","Gender":"M","Nationality":"PH","DutyProfession":"14","Birthday":"1970/9/23 0:00:00","Address":"菲律宾","CertificateType":"14","CertificateNo":"EB9036355","Memo":"免办签证"},{"Name":"ROSIT ELMER ENCARNACION","Gender":"M","Nationality":"PH","DutyProfession":"18","Birthday":"1973/1/13 0:00:00","Address":"菲律宾","CertificateType":"14","CertificateNo":"EC0297731","Memo":"免办签证"},{"Name":"HALLARES ULYSES MILITAR","Gender":"M","Nationality":"PH","DutyProfession":"18","Birthday":"1973/8/12 0:00:00","Address":"菲律宾","CertificateType":"14","CertificateNo":"EB5667715","Memo":"免办签证"},{"Name":"SABANG PAT JR. MAJORENOS","Gender":"M","Nationality":"PH","DutyProfession":"22","Birthday":"1972/9/8 0:00:00","Address":"菲律宾","CertificateType":"14","CertificateNo":"EB1081229","Memo":"免办签证"},{"Name":"BOBOC COSTEL","Gender":"M","Nationality":"RO","DutyProfession":"25","Birthday":"1963/7/22 0:00:00","Address":"罗马尼亚","CertificateType":"14","CertificateNo":null,"Memo":"免办签证"},{"Name":"MORIGO MARK LOUIE","Gender":"M","Nationality":"PH","DutyProfession":"25","Birthday":"1982/11/16 0:00:00","Address":"菲律宾","CertificateType":"14","CertificateNo":"EB9861208","Memo":"免办签证"},{"Name":"MONTES MICHEL CRIS DUBLA","Gender":"M","Nationality":"PH","DutyProfession":"25","Birthday":"1988/12/17 0:00:00","Address":"菲律宾","CertificateType":"14","CertificateNo":"EB3112800","Memo":"免办签证"},{"Name":"CURIB JORDAN LABIAL","Gender":"M","Nationality":"PH","DutyProfession":"25","Birthday":"1991/1/7 0:00:00","Address":"菲律宾","CertificateType":"14","CertificateNo":"EB7308970","Memo":"免办签证"},{"Name":"RAFANAN RONNEL JAMILA","Gender":"M","Nationality":"PH","DutyProfession":"25","Birthday":"1987/12/8 0:00:00","Address":"菲律宾","CertificateType":"14","CertificateNo":"EB1079521","Memo":"免办签证"},{"Name":"TSAGKARIS NIKOLAOS","Gender":"M","Nationality":"GR","DutyProfession":"1","Birthday":"1952/7/12 0:00:00","Address":"希腊","CertificateType":"14","CertificateNo":"AH4095759","Memo":"免办签证"},{"Name":"PALABAY ARNOLD DACUMOS","Gender":"M","Nationality":"PH","DutyProfession":"2","Birthday":"1960/10/28 0:00:00","Address":"菲律宾","CertificateType":"14","CertificateNo":"EB9593736","Memo":"免办签证"},{"Name":"MORANCIL JESUS AXZEL NOR","Gender":"M","Nationality":"PH","DutyProfession":"3","Birthday":"1973/5/17 0:00:00","Address":"菲律宾","CertificateType":"14","CertificateNo":"EB3834631","Memo":"免办签证"},{"Name":"SAGARAL DIOSCORO JAYECTIN","Gender":"M","Nationality":"PH","DutyProfession":"4","Birthday":"1961/12/14 0:00:00","Address":"菲律宾","CertificateType":"14","CertificateNo":"EB3484720","Memo":"免办签证"},{"Name":"BOULIS ADAMANTIOS","Gender":"M","Nationality":"GR","DutyProfession":"5","Birthday":"1959/6/27 0:00:00","Address":"希腊","CertificateType":"14","CertificateNo":"AH3015444","Memo":"免办签证"},{"Name":"MAJESTERIO IGNACIO SEREVO","Gender":"M","Nationality":"PH","DutyProfession":"7","Birthday":"1967/7/30 0:00:00","Address":"菲律宾","CertificateType":"14","CertificateNo":"EC0622713","Memo":"免办签证"},{"Name":"IBUAN JOSE NARBONITA","Gender":"M","Nationality":"PH","DutyProfession":"8","Birthday":"1958/7/28 0:00:00","Address":"菲律宾","CertificateType":"14","CertificateNo":"EC0226326","Memo":"免办签证"}]}
+    var memberObj = eval(Memberjson.OpResult);
+    var memberhtml = '';
+    for (var i = 0; i < memberObj.length; i++) {
+    	memberhtml += '<li>\
+									<div class="order-item">\
+										<div class="order">姓名</div>\
+										<div class="order-right">\
+											<span>'+ memberObj[i].Name +'</span>\
+											<i class="seperate"></i>\
+										</div>\
+									</div>\
+									<div class="order-spread">\
+										<table>\
+											<tr>\
+												<td>性别</td>\
+												<td>'+ memberObj[i].Gender +'</td>\
+											</tr>\
+											<tr class="active">\
+												<td>国籍</td>\
+												<td>'+ memberObj[i].Nationality +'</td>\
+											</tr>\
+											<tr>\
+												<td>职务</td>\
+												<td>'+ memberObj[i].DutyProfession +'</td>\
+											</tr>\
+											<tr>\
+												<td>出生日期</td>\
+												<td>'+ memberObj[i].Birthday +'</td>\
+											</tr>\
+											<tr>\
+												<td>出生地点</td>\
+												<td>'+ memberObj[i].Address +'</td>\
+											</tr>\
+											<tr>\
+												<td>船员证件类型</td>\
+												<td>'+ memberObj[i].CertificateType +'</td>\
+											</tr>\
+											<tr>\
+												<td>船员证件号码</td>\
+												<td>'+ memberObj[i].CertificateNo +'</td>\
+											</tr>\
+											<tr>\
+												<td>备注</td>\
+												<td>'+ memberObj[i].Memo +'</td>\
+											</tr>\
+										</table>\
+									</div>\
+								</li>';
+    };
+    $("#member_sheet").html(memberhtml);
+
+    // 船员物品清单
+    var mgjson = {"OpResult":[{"CrewCertificateType":"海员证1","CrewCertificateNo":"A00258105","GoodsType":"免税烟及制品1","GoodsName":"1","GoodsQty":200,"GoodsUnit":"支","Memo":null},{"CrewCertificateType":"海员证2","CrewCertificateNo":"A00258106","GoodsType":"免税烟及制品2","GoodsName":"烟2","GoodsQty":200,"GoodsUnit":"支","Memo":null},{"CrewCertificateType":"海员证3","CrewCertificateNo":"A00258107","GoodsType":"免税烟及制品3","GoodsName":"烟3","GoodsQty":200,"GoodsUnit":"支","Memo":null}]}
+    var mgObj = eval(mgjson.OpResult);
+    var mghtml = '';
+    for (var i = 0; i < mgObj.length; i++) {
+    	mghtml += '<li>\
+									<div class="order-item">\
+										<div class="order">序号</div>\
+										<div class="order-right">\
+											<span>'+ (i + 1) +'</span>\
+											<i class="seperate"></i>\
+										</div>\
+									</div>\
+									<div class="order-spread">\
+										<table>\
+											<tr>\
+												<td>船员证件类型</td>\
+												<td>'+ mgObj[i].
+CrewCertificateType +'</td>\
+											</tr>\
+											<tr class="active">\
+												<td>船员证件号码</td>\
+												<td>'+ mgObj[i].
+CrewCertificateNo +'</td>\
+											</tr>\
+											<tr>\
+												<td>物品类型</td>\
+												<td>'+ mgObj[i].
+GoodsType +'</td>\
+											</tr>\
+											<tr>\
+												<td>物品名称</td>\
+												<td>'+ mgObj[i].
+GoodsName +'</td>\
+											</tr>\
+											<tr>\
+												<td>物品数量</td>\
+												<td>'+ mgObj[i].
+GoodsQty +'</td>\
+											</tr>\
+											<tr>\
+												<td>数量单位</td>\
+												<td>'+ mgObj[i].
+GoodsUnit +'</td>\
+											</tr>\
+											<tr>\
+												<td>备注</td>\
+												<td>'+ mgObj[i].
+Memo +'</td>\
+											</tr>\
+										</table>\
+									</div>\
+								</li>';
+    };
+    $("#mg_sheet").html(mghtml);
+
+    // 航次摘要
+    var airjson = {"OpResult":[{"Port":"唛瞭(TWHLLT)1","ArrivalDateTime":"2015-06-07","DepartureDateTime":"2015-06-08","Memo":null},{"Port":"唛瞭(TWHLLT)2","ArrivalDateTime":"2015-06-07","DepartureDateTime":"2015-06-08","Memo":null},{"Port":"唛瞭(TWHLLT)3","ArrivalDateTime":"2015-06-07","DepartureDateTime":"2015-06-08","Memo":null}]}
+    var airObj = eval(airjson.OpResult);
+    var airhtml = '';
+    for (var i = 0; i < airObj.length; i++) {
+    	airhtml += '<li>\
+									<div class="order-item">\
+										<div class="order">序号</div>\
+										<div class="order-right">\
+											<span>'+ (i + 1) +'</span>\
+											<i class="seperate"></i>\
+										</div>\
+									</div>\
+									<div class="order-spread">\
+										<table>\
+											<tr>\
+												<td>报文唯一编号</td>\
+												<td>'+ airObj[i].MessageID +'</td>\
+											</tr>\
+											<tr class="active">\
+												<td>序号</td>\
+												<td>'+ airObj[i].SeqNo +'</td>\
+											</tr>\
+											<tr>\
+												<td>抵达时间</td>\
+												<td>'+ airObj[i].ArrivalDateTime +'</td>\
+											</tr>\
+											<tr>\
+												<td>驶离时间</td>\
+												<td>'+ airObj[i].DepartureDateTime +'</td>\
+											</tr>\
+											<tr>\
+												<td>备注</td>\
+												<td>'+ airObj[i].Memo +'</td>\
+											</tr>\
+										</table>\
+									</div>\
+								</li>';
+    };
+
+    $("#air").html(airhtml);
+
+
+
+
+
+
+
+
+			// 点击右边箭头展开
+			$(".item i").on('click',function(){
+				var index = $(this).parents("li").index(".item-box li");
+				
+				if($(".item-box li").eq(index).find(".spread").is(":hidden")) {
+					$(this).addClass("pointHover");
+					$(".item-box li").eq(index).find(".spread").show();
+				}else{
+					$(this).removeClass("pointHover").addClass("point");
+					$(".item-box li").eq(index).find(".spread").hide();
+				}
+				return false;
+			})
+
+			// 点击序号时候展开
+			$(".order-item").on('click',function(){
+				var index = $(this).parent("li").index(".order-ul li");
+				if($(".order-ul li").eq(index).find(".order-spread").is(":visible") == false) {
+					$(".order-ul li").eq(index).find(".order-spread").show();
+				}else{
+					$(".order-ul li").eq(index).find(".order-spread").hide();
+				}
+				return false;
+			})
+
+			$(".nav-menu li").on('click',function(){
+				var index = $(this).index(".nav-menu li");
+				$(".active").removeClass("active");
+				$(".nav-menu li").eq(index).addClass("active");
+				$(".item-box").eq(index).show().siblings(".item-box").hide();
+				return false;
+			});
+			// 点击序号时候展开
+			$(".order-right").on('click',function(){
+				var index = $(this).parents("li").index(".order-ul li");
+				if($(".order-ul li").eq(index).find(".order-spread").is(":visible") == false) {
+					$(this).find("i").removeClass("plus");
+					$(".order-ul li").eq(index).find(".order-spread").show();
+
+				}else{
+					$(this).find("i").addClass("plus");
+					$(".order-ul li").eq(index).find(".order-spread").hide();
+				}
+				return false;
+			});
+
+		})
+	</script>
+</body>
+</html>

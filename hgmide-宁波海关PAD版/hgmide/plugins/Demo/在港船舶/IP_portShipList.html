@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动单兵系统在港船舶列表</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../res/css/reset.css">
+	<link rel="stylesheet" href="../res/css/index-rem.css">
+</head>
+<body>
+	<header class="header-box">
+		<div class="index-logo left-arrow">
+			<a href="IP_ship_queryInfo.html">
+				<img src="../res/images/left-arrow.png" alt="">
+			</a>
+		</div>
+		<h3>在港船舶</h3>
+		<p class="header-glass">
+			<a href="IP_informationView_apply.html">
+				<img src="../res/images/glass.png">
+			</a>
+		</p>
+	</header>
+	<div class="main-body" id="portList">
+		<section class="port-banner flex">
+			<div class="flex-1" style="padding-top:25px">
+				<div class="flex-2-item">总计登轮<strong id ="voyage"><!-- 100000 --></strong>航次</div>
+				<div class="scroll_cover">
+					<div class="scroll_uncover"></div>
+				</div>
+			</div>
+			<div class="flex-1">
+				<div class="flex-2-item flex-1-item">本月登轮
+					<strong id ="monthship"><!-- 10000 --></strong>艘次
+				</div>
+				<div class="bar_cover">
+					<div class="bar_uncover"></div>
+				</div>
+				<div class="flex-2-item flex-1-item flex-wait">待查
+					<strong id ="checkship"><!-- 50 --></strong>艘次
+				</div>
+				<div class="bar_cover">
+					<div class="bar_uncover"></div>
+				</div>
+			</div>
+		</section>
+		<!-- <section class="part-section">
+			<a href="IP_informationView.html" class="status-navigate">
+				<div class="status deep">正常</div>
+				<div class="status-body">
+					<div class="flex">
+						<div class="flex-1">
+							<p>码   头：二期</p>
+							<p>英文船名：NB TEST1</p>
+							<p>靠泊时间：2015-1-1</p>
+						</div>
+						<div class="flex-1">
+							<p>泊位：3号 </p>
+							<p>MMSI	：31012345</p>
+						</div>
+					</div>
+				</div>
+			</a>
+		</section>
+		<section class="part-section">
+			<a href="IP_informationView.html" class="status-navigate">
+				<div class="status red">异常</div>
+				<div class="status-body">
+					<div class="flex">
+						<div class="flex-1">
+							<p>码   头：二期</p>
+							<p>英文船名：NB TEST1</p>
+							<p>靠泊时间：2015-1-1</p>
+						</div>
+						<div class="flex-1">
+							<p>泊位：3号 </p>
+							<p>MMSI	：31012345</p>
+						</div>
+					</div>
+				</div>
+			</a>
+		</section>
+		<section class="part-section">
+			<a href="informationView_apply.html" class="status-navigate">
+				<div class="status low">申请</div>
+				<div class="status-body">
+					<div class="flex">
+						<div class="flex-1">
+							<p>码   头：二期</p>
+							<p>英文船名：NB TEST1</p>
+							<p>靠泊时间：2015-1-1</p>
+						</div>
+						<div class="flex-1">
+							<p>泊位：3号 </p>
+							<p>MMSI	：31012345</p>
+						</div>
+					</div>
+				</div>
+			</a>
+		</section>
+		<section class="part-section">
+			<a href="#" class="status-navigate">
+				<div class="status yellow">暂存</div>
+				<div class="status-body">
+					<div class="flex">
+						<div class="flex-1">
+							<p>码   头：二期</p>
+							<p>英文船名：NB TEST1</p>
+							<p>靠泊时间：2015-1-1</p>
+						</div>
+						<div class="flex-1">
+							<p>泊位：3号 </p>
+							<p>MMSI	：31012345</p>
+						</div>
+					</div>
+				</div>
+			</a>
+		</section>
+		<section class="part-section">
+			<a href="informationView_check.html" class="status-navigate">
+				<div class="status cray">待查</div>
+				<div class="status-body">
+					<div class="flex">
+						<div class="flex-1">
+							<p>码   头：二期</p>
+							<p>英文船名：NB TEST1</p>
+							<p>靠泊时间：2015-1-1</p>
+						</div>
+						<div class="flex-1">
+							<p>泊位：3号 </p>
+							<p>MMSI	：31012345</p>
+						</div>
+					</div>
+				</div>
+			</a>
+		</section> -->
+	</div>
+	<script type="text/javascript" charset="utf-8" src="../js/jquerymobile-1.4.2.js"></script>
+	<script>
+		$(function(){
+           var portCountjson={"OpResult":[{"TOTALNUM":"500","THISMONTHNUM":"30","WAITNUM":"20"}]}
+           var portCountObj = eval(portCountjson.OpResult);
+           $('#voyage').text(portCountObj[0].TOTALNUM);  //总计登轮
+           $('#monthship').text(portCountObj[0].THISMONTHNUM);  //本月登轮
+           $('#checkship').text(portCountObj[0].WAITNUM);  //待查
+
+			var portListjson={"OpResult":[{"TER_NAME":"二期","BTH_NAME":"3号","VSL_ENAME":"MAERSK","MMSI":3101213451,"VBT_BERTHTM":"2015/08/06","RESULT":"正常"},{"TER_NAME":"二期","BTH_NAME":"4号","VSL_ENAME":"TIANXIANG61","MMSI":3101213452,"VBT_BERTHTM":"2015/08/06","RESULT":"异常"},{"TER_NAME":"二期","BTH_NAME":"5号","VSL_ENAME":"QIYUN","MMSI":310121345,"VBT_BERTHTM":"2015/08/06","RESULT":"申请"},{"TER_NAME":"二期","BTH_NAME":"3号","VSL_ENAME":"MAERSK","MMSI":3101213453,"VBT_BERTHTM":"2015/08/06","RESULT":"待查"},{"TER_NAME":"二期","BTH_NAME":"1号","VSL_ENAME":"QIYUN","MMSI":3101213454,"VBT_BERTHTM":"2015/08/06","RESULT":"正常"},{"TER_NAME":"二期","BTH_NAME":"3号","VSL_ENAME":"MAERSK","MMSI":3101213455,"VBT_BERTHTM":"2015/08/06","RESULT":"待查"},{"TER_NAME":"二期","BTH_NAME":"2号","VSL_ENAME":"QIYUN","MMSI":3101213456,"VBT_BERTHTM":"2015/08/06","RESULT":"异常"},{"TER_NAME":"二期","BTH_NAME":"3号","VSL_ENAME":"MAERSK","MMSI":3101213457,"VBT_BERTHTM":"2015/08/06","RESULT":"申请"},{"TER_NAME":"二期","BTH_NAME":"1号","VSL_ENAME":"MAERSK","MMSI":3101213458,"VBT_BERTHTM":"2015/08/06","RESULT":"正常"},{"TER_NAME":"二期","BTH_NAME":"3号","VSL_ENAME":"TIANXIANG61","MMSI":3101213411,"VBT_BERTHTM":"2015/08/06","RESULT":"正常"},{"TER_NAME":"二期","BTH_NAME":"7号","VSL_ENAME":"LIANHE23","MMSI":310121323,"VBT_BERTHTM":"2015/08/06","RESULT":"待查"},{"TER_NAME":"二期","BTH_NAME":"3号","VSL_ENAME":"MAERSK","MMSI":31012154321,"VBT_BERTHTM":"2015/08/06","RESULT":"正常"},{"TER_NAME":"二期","BTH_NAME":"4号","VSL_ENAME":"TIANXIANG61","MMSI":3101213234,"VBT_BERTHTM":"2015/08/06","RESULT":"异常"},{"TER_NAME":"二期","BTH_NAME":"5号","VSL_ENAME":"QIYUN","MMSI":310121312,"VBT_BERTHTM":"2015/08/06","RESULT":"申请"},{"TER_NAME":"二期","BTH_NAME":"3号","VSL_ENAME":"MAERSK","MMSI":310121344325,"VBT_BERTHTM":"2015/08/06","RESULT":"待查"},{"TER_NAME":"二期","BTH_NAME":"1号","VSL_ENAME":"QIYUN","MMSI":310121346544,"VBT_BERTHTM":"2015/08/06","RESULT":"正常"},{"TER_NAME":"二期","BTH_NAME":"3号","VSL_ENAME":"MAERSK","MMSI":3101213865,"VBT_BERTHTM":"2015/08/06","RESULT":"待查"},{"TER_NAME":"二期","BTH_NAME":"2号","VSL_ENAME":"QIYUN","MMSI":3101213575,"VBT_BERTHTM":"2015/08/06","RESULT":"异常"},{"TER_NAME":"二期","BTH_NAME":"3号","VSL_ENAME":"MAERSK","MMSI":31012135837,"VBT_BERTHTM":"2015/08/06","RESULT":"申请"},{"TER_NAME":"二期","BTH_NAME":"1号","VSL_ENAME":"MAERSK","MMSI":3101213058,"VBT_BERTHTM":"2015/08/06","RESULT":"正常"},{"TER_NAME":"二期","BTH_NAME":"3号","VSL_ENAME":"TIANXIANG61","MMSI":310121347,"VBT_BERTHTM":"2015/08/06","RESULT":"正常"},{"TER_NAME":"二期","BTH_NAME":"7号","VSL_ENAME":"LIANHE23","MMSI":310121733,"VBT_BERTHTM":"2015/08/06","RESULT":"待查"}]}
+
+				var portListObj = eval(portListjson.OpResult);
+				var content = '';
+				for (var i = 0; i < portListObj.length; i++) {
+					content += '<section class="part-section">';
+				if(portListObj[i].RESULT == '正常') {
+					content += '<a href="IP_informationView.html" class="status-navigate">\
+					<div class="status deep">' + portListObj[i].RESULT +'</div>';
+				}else if(portListObj[i].RESULT == '异常') {
+					content += '<a href="IP_informationView.html" class="status-navigate">\
+					<div class="status red">' + portListObj[i].RESULT +'</div>';
+				}else if(portListObj[i].RESULT == '申请') {
+					content += '<a href="IP_informationView_apply.html" class="status-navigate">\
+					<div class="status low">' + portListObj[i].RESULT +'</div>';
+				}else if(portListObj[i].RESULT == '待查') {
+					content += '<a href="IP_informationView_check.html" class="status-navigate">\
+					<div class="status cray">' + portListObj[i].RESULT +'</div>';
+				}
+				
+				content += '<div class="status-body">\
+					<div class="flex">\
+						<div class="flex-1">\
+							<p>码   头：' + portListObj[i].TER_NAME +'</p>\
+							<p>英文船名：' + portListObj[i].VSL_ENAME +'</p>\
+							<p>靠泊时间：' + portListObj[i].VBT_BERTHTM +'</p>\
+						</div>\
+						<div class="flex-1">\
+							<p>泊位：' + portListObj[i].BTH_NAME +' </p>\
+							<p>MMSI	：' + portListObj[i].MMSI +'</p>\
+						</div>\
+					</div>\
+				</div>\
+			</a>\
+		</section>';
+		 }
+		$("#portList").append(content);	
+			
+		});	
+	</script>
+</body>
+</html>

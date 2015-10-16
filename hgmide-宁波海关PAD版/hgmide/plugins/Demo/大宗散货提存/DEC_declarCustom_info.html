@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动单兵系统报关单信息</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../res/css/reset.css">
+	<link rel="stylesheet" href="../res/css/index-rem.css">
+	<script src="../js/jquerymobile-1.4.2.js"></script>
+</head>
+<body>
+	<header class="header-box">
+		<div class="index-logo left-arrow">
+			<a href="DEC_declarCustom_list.html">
+				<img src="../res/images/left-arrow.png" alt="">
+			</a>
+		</div>
+		<h3>报关单信息</h3>
+		<p class="header-glass">
+			<a href="#">
+				<img src="../res/images/home.png">
+			</a>
+		</p>
+	</header>
+	<div class="main-body">
+		<div class="main-box" style="padding-top:20px;">
+			<div class="card-wrap">
+				<ul class="item-box">
+					<div class="custom_info">
+						<table>
+							<tr>
+								<td class="td-left">报关单号</td>
+								<td colspan="3" class="td-right" id="report_number">
+								<!-- 310420111049933960 --></td>
+							</tr>
+							<tr>
+								<td class="td-left">进/出口</td>
+								<td class="td-right" id="door"><!-- 出口 --></td>
+								<td class="td-left">出口口岸</td>
+								<td class="td-right" id="side"><!-- 3104[北仑海关] --></td>
+							</tr>
+							<tr>
+								<td class="td-left">经营单位</td>
+								<td colspan="3" class="td-right" id="orgination">
+								<!-- 3320961293[慈溪市中联毛绒有限公司] --></td>
+							</tr>
+							<tr>
+								<td class="td-left">收货单位</td>
+								<td colspan="3" class="td-right" id="receive_orgination">
+								<!-- 3320961293[慈溪市中联毛绒有限公司] --></td>
+							</tr>
+							<tr>
+								<td class="td-left">申报单位</td>
+								<td colspan="3" class="td-right" id="apply_orgination">
+								<!-- 3320961293[慈溪市中联毛绒有限公司] --></td>
+							</tr>
+							<tr>
+								<td class="td-left">抵运国</td>
+								<td class="td-right" id="arrive_country">
+								<!-- 143[台澎金马关税区] --></td>
+								<td class="td-left">指运港</td>
+								<td class="td-right" id="arrive_port"><!-- 1561 --></td>
+							</tr>
+							<tr>
+								<td class="td-left">成交方式</td>
+								<td class="td-right" id="trade_way"><!-- 1[CIF] --></td>
+								<td class="td-left">集装箱数</td>
+								<td class="td-right" id="container_num"><!-- 2 --></td>
+							</tr>
+							<tr>
+								<td class="td-left">毛重(KG)</td>
+								<td class="td-right" id="gross"><!-- 1[CIF] --></td>
+								<td class="td-left">净重(kg)</td>
+								<td class="td-right" id="net"><!-- 22605.0 --></td>
+							</tr>
+							<tr>
+								<td class="td-left">出口日期</td>
+								<td class="td-right" id="exitdate"><!-- 2011-10-23 --></td>
+								<td class="td-left">申报日期</td>
+								<td class="td-right" id="applydate"><!-- 2011-10-2 -->4</td>
+							</tr>
+							<tr>
+								<td class="td-left">运输方式</td>
+								<td class="td-right" id="trans_way"><!-- 2[江海运输] --></td>
+								<td class="td-left">运输航次</td>
+								<td class="td-right" id="trans_num"></td>
+							</tr>
+							<tr>
+								<td class="td-left">运输工具</td>
+								<td colspan="3" class="td-right" id="trans_name">
+								<!-- GLENCANYONBRLDGE --></td>
+							</tr>
+							<tr>
+								<td class="td-left">贸易方式</td>
+								<td class="td-right" id="trade_way"><!-- 0110[一般贸易] --></td>
+								<td class="td-left">结汇方式</td>
+								<td class="td-right" id="count_way"><!-- 030E --></td>
+							</tr>
+							<tr>
+								<td class="td-left">报关员</td>
+								<td class="td-right" id="declare"><!-- 3100057 --></td>
+								<td class="td-left">免征性质</td>
+								<td class="td-right" id="cut_mode"><!-- 101[一般征税] --></td>
+							</tr>
+							<tr>
+								<td class="td-left">境内货源地</td>
+								<td class="td-right" id="destination"><!-- 22689.0 --></td>
+								<td class="td-left">件数</td>
+								<td class="td-right" id="number"><!-- 83.0 --></td>
+							</tr>
+							<tr>
+								<td class="td-left">提运单号</td>
+								<td class="td-right" id="bill_no">
+								<!-- GLENCANYONBRLDGE --></td>
+								<td class="td-left">包装种类 </td>
+								<td class="td-right" id="wrap_type">
+								<!-- GLENCANYONBRLDGE --></td>
+							</tr>
+							<tr>
+								<td class="td-left">集装箱号</td>
+								<td colspan="3" class="td-right" id="container_no">
+								<!-- GLENCANYONBRLDGE --></td>
+							</tr>
+							<tr>
+								<td class="td-left">预录入号</td>
+								<td colspan="3" class="td-right" id="pre_entry_no">
+								<!-- 00000000078946514 --></td>
+							</tr>
+							<tr>
+								<td class="td-left">备注</td>
+								<td colspan="3" class="td-right" id="note">
+								<!-- 合同日期:2011-9-19 --></td>
+							</tr>
+						</table>
+					</div>
+					<li>
+						<div class="item">
+							<h3>商品信息</h3>
+							<i class="arrowHover"></i>
+						</div>
+						<div class="spread">
+							<ul class="order-ul" id="goodsinfo">
+								<!-- <li>
+									<div class="order-item">
+										<div class="order">商品项号</div>
+										<div class="order-right">
+											<span>1</span>
+											<i class="seperate"></i>
+										</div>
+									</div>
+									<div class="order-spread">
+										<table>
+											<tr>
+												<td>商品编码</td>
+												<td>5503300000</td>
+											</tr>
+											<tr class="active">
+												<td>商品名称</td>
+												<td>聚丙烯短纤维</td>
+											</tr>
+											<tr>
+												<td>征免方式</td>
+												<td>1</td>
+											</tr>
+											<tr>
+												<td>最终目的国</td>
+												<td>143[台澎金马关税区]</td>
+											</tr>
+											<tr>
+												<td>币制</td>
+												<td>502[美元]</td>
+											</tr>
+											<tr>
+												<td>数量</td>
+												<td>10076.0</td>
+											</tr>
+											<tr>
+												<td>单价</td>
+												<td>3.32</td>
+											</tr>
+											<tr>
+												<td>总价</td>
+												<td>33452.6</td>
+											</tr>
+										</table>
+									</div>
+								</li> -->
+							</ul>
+						</div>
+					</li>
+				 </ul>
+			 </div>
+			</li>
+		</ul>
+	</div>
+</div>
+</div>
+	<script>
+		$(function(){
+			var infojson = {"OpResult":[{"ENTRY_ID":"310120070517847000","I_E_FLAG":"出口","I_E_PORT":"3104","TRADE":"3307960249[步阳集团有限公司]","OWNERD":"3307960249[步阳集团有限公司]","AGENT":"3302980026[宁波外运国际集装箱货运有限公司]","TRADE_COUNTRY":"330[孟加拉国]","DESTINATION_PORT":"2587","TRANS_MODE":"3[CIF]","CONTAINER_NO":"2","GROSS_WT":"13087.0","NET_WT":"11863.0","I_E_DATE":"2014-08-09","D_DATE":null,"TRAF_MODE":"2[水路运输]","TRAF_NAME":"CHUANHE","VOYAGE_NO":"128W","DECLARE_NO":"31000022","PAY_WAY":null,"CUT_MODE":"101[示范平台用品]","WRAP_TYPE":"2[包]","PACK_NO":"223.0","BILL_NO":"NBO7BE11865","PRE_ENTRY_ID":"98793718","CONTAINER_ID":null,"NOTE_S":null}]}
+			var infoObj = eval(infojson.OpResult);
+			$("#report_number").text(infoObj[0].ENTRY_ID);//报关单号
+			$("#door").text(infoObj[0].I_E_FLAG);//进/出口
+			$("#side").text(infoObj[0].I_E_PORT);//出口口岸
+			$("#orgination").text(infoObj[0].TRADE);//经营单位
+			$("#receive_orgination").text(infoObj[0].OWNERD);  //收货单位
+			$("#apply_orgination").text(infoObj[0].AGENT); //申报单位
+			$("#arrive_country").text(infoObj[0].TRADE_COUNTRY);//抵运国
+			$("#arrive_port").text(infoObj[0].DESTINATION_PORT);//指运港
+			$("#trade_way").text(infoObj[0].TRANS_MODE);//成交方式
+			$("#container_num").text(infoObj[0].CONTAINER_NO);//集装箱数
+			$("#gross").text(infoObj[0].GROSS_WT);//毛重
+			$("#net").text(infoObj[0].NET_WT);//净重
+			$("#exitdate").text(infoObj[0].I_E_DATE);//出口日期
+			$("#applydate").text(infoObj[0].D_DATE);//申报日期
+			$("#trans_way").text(infoObj[0].TRAF_MODE);//运输方式
+			$("#trans_name").text(infoObj[0].TRAF_NAME);//运输工具
+			$("#trans_num").text(infoObj[0].VOYAGE_NO);//运输航次
+			$("#trade_way").text(infoObj[0].TRADE_MODE);//贸易方式
+			$("#count_way").text(infoObj[0].PAY_WAY);//结汇方式
+			$("#declare").text(infoObj[0].DECLARE_NO);//报关员 
+			$("#cut_mode").text(infoObj[0].CUT_MODE);//免征性质
+			$("#destination").text(infoObj[0].DISTRICT_CODE);//境内货源地
+			$("#number").text(infoObj[0].PACK_NO);//件数
+			$("#bill_no").text(infoObj[0].BILL_NO);//提运单号 
+			$("#wrap_type").text(infoObj[0].WRAP_TYPE);//包装种类
+			$("#container_no").text(infoObj[0].CONTAINER_ID);//集装箱号 
+			$("#pre_entry_no").text(infoObj[0].PRE_ENTRY_ID);//预录入号
+			$("#note").text(infoObj[0].NOTE_S);//备注
+
+			// 商品信息
+			var goodsinfojson = {"OpResult":[{"ENTRY_ID":"310120070517847000","I_E_FLAG":"出口","I_E_PORT":"3104","TRADE":"3307960249[步阳集团有限公司]","OWNERD":"3307960249[步阳集团有限公司]","AGENT":"3302980026[宁波外运国际集装箱货运有限公司]","TRADE_COUNTRY":"330[孟加拉国]","DESTINATION_PORT":"2587","TRANS_MODE":"3[CIF]","CONTAINER_NO":"2","GROSS_WT":"13087.0","NET_WT":"11863.0","I_E_DATE":"2014-08-09","D_DATE":null,"TRAF_MODE":"2[水路运输]","TRAF_NAME":"CHUANHE","VOYAGE_NO":"128W","DECLARE_NO":"31000022","PAY_WAY":null,"CUT_MODE":"101[示范平台用品]","WRAP_TYPE":"2[包]","PACK_NO":"223.0","BILL_NO":"NBO7BE11865","PRE_ENTRY_ID":"98793718","CONTAINER_ID":null,"NOTE_S":null}]}
+			var goodsinfoObj = eval(goodsinfojson.OpResult);
+			var goodsinfohtml = '';
+			for (var i = 0; i < goodsinfoObj.length; i++) {
+				goodsinfohtml += '<li>\
+									<div class="order-item">\
+										<div class="order">商品项号</div>\
+										<div class="order-right">\
+											<span>'+ ( i + 1 ) +'</span>\
+											<i class="seperate"></i>\
+										</div>\
+									</div>\
+									<div class="order-spread">\
+										<table>\
+											<tr>\
+												<td>商品名称</td>\
+												<td>'+ goodsinfoObj[i].G_NAME +'</td>\
+											</tr>\
+											<tr class="active">\
+												<td>征免方式</td>\
+												<td>'+ goodsinfoObj[i].DUTY_MODE +'</td>\
+											</tr>\
+											<tr>\
+												<td>最终目的国（产销国）</td>\
+												<td>'+ goodsinfoObj[i].ORIGIN_COUNTRY +'</td>\
+											</tr>\
+											<tr>\
+												<td>币制</td>\
+												<td>'+ goodsinfoObj[i].TRADE_CURR +'</td>\
+											</tr>\
+											<tr>\
+												<td>数量</td>\
+												<td>'+ goodsinfoObj[i].G_QTY +'</td>\
+											</tr>\
+											<tr>\
+												<td>单价</td>\
+												<td>'+ goodsinfoObj[i].DECL_PRICE +'</td>\
+											</tr>\
+											<tr>\
+												<td>总价</td>\
+												<td>'+ goodsinfoObj[i].DECL_TOTAL +'</td>\
+											</tr>\
+										</table>\
+									</div>\
+								</li>';
+			};
+			$("#goodsinfo").html(goodsinfohtml);
+
+
+			// 点击序号时候展开
+			$(".order-right").on('click',function(){
+				var index = $(this).parents("li").index(".order-ul li");
+				if($(".order-ul li").eq(index).find(".order-spread").is(":visible") == false) {
+					$(this).find("i").removeClass("plus");
+					$(".order-ul li").eq(index).find(".order-spread").show();
+
+				}else{
+					$(this).find("i").addClass("plus");
+					$(".order-ul li").eq(index).find(".order-spread").hide();
+				}
+				return false;
+			})
+
+			// 点击右边箭头展开
+			$(".item i").on('click',function(){
+				var index = $(this).parents("li").index(".item-box li");
+				if($(".item-box li").eq(index).find(".spread").is(":visible")) {
+					$(this).removeClass("arrowHover").addClass("drop-arrow");
+					$(".item-box li").eq(index).find(".spread").hide();
+				}else{
+					$(this).addClass("arrowHover");
+					$(".item-box li").eq(index).find(".spread").show();
+				}
+				return false;
+			})
+		})
+	</script>
+</body>
+</html>

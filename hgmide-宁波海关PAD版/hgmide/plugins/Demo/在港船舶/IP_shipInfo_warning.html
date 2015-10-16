@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动单兵系统预警信息</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../res/css/reset.css">
+	<link rel="stylesheet" href="../res/css/index-rem.css">
+</head>
+<body>
+	<header class="header-box">
+		<div class="index-logo left-arrow">
+			<a href="IP_informationView.html">
+				<img src="../res/images/left-arrow.png" alt="">
+			</a>
+		</div>
+		<h3>预警信息</h3>
+		<p class="header-glass">
+			<a href="#">
+				<img src="../res/images/glass.png">
+			</a>
+		</p>
+	</header>
+	<div class="main-body">
+		<div class="main-box">
+			<ul class="item-ul">
+				<li class="flex flex-flow-row">
+					<div class="item-left">预警类型</div>
+					<div class="item-right" id="warn_type"><!-- 近距离挨靠预警 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">预警描述</div>
+					<div class="item-right" id="warn_des"><!-- 招商码头@1号泊位区域两船挨靠，MMSI编号分别为进出境船舶罗德康塞636014357、燃油供应船舶412763970请核实处置 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">是否已处置</div>
+					<div class="item-right" id="isDisposal"><!-- 是 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">预警时间</div>
+					<div class="item-right" id="warnTime"><!-- 2015/2/3 8:17:59 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">预警处置描述</div>
+					<div class="item-right" id="warnDisposalDes"><!-- 4.1预警准确，经核实为燃料供应船挨靠进出境船舶，燃油供应申请已审批通过，申报单编号()009为：093104201500104 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">处置人</div>
+					<div class="item-right" id="disposal_person"><!-- 311331 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">处置时间</div>
+					<div class="item-right" id="disposalTime"><!-- 2015/2/3 9:52:24 --></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script src="../js/jquerymobile-1.4.2.js"></script>
+	<script>
+		var warnjson = {"OpResult":[{"ALERT_TYPE":"近距离挨靠预警","ALERT_DEPICT":"招商码头@1号泊位区域两船挨靠，MMSI编号分别为进出境船舶招商码头@1号泊位区域两船挨靠，MMSI编号分别为进出境船舶","ISDISPOSAL":"是","ALERT_TIME":"2015-2-3 8:17:59","ALERT_DISPOSEDEPICT":"4.1预警准确，经核实为燃料供应船舶挨靠进出境船舶，燃料供应申请已审批通过，申报编号（09开头）为:092104201500104","ALERT_PERSON":"311331","DISPOSE_TIME":"2015-2-3 9:52:24"}]}
+		var warnObj = eval(warnjson.OpResult);
+		$("#warn_type").text(warnObj[0].ALERT_TYPE);//预警类型
+		$("#warn_des").text(warnObj[0].ALERT_DEPICT);// 预警描述
+		$("#isDisposal").text(warnObj[0].ISDISPOSAL);//是否已处置
+		$("#warnTime").text(warnObj[0].ALERT_TIME);// 预警时间
+		$("#warnDisposalDes").text(warnObj[0].ALERT_DISPOSEDEPICT);//预警处置描述
+		$("#disposal_person").text(warnObj[0].ALERT_PERSON);//处置人
+		$("#disposalTime").text(warnObj[0].DISPOSE_TIME);//处置时间
+	</script>
+</body>
+</html>

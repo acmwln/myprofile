@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动单兵系统船舶AIS信息</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../res/css/reset.css">
+	<link rel="stylesheet" href="../res/css/index-rem.css">
+</head>
+<body>
+	<header class="header-box">
+		<div class="index-logo left-arrow">
+			<a href="IP_informationView.html">
+				<img src="../res/images/left-arrow.png" alt="">
+			</a>
+		</div>
+		<h3>船舶AIS信息</h3>
+		<p class="header-glass">
+			<a href="#">
+				<img src="../res/images/glass.png">
+			</a>
+		</p>
+	</header>
+	<div class="main-body">
+		<div class="main-box">
+			<ul class="item-ul">
+				<li class="flex flex-flow-row">
+					<div class="item-left">MMSI</div>
+					<div class="item-right" id="mmsi"><!-- 636014357 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">IMO</div>
+					<div class="item-right" id="imo"><!-- 9415844 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">设备型号</div>
+					<div class="item-right" id="equip_type"><!-- CLASS A --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">目的港</div>
+					<div class="item-right" id="destination"><!-- CNNGB --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">定位精度</div>
+					<div class="item-right" id="accuracy"><!-- 低精度（>=10米） --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">LTM</div>
+					<div class="item-right" id="ltm"><!-- 2015/2/3    14:23:59 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">航行状态</div>
+					<div class="item-right" id="navigate_status"><!-- Moored (靠泊) --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">航向</div>
+					<div class="item-right" id="navigate_direction"><!-- 1288 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">航首向</div>
+					<div class="item-right" id="navigate_shead"><!-- 237 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">英文船名</div>
+					<div class="item-right" id="shipEName"><!-- RDOCONCERTRDOCONCERTRDOCONCERTRDOCONCERTRDOCONCERTRDOCONCERTRDOCONCERTRDOCONCERT --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">船舶类型</div>
+					<div class="item-right item-right-row" id="ship_type">
+						<!-- Cargo ships-Carrying DG,HS,or
+						Cargo ships-Carrying DG,HS,or
+						PullutantCargo -->
+					</div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">吃水(分米)</div>
+					<div class="item-right" id="depth"><!-- 98 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">船长(米)</div>
+					<div class="item-right" id="ship_length"><!-- 10米 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">经度</div>
+					<div class="item-right" id="long"><!-- 121.93655167 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">纬度</div>
+					<div class="item-right" id="lat"><!-- 29.93655167 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">ETA</div>
+					<div class="item-right" id="eta"><!-- 02/03 01:00 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">航速</div>
+					<div class="item-right" id="navigate_speed"><!-- 0 --></div>
+				</li>
+				<li class="flex flex-flow-row">
+					<div class="item-left">转向率</div>
+					<div class="item-right" id="ratio"><!-- 0 --></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" charset="utf-8" src="../js/jquerymobile-1.4.2.js">
+	</script>
+	<script>
+		$(function(){
+			  var json={"OpResult":[{"MMSI":"636014357","VSL_ENAME":"RDOCCONERT","IMO":"94158844","VSL_TYPE":"Cargo ships-Carrying DG,HS,or MP,IMO hezard or pollutant categoy Z","UNIT_TYPE":"2015/08/06","VSL_DEPTH":"CLASS A","DSTPORT":"304","VSL_LENGTH":"40","LOCATION_ACCURACY":"低精度(>=10米)","LONG":"121.9371183","LTM":"2015/2/3 14:23","LAT":"29.93655167","NAVIGAT_STATUS":"Moored（靠泊）","ETA":"02-03 1:00","AZIMUTH":"1288","SHIP_SPEED":"0","SHIP_HEAD":"237","STEER_RATIO":"0"}]}
+           var obj = eval(json.OpResult);
+           $('#mmsi').text(obj[0].MMSI);  //MMSI
+           $('#imo').text(obj[0].IMO);  // IMO
+           $('#equip_type').text(obj[0].UNIT_TYPE);  //设备型号
+           $('#destination').text(obj[0].DSTPORT);  //目的港
+           $('#accuracy').text(obj[0].LOCATION_ACCURACY);  //定位精度
+           $('#ltm').text(obj[0].LTM);  //LTM
+           $('#navigate_status').text(obj[0].NAVIGAT_STATUS);  //航行状态
+           $('#navigate_direction').text(obj[0].AZIMUTH);  //航向
+           $('#navigate_shead').text(obj[0].SHIP_SHEAD);  //船首向
+           $('#shipEName').text(obj[0].VSL_ENAME);//英文船名
+           $('#ship_type').text(obj[0].VSL_TYPE);  //船舶类型
+           $('#depth').text(obj[0].VSL_DEPTH);  // 吃水（分米）
+           $('#ship_length').text(obj[0].VSL_LENGTH);  //船长（米）
+           $('#long').text(obj[0].LONG);  //经度
+           $('#lat').text(obj[0].LAT);  //纬度
+           $('#eta').text(obj[0].ETA);  //ETA
+           $('#navigate_speed').text(obj[0].SHIP_SPEED);  //航速
+           $('#ratio').text(obj[0].STEER_RATIO);  //转向率
+           
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <title>Demo</title>
+            <link rel="stylesheet" href="qunit/qunit-1.12.0.css">
+	        <script type="text/javascript" charset="utf-8"  src="../cordova.js"></script>
+	        <script type="text/javascript" charset="utf-8"  src="../hgmsdk.js"></script>
+	        <script type="text/javascript" charset="utf-8"  src="qunit/qunit-1.12.0.js"></script>
+	        <script type="text/javascript" charset="utf-8"  src="testcases/test.js"></script>
+	        <script type="text/javascript" charset="utf-8" >
+	        	QUnit.config.autostart = false;
+	        	document.addEventListener("deviceready", onDeviceReady, false);
+	        	function onDeviceReady() {
+	        		QUnit.start();
+	            }
+	        </script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+    </body>
+</html>

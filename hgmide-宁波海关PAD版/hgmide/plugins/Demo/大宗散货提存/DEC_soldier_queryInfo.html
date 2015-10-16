@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动单兵系统大兵散杂货提存监管单兵查询</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../res/css/reset.css">
+	<link rel="stylesheet" href="../res/css/index-rem.css">
+	<script src="../js/jquerymobile-1.4.2.js"></script>
+	<script language="javascript" type="text/javascript" src="../My97DatePicker/WdatePicker.js">
+	</script>
+</head>
+<body>
+	<header class="header-box">
+		<div class="index-logo left-arrow">
+			<a href="../index.html">
+				<img src="../res/images/left-arrow.png" alt="">
+			</a>
+		</div>
+		<h3>大兵散杂货提存监管单兵查询</h3>
+		<p class="header-glass">
+			<a href="DEC_declarCustom_info.html">
+				<img src="../res/images/glass.png">
+			</a>
+		</p>
+	</header>
+	<div class="main-body">
+		<div class="main-query" style="position:relative;">
+			<nav class="nav-query">
+				<ul>
+					<li><a href="#" class="curhover">查询信息</a></li>
+					<li><a href="#">报关单查询</a></li>
+				</ul>
+			</nav>
+			<!-- 查询信息开始-->
+			<div class="query-wraper">
+				<section class="section-input">
+					<div class="input-item">
+						<p>UN代码</p>
+						<div class="input-bg">
+							<input type="text" placeholder="" class="input-border">
+						</div>
+					</div>
+				</section>
+				<section class="section-input">
+					<div class="input-item">
+						<p>英文船名</p>
+						<div class="input-bg">
+							<input type="text" placeholder="" class="input-border">
+						</div>
+					</div>
+				</section>
+				<section class="section-input">
+					<div class="input-item">
+						<p>进境航次</p>
+						<div class="input-bg">
+							<input type="text" placeholder="" class="input-border">
+						</div>
+					</div>
+				</section>
+				<section class="section-input">
+					<div class="input-item">
+						<p>出境航次</p>
+						<div class="input-bg">
+							<input type="text" placeholder="" class="input-border">
+						</div>
+					</div>
+				</section>
+				<section class="section-input">
+					<div class="input-item">
+						<p>泊位</p>
+						<div class="input-bg">
+							<input type="text" placeholder="" class="input-border">
+						</div>
+					</div>
+				</section>
+				<section class="section-input">
+					<div class="input-item">
+						<p>抵港时间</p>
+						<div class="input-bg">
+							<div class="calendar-order">
+								<div class="calendar-item">
+									<input type="text" placeholder = "" class="calendar-input" onClick="WdatePicker()">
+									<a href="#" class="calendar">
+										<img src="../res/images/calendar.png">
+									</a>
+								</div>
+								<i class="line"></i>
+								<div class="calendar-item">
+									<input type="text" placeholder = "" class="calendar-input" onClick="WdatePicker()">
+									<a href="#" class="calendar">
+										<img src="../res/images/calendar.png">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section-input">
+					<div class="input-item">
+						<p>离港时间</p>
+						<div class="input-bg">
+							<div class="calendar-order">
+								<div class="calendar-item">
+									<input type="text" placeholder = "" class="calendar-input" onClick="WdatePicker()">
+									<a href="#" class="calendar">
+										<img src="../res/images/calendar.png">
+									</a>
+								</div>
+								<i class="line"></i>
+								<div class="calendar-item">
+									<input type="text" placeholder = "" class="calendar-input" onClick="WdatePicker()">
+									<a href="#" class="calendar">
+										<img src="../res/images/calendar.png">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<!-- 查询信息结束-->
+			<!-- 报关单查询开始-->
+			<div class="query-wraper" style="display:none;">
+				<section class="section-input">
+					<div class="input-item">
+						<p>报关单号</p>
+						<div class="input-bg">
+							<input type="text" placeholder="" class="input-border">
+						</div>
+					</div>
+				</section>
+			</div>
+			<!-- 报关单查询结束 -->
+			<div class="query queryother">
+				<a href="DEC_declarCustom_info.html">查 询</a>
+			</div>
+		</div>	
+	</div>
+	<script>
+		$(function(){
+			$(".nav-query ul li a").on('click',function(){
+				var index = $(this).parent("li").index(".nav-query ul li");
+				$(".curhover").removeClass("curhover");
+				$(".nav-query ul li").eq(index).find("a").addClass("curhover");
+				$(".query-wraper").eq(index).show().siblings(".query-wraper").hide();
+				return false;
+			});
+		})
+	</script>
+</body>
+</html>

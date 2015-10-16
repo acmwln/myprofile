@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动单兵系统货物信息</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../res/css/reset.css">
+	<link rel="stylesheet" href="../res/css/index-rem.css">
+	<script src="../js/jquerymobile-1.4.2.js"></script>
+</head>
+<body>
+	<header class="header-box">
+		<div class="index-logo left-arrow">
+			<a href="IP_informationView.html">
+				<img src="../res/images/left-arrow.png" alt="">
+			</a>
+		</div>
+		<h3>货物信息</h3>
+		<p class="header-glass">
+			<a href="#">
+				<img src="../res/images/home.png">
+			</a>
+		</p>
+	</header>
+	<div class="main-body">
+		<div class="main-box" style="padding-top:20px;">
+			<div class="card-wrap">
+				<ul class="item-box">
+					<li>
+						<div class="item">
+							<h3>卸载货物舱单数据</h3>
+							<i class="arrowHover"></i>
+						</div>
+						<div class="spread">
+							<ul class="order-ul" id="unloadGoods">
+								<!-- <li>
+									<div class="order-spread">
+										<table>
+											<tr>
+												<td>原始舱单</td>
+												<td>0</td>
+											</tr>
+											<tr class="active">
+												<td>国际转运申报单号</td>
+												<td>1304204567890</td>
+											</tr>
+											<tr>
+												<td>暂时进出境空箱申报单号</td>
+												<td>1304204567890</td>
+											</tr>
+											<tr>
+												<td>进口理货报告</td>
+												<td></td>
+											</tr>
+										</table>
+									</div>
+								</li> -->
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<h3>卸船数据核对</h3>
+							<i class="arrowHover"></i>
+						</div>
+						<div class="spread">
+							<ul class="order-ul" id="unloadData">
+								<!-- <li>
+									<div class="order-spread">
+										<table>
+											<tr>
+												<td>理货对比</td>
+												<td></td>
+											</tr>
+											<tr class="active">
+												<td>卸货比对</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>进口舱单比对时间</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>进口舱单比对结果</td>
+												<td>比对结果</td>
+											</tr>
+											<tr>
+												<td>出口理货报告</td>
+												<td></td>
+											</tr>
+										</table>
+									</div>
+								</li> -->
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<h3>装载货物舱单数据</h3>
+							<i class="arrowHover"></i>
+						</div>
+						<div class="spread">
+							<ul class="order-ul" id="loadGoods">
+								<!-- <li>
+									<div class="order-spread">
+										<table>
+											<tr>
+												<td>预配舱单</td>
+												<td>554</td>
+											</tr>
+											<tr class="active">
+												<td>装载舱单</td>
+												<td>473</td>
+											</tr>
+											<tr>
+												<td>国际转运申报单号</td>
+												<td>1304204567890</td>
+											</tr>
+											<tr>
+												<td>暂时进出境空箱申报单号</td>
+												<td></td>
+											</tr>
+										</table>
+									</div>
+								</li> -->
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<h3>出口装船信息比对（集）</h3>
+							<i class="arrowHover"></i>
+						</div>
+						<div class="spread">
+							<ul class="order-ul" id="exitLoad">
+								<!-- <li>
+									<div class="order-spread">
+										<table>
+											<tr>
+												<td>配载比对情况</td>
+												<td>已比对</td>
+											</tr>
+											<tr class="active">
+												<td>装载比对情况</td>
+												<td>已比对</td>
+											</tr>
+											<tr>
+												<td>预配装载品名比对情况</td>
+												<td>已比对</td>
+											</tr>
+											<tr>
+												<td>装载清洁舱单比对</td>
+												<td>未比对</td>
+											</tr>
+											<tr>
+												<td>装船指令下达时间</td>
+												<td>2013-6-6 19:00:33</td>
+											</tr>
+										</table>
+									</div>
+								</li> -->
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<h3>装船数据核对</h3>
+							<i class="arrowHover"></i>
+						</div>
+						<div class="spread">
+							<ul class="order-ul" id="loadData">
+								<!-- <li>
+									<div class="order-spread">
+										<table>
+											<tr>
+												<td>配载比对情况</td>
+												<td>已比对</td>
+											</tr>
+											<tr class="active">
+												<td>装载比对情况</td>
+												<td>已比对</td>
+											</tr>
+											<tr>
+												<td>预配装载品名比对情况</td>
+												<td>已比对</td>
+											</tr>
+											<tr>
+												<td>装载清洁舱单比对</td>
+												<td>未比对</td>
+											</tr>
+											<tr>
+												<td>装船指令下达时间</td>
+												<td>2013-6-6 19:00:33</td>
+											</tr>
+										</table>
+									</div>
+								</li> -->
+							</ul>
+						</div>
+					</li>
+				 </ul>
+			 </div>
+			</li>
+		</ul>
+	</div>
+</div>
+</div>
+	<script type="text/javascript" charset="utf-8" src="../js/jquerymobile-1.4.2.js">
+	</script>
+	<script>
+		$(function(){
+			// 卸船货物舱单数据
+			var unloadGoodsjson={"OpResult":[{"OLD_BILL":"0","TRANS_BILL":"31042012I840000465","TEMP_EMPTYBILL":"31042012I040000465","TALLY_REPORT":""}]}
+            var unloadGoodsobj = eval(unloadGoodsjson.OpResult);
+            var unloadGoodsHtml = '';
+            for (var i = 0; i < unloadGoodsobj.length ; i++) {
+            	unloadGoodsHtml += '<li>\
+					<div class="order-spread">\
+						<table>\
+							<tr>\
+								<td>原始舱单</td>\
+								<td>'+ unloadGoodsobj[i].OLD_BILL +'</td>\
+							</tr>\
+							<tr class="active">\
+								<td>国际转运申报单号</td>\
+								<td>'+ unloadGoodsobj[i].TRANS_BILL +'</td>\
+							</tr>\
+							<tr>\
+								<td>暂时进出境空箱申报单号</td>\
+								<td>'+ unloadGoodsobj[i].TEMP_EMPTYBILL +'</td>\
+							</tr>\
+							<tr>\
+								<td>进口理货报告</td>\
+								<td>'+ unloadGoodsobj[i].TALLY_REPORT +'</td>\
+							</tr>\
+						</table>\
+					</div>\
+				</li>';
+            };
+            $("#unloadGoods").html(unloadGoodsHtml);
+
+            // 卸船数据核对
+			var unloadDatajson={"OpResult":[{"COMP_TALLY":"已比对","COMP_UNLOAD":"未比对","COMP_BILLTIME":"2013/6/6 19:33","COMP_BILLRESULT":""}]}
+            var unloadDataobj = eval(unloadDatajson.OpResult);
+            var unloadDataHtml = '';
+            for (var i = 0; i < unloadDataobj.length ; i++) {
+            	unloadDataHtml += '<li>\
+					<div class="order-spread">\
+						<table>\
+							<tr>\
+								<td>理货比对</td>\
+								<td>'+ unloadDataobj[i].COMP_TALLY +'</td>\
+							</tr>\
+							<tr class="active">\
+								<td>卸货比对</td>\
+								<td>'+ unloadDataobj[i].COMP_UNLOAD +'</td>\
+							</tr>\
+							<tr>\
+								<td>井口舱单比对时间</td>\
+								<td>'+ unloadDataobj[i].COMP_BILLTIME +'</td>\
+							</tr>\
+							<tr>\
+								<td>进口舱单比对结果</td>\
+								<td>'+ unloadDataobj[i].COMP_BILLRESULT +'</td>\
+							</tr>\
+						</table>\
+					</div>\
+				</li>';
+            };
+            $("#unloadData").html(unloadDataHtml);
+            // 装载货物舱单数据
+            var loadGoodsjson={"OpResult":[{"PRE_BILL":"554","TRANSFER_BILL":"473","TRANS_BILL":"31042012I040000465","TEMP_EMPTYBILL":"","TALLY_REPORT":""}]}
+            var loadGoodsobj = eval(loadGoodsjson.OpResult);
+            var loadGoodsHtml = '';
+            for (var i = 0; i < loadGoodsobj.length ; i++) {
+            	loadGoodsHtml += '<li>\
+					<div class="order-spread">\
+						<table>\
+							<tr>\
+								<td>预配舱单</td>\
+								<td>'+ loadGoodsobj[i].PRE_BILL +'</td>\
+							</tr>\
+							<tr class="active">\
+								<td>转载舱单</td>\
+								<td>'+ loadGoodsobj[i].TRANSFER_BILL +'</td>\
+							</tr>\
+							<tr>\
+								<td>国际转运申报单号</td>\
+								<td>'+ loadGoodsobj[i].TRANS_BILL +'</td>\
+							</tr>\
+							<tr>\
+								<td>暂时进出境空箱申报单号</td>\
+								<td>'+ loadGoodsobj[i].TEMP_EMPTYBILL +'</td>\
+							</tr>\
+							<tr>\
+								<td>进口理货报告</td>\
+								<td>'+ loadGoodsobj[i].TALLY_REPORT +'</td>\
+							</tr>\
+						</table>\
+					</div>\
+				</li>';
+            };
+            $("#loadGoods").html(loadGoodsHtml);
+            // 出口装船信息比对（集）
+            var exitLoadjson={"OpResult":[{"COMP_STOWAGE":"已比对","COMP_LOAD":"已比对","PRE_PRODUCT":"已比对","LOAD_BILL":"未比对","ORDER_TIME":"2013/6/6 19:33"}]}
+            var exitLoadobj = eval(exitLoadjson.OpResult);
+            var exitLoadHtml = '';
+            for (var i = 0; i < exitLoadobj.length ; i++) {
+            	exitLoadHtml += '<li>\
+					<div class="order-spread">\
+						<table>\
+							<tr>\
+								<td>配载比对情况</td>\
+								<td>'+ exitLoadobj[i].COMP_STOWAGE +'</td>\
+							</tr>\
+							<tr class="active">\
+								<td>装载比对情况</td>\
+								<td>'+ exitLoadobj[i].COMP_LOAD +'</td>\
+							</tr>\
+							<tr>\
+								<td>预配装载品名比对</td>\
+								<td>'+ exitLoadobj[i].PRE_PRODUCT +'</td>\
+							</tr>\
+							<tr>\
+								<td>装载清洁舱单比对</td>\
+								<td>'+ exitLoadobj[i].LOAD_BILL +'</td>\
+							</tr>\
+							<tr>\
+								<td>装船指令下达时间</td>\
+								<td>'+ exitLoadobj[i].ORDER_TIME +'</td>\
+							</tr>\
+						</table>\
+					</div>\
+				</li>';
+            };
+            $("#exitLoad").html(exitLoadHtml);
+            // 装船数据核对
+            var loadDatajson={"OpResult":[{"COMP_TALLY":"已比对"}]}
+            var loadDataObj = eval(loadDatajson.OpResult);
+            var loadDataHtml = '';
+            for (var i = 0; i < loadDataObj.length ; i++) {
+            	loadDataHtml += '<li>\
+					<div class="order-spread">\
+						<table>\
+							<tr>\
+								<td>理货比对</td>\
+								<td>'+ loadDataObj[i].COMP_TALLY +'</td>\
+							</tr>\
+						</table>\
+					</div>\
+				</li>';
+            };
+            $("#loadData").html(loadDataHtml);
+			// 点击右边箭头展开
+			$(".item i").on('click',function(){
+				var index = $(this).parents("li").index(".item-box li");
+				if($(".item-box li").eq(index).find(".spread").is(":visible")) {
+					$(this).removeClass("arrowHover").addClass("drop-arrow");
+					$(".item-box li").eq(index).find(".spread").hide();
+				}else{
+					$(this).addClass("arrowHover");
+					$(".item-box li").eq(index).find(".spread").show();
+				}
+				return false;
+			})
+		})
+	</script>
+</body>
+</html>

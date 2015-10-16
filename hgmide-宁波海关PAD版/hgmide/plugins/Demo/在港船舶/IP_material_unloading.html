@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动单兵系统物料起卸信息</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../res/css/reset.css">
+	<link rel="stylesheet" href="../res/css/index-rem.css">
+	<script src="../js/jquerymobile-1.4.2.js"></script>
+</head>
+<body>
+	<header class="header-box">
+		<div class="index-logo left-arrow">
+			<a href="IP_informationView.html">
+				<img src="../res/images/left-arrow.png" alt="">
+			</a>
+		</div>
+		<h3>物料起卸信息</h3>
+		<p class="header-glass">
+			<a href="#">
+				<img src="../res/images/home.png">
+			</a>
+		</p>
+	</header>
+	<div class="main-body">
+		<div class="main-box" id="unloadMaterial">
+			<!-- <ul class="item-ul fold-ul">
+				<li class="row-items">
+				   <div class="flex flex-flow-row">
+						<div class="item-left flex-2">起卸、添加物流申报单编号</div>
+						<div class="item-right fold">
+							073104201501919
+							<i class="triangle"></i>
+						</div>
+					</div>-->
+					<div class="drop-table" id="goodsTable">
+						<!--<table>
+							<tr style="background-color:#fff;">
+								<th>商品名称 </th>
+								<th>申报数量 </th>
+								<th>申报单位 </th>
+							</tr>
+							<tr class="cur">
+								<td>未梳的聚丙烯腈短纤维</td>
+								<td>3886.610</td>
+								<td>千克</td>
+							</tr>
+							<tr style="background-color:#fff;">
+								<td>未梳的聚丙烯腈短纤维</td>
+								<td>3886.610</td>
+								<td>千克</td>
+							</tr>
+						</table>-->
+					</div>
+				<!--</li>
+				<li class="row-items">
+				   <div class="flex flex-flow-row">
+						<div class="item-left flex-2">服务企业名称</div>
+						<div class="item-right fold">
+							宁波东方船务公司
+						</div>
+					</div>
+				</li>
+				<li class="row-items">
+				   <div class="flex flex-flow-row">
+						<div class="item-left flex-2">申报单状态</div>
+						<div class="item-right fold">
+							已核销
+						</div>
+					</div>
+				</li>
+				<li class="row-items">
+				   <div class="flex flex-flow-row">
+						<div class="item-left flex-2">检查结果</div>
+						<div class="item-right fold">
+							
+						</div>
+					</div>
+				</li>
+			</ul>
+			<ul class="item-ul fold-ul">
+				<li class="row-items">
+				   <div class="flex flex-flow-row">
+						<div class="item-left flex-2">起卸、添加物流申报单编号</div>
+						<div class="item-right fold">
+							073104201501919
+							<i class="triangle"></i>
+						</div>
+					</div>
+					<div class="drop-table">
+						<table>
+							<tr style="background-color:#fff;">
+								<th>商品名称 </th>
+								<th>申报数量 </th>
+								<th>申报单位 </th>
+							</tr>
+							<tr class="cur">
+								<td>未梳的聚丙烯腈短纤维</td>
+								<td>3886.610</td>
+								<td>千克</td>
+							</tr>
+							<tr style="background-color:#fff;">
+								<td>未梳的聚丙烯腈短纤维</td>
+								<td>3886.610</td>
+								<td>千克</td>
+							</tr>
+						</table>
+					</div>
+				</li>
+				<li class="row-items">
+				   <div class="flex flex-flow-row">
+						<div class="item-left flex-2">服务企业名称</div>
+						<div class="item-right fold">
+							宁波东方船务公司
+						</div>
+					</div>
+				</li>
+				<li class="row-items">
+				   <div class="flex flex-flow-row">
+						<div class="item-left flex-2">申报单状态</div>
+						<div class="item-right fold">
+							已核销
+						</div>
+					</div>
+				</li>
+				<li class="row-items">
+				   <div class="flex flex-flow-row">
+						<div class="item-left flex-2">检查结果</div>
+						<div class="item-right fold">
+							
+						</div>
+					</div>
+				</li>
+			</ul>
+			<ul class="item-ul fold-ul">
+				<li class="row-items">
+				   <div class="flex flex-flow-row">
+						<div class="item-left flex-2">起卸、添加物流申报单编号</div>
+						<div class="item-right fold">
+							073104201501919
+							<i class="triangle"></i>
+						</div>
+					</div>
+					<div class="drop-table">
+						<table>
+							<tr style="background-color:#fff;">
+								<th>商品名称 </th>
+								<th>申报数量 </th>
+								<th>申报单位 </th>
+							</tr>
+							<tr class="cur">
+								<td>未梳的聚丙烯腈短纤维</td>
+								<td>3886.610</td>
+								<td>千克</td>
+							</tr>
+							<tr style="background-color:#fff;">
+								<td>未梳的聚丙烯腈短纤维</td>
+								<td>3886.610</td>
+								<td>千克</td>
+							</tr>
+						</table>
+					</div>
+				</li>
+				<li class="row-items">
+				   <div class="flex flex-flow-row">
+						<div class="item-left flex-2">服务企业名称</div>
+						<div class="item-right fold">
+							宁波东方船务公司
+						</div>
+					</div>
+				</li>
+				<li class="row-items">
+				   <div class="flex flex-flow-row">
+						<div class="item-left flex-2">申报单状态</div>
+						<div class="item-right fold">
+							已核销
+						</div>
+					</div>
+				</li>
+				<li class="row-items">
+				   <div class="flex flex-flow-row">
+						<div class="item-left flex-2">检查结果</div>
+						<div class="item-right fold">
+							
+						</div>
+					</div>
+				</li>
+			</ul> -->
+		</div>
+	</div>
+	<script>
+		$(function(){
+		  var unloadInfojson={"OpResult":[{"REPORT_BILL":"07310420151919","COMPANY_NAME":"宁波东方船务公司","REPORT_STATUS":"已核查","ORDER_NO":"","RESULT":""}]}
+           var unloadInfoObj = eval(unloadInfojson.OpResult);
+           var unloadInfoHtml = '';
+           for (var i = 0; i < unloadInfoObj.length; i++) {
+           		unloadInfoHtml += '<ul class="item-ul fold-ul">\
+				<li class="row-items">\
+				   <div class="flex flex-flow-row">\
+						<div class="item-left flex-2">起卸、添加物流申报单编号</div>\
+						<div class="item-right fold">'
+							+ unloadInfoObj[i].REPORT_BILL +
+							'<i class="triangle"></i>\
+						</div>\
+					</div>';
+					 goodsInfo();
+					unloadInfoHtml += '</li>\
+										<li class="row-items">\
+										   <div class="flex flex-flow-row">\
+												<div class="item-left flex-2">服务企业名称</div>\
+												<div class="item-right fold">\
+													'+ unloadInfoObj[i].COMPANY_NAME +
+												'</div>\
+											</div>\
+										</li>\
+										<li class="row-items">\
+										   <div class="flex flex-flow-row">\
+												<div class="item-left flex-2">申报单状态</div>\
+												<div class="item-right fold">\
+													'+ unloadInfoObj[i].REPORT_STATUS +
+												'</div>\
+											</div>\
+										</li>\
+										<li class="row-items">\
+										   <div class="flex flex-flow-row">\
+												<div class="item-left flex-2">检查指令编号</div>\
+												<div class="item-right fold">\
+													'+ unloadInfoObj[i].ORDER_NO  +
+												'</div>\
+											</div>\
+										</li>\
+										<li class="row-items">\
+										   <div class="flex flex-flow-row">\
+												<div class="item-left flex-2">检查结果</div>\
+												<div class="item-right fold">\
+													'+ unloadInfoObj[i].RESULT  +
+												'</div>\
+											</div>\
+										</li>\
+									</ul>';
+          			 };
+          			 $("#unloadMaterial").html(unloadInfoHtml);
+				    function goodsInfo(){
+				    	var goodsInfojson={"OpResult":[{"TRADE_NAME":"未梳的聚丙烯晴短纤维","REPORT_NUMBER":"3886.610","REPORT_UNIT":"千克"},{"TRADE_NAME":"未梳的聚丙烯晴短纤维","REPORT_NUMBER":"231.610","REPORT_UNIT":"千克"},{"TRADE_NAME":"未梳的聚丙烯晴短纤维","REPORT_NUMBER":"3532.610","REPORT_UNIT":"千克"}]}
+	           			var goodsInfoObj = eval(goodsInfojson.OpResult);
+	           			var goodsInfoHtml = '';
+	           			for (var i = 0; i < goodsInfoObj.length; i++) {
+	           				goodsInfoHtml += '<table>\
+													<tr style="background-color:#fff;">\
+														<th>商品名称 </th>\
+														<th>申报数量 </th>\
+														<th>申报单位 </th>\
+													</tr>\
+													<tr class="cur">\
+														<td>'+ goodsInfoObj[i].TRADE_NAME +'</td>\
+														<td>'+ goodsInfoObj[i].REPORT_NUMBER +'</td>\
+														<td>'+ goodsInfoObj[i].REPORT_UNIT +'</td>\
+													</tr>\
+													<tr style="background-color:#fff;">\
+														<td>'+ goodsInfoObj[i].TRADE_NAME +'</td>\
+														<td>'+ goodsInfoObj[i].REPORT_NUMBER +'</td>\
+														<td>'+ goodsInfoObj[i].REPORT_UNIT +'</td>\
+													</tr>\
+												</table>\
+											</div>';
+						
+	           			};
+						$("#goodsTable").html(goodsInfoHtml);
+				    }
+						
+				
+           
+			// 点击右边箭头展开
+			$(".triangle").on('click',function(){
+				var index = $(this).parents("ul").index(".fold-ul");
+				if($(".fold-ul").eq(index).find(".drop-table").is(":hidden")) {
+					$(".fold-ul").eq(index).find(".drop-table").show();
+				}else{
+					$(".fold-ul").eq(index).find(".drop-table").hide();
+				}
+				return false;
+				
+			})
+		})
+	</script>
+</body>
+</html>
